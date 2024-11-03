@@ -259,6 +259,8 @@ public class DatabaseConnection {
             if (rs.next()) {
                 this.setVisible(false);
                 JOptionPane.showMessageDialog(this, "Dang nhap thanh cong");
+                Homepage home = new Homepage();
+                home.setVisible(true);
                 // Chuyển đến trang tiếp theo hoặc xử lý đăng nhập thành công
             } else {
                 JOptionPane.showMessageDialog(this, "Sai tài khoản hoặc mật khẩu.");

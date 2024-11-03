@@ -361,88 +361,7 @@ public class Homepage extends javax.swing.JFrame {
         jLabel92 = new javax.swing.JLabel();
         jPanel93 = new javax.swing.JPanel();
         jLabel93 = new javax.swing.JLabel();
-        jPanel52 = new javax.swing.JPanel();
-        jLabel53 = new javax.swing.JLabel();
-        jPanel53 = new javax.swing.JPanel();
-        jLabel54 = new javax.swing.JLabel();
-        jPanel54 = new javax.swing.JPanel();
-        jLabel55 = new javax.swing.JLabel();
-        jPanel55 = new javax.swing.JPanel();
-        jLabel56 = new javax.swing.JLabel();
-        jPanel56 = new javax.swing.JPanel();
-        jLabel57 = new javax.swing.JLabel();
-        jPanel57 = new javax.swing.JPanel();
-        jLabel58 = new javax.swing.JLabel();
-        jPanel58 = new javax.swing.JPanel();
-        jLabel59 = new javax.swing.JLabel();
-        jPanel59 = new javax.swing.JPanel();
-        jLabel60 = new javax.swing.JLabel();
-        jPanel126 = new javax.swing.JPanel();
-        jLabel126 = new javax.swing.JLabel();
-        jPanel127 = new javax.swing.JPanel();
-        jLabel127 = new javax.swing.JLabel();
-        jPanel128 = new javax.swing.JPanel();
-        jLabel128 = new javax.swing.JLabel();
-        jPanel129 = new javax.swing.JPanel();
-        jLabel129 = new javax.swing.JLabel();
-        jPanel130 = new javax.swing.JPanel();
-        jLabel130 = new javax.swing.JLabel();
-        jPanel131 = new javax.swing.JPanel();
-        jLabel131 = new javax.swing.JLabel();
-        jPanel132 = new javax.swing.JPanel();
-        jLabel132 = new javax.swing.JLabel();
-        jPanel133 = new javax.swing.JPanel();
-        jLabel133 = new javax.swing.JLabel();
-        jPanel134 = new javax.swing.JPanel();
-        jLabel134 = new javax.swing.JLabel();
-        jPanel135 = new javax.swing.JPanel();
-        jLabel135 = new javax.swing.JLabel();
-        jPanel136 = new javax.swing.JPanel();
-        jLabel136 = new javax.swing.JLabel();
-        jPanel137 = new javax.swing.JPanel();
-        jLabel137 = new javax.swing.JLabel();
-        jPanel138 = new javax.swing.JPanel();
-        jLabel138 = new javax.swing.JLabel();
-        jPanel139 = new javax.swing.JPanel();
-        jLabel139 = new javax.swing.JLabel();
-        jPanel140 = new javax.swing.JPanel();
-        jLabel140 = new javax.swing.JLabel();
-        jPanel141 = new javax.swing.JPanel();
-        jLabel141 = new javax.swing.JLabel();
-        jPanel142 = new javax.swing.JPanel();
-        jLabel142 = new javax.swing.JLabel();
-        jPanel143 = new javax.swing.JPanel();
-        jLabel143 = new javax.swing.JLabel();
-        jPanel144 = new javax.swing.JPanel();
-        jLabel144 = new javax.swing.JLabel();
-        jPanel145 = new javax.swing.JPanel();
-        jLabel145 = new javax.swing.JLabel();
-        jPanel146 = new javax.swing.JPanel();
-        jLabel146 = new javax.swing.JLabel();
-        jPanel147 = new javax.swing.JPanel();
-        jLabel147 = new javax.swing.JLabel();
-        jPanel148 = new javax.swing.JPanel();
-        jLabel148 = new javax.swing.JLabel();
-        jPanel149 = new javax.swing.JPanel();
-        jLabel149 = new javax.swing.JLabel();
-        jPanel150 = new javax.swing.JPanel();
-        jLabel150 = new javax.swing.JLabel();
-        jPanel151 = new javax.swing.JPanel();
-        jLabel151 = new javax.swing.JLabel();
-        jPanel152 = new javax.swing.JPanel();
-        jLabel152 = new javax.swing.JLabel();
-        jPanel153 = new javax.swing.JPanel();
-        jLabel153 = new javax.swing.JLabel();
-        jPanel154 = new javax.swing.JPanel();
-        jLabel154 = new javax.swing.JLabel();
-        jPanel155 = new javax.swing.JPanel();
-        jLabel155 = new javax.swing.JLabel();
-        jPanel156 = new javax.swing.JPanel();
-        jLabel156 = new javax.swing.JLabel();
-        jPanel157 = new javax.swing.JPanel();
-        jLabel157 = new javax.swing.JLabel();
         jPanel60 = new javax.swing.JPanel();
-        jLabel61 = new javax.swing.JLabel();
         jPanel61 = new javax.swing.JPanel();
         jLabel62 = new javax.swing.JLabel();
         jPanel62 = new javax.swing.JPanel();
@@ -585,8 +504,170 @@ public class Homepage extends javax.swing.JFrame {
         jLabel220 = new javax.swing.JLabel();
         jPanel221 = new javax.swing.JPanel();
         jLabel221 = new javax.swing.JLabel();
+        jLabel222 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jPanel69 = new javax.swing.JPanel();
+        jPanel226 = new javax.swing.JPanel();
+        jPanel52 = new javax.swing.JPanel();
+        jLabel53 = new javax.swing.JLabel();
+        jPanel53 = new javax.swing.JPanel();
+        jLabel54 = new javax.swing.JLabel();
+        jPanel54 = new javax.swing.JPanel();
+        jLabel55 = new javax.swing.JLabel();
+        jPanel55 = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
+        jPanel56 = new javax.swing.JPanel();
+        jLabel57 = new javax.swing.JLabel();
+        jPanel57 = new javax.swing.JPanel();
+        jLabel58 = new javax.swing.JLabel();
+        jPanel58 = new javax.swing.JPanel();
+        jLabel59 = new javax.swing.JLabel();
+        jPanel59 = new javax.swing.JPanel();
+        jLabel60 = new javax.swing.JLabel();
+        jPanel126 = new javax.swing.JPanel();
+        jLabel126 = new javax.swing.JLabel();
+        jPanel127 = new javax.swing.JPanel();
+        jLabel127 = new javax.swing.JLabel();
+        jPanel128 = new javax.swing.JPanel();
+        jLabel128 = new javax.swing.JLabel();
+        jPanel129 = new javax.swing.JPanel();
+        jLabel129 = new javax.swing.JLabel();
+        jPanel130 = new javax.swing.JPanel();
+        jLabel130 = new javax.swing.JLabel();
+        jPanel131 = new javax.swing.JPanel();
+        jLabel131 = new javax.swing.JLabel();
+        jPanel132 = new javax.swing.JPanel();
+        jLabel132 = new javax.swing.JLabel();
+        jPanel133 = new javax.swing.JPanel();
+        jLabel133 = new javax.swing.JLabel();
+        jPanel134 = new javax.swing.JPanel();
+        jLabel134 = new javax.swing.JLabel();
+        jPanel135 = new javax.swing.JPanel();
+        jLabel135 = new javax.swing.JLabel();
+        jPanel136 = new javax.swing.JPanel();
+        jLabel136 = new javax.swing.JLabel();
+        jPanel137 = new javax.swing.JPanel();
+        jLabel137 = new javax.swing.JLabel();
+        jPanel138 = new javax.swing.JPanel();
+        jLabel138 = new javax.swing.JLabel();
+        jPanel139 = new javax.swing.JPanel();
+        jLabel139 = new javax.swing.JLabel();
+        jPanel140 = new javax.swing.JPanel();
+        jLabel140 = new javax.swing.JLabel();
+        jPanel141 = new javax.swing.JPanel();
+        jLabel141 = new javax.swing.JLabel();
+        jPanel142 = new javax.swing.JPanel();
+        jLabel142 = new javax.swing.JLabel();
+        jPanel143 = new javax.swing.JPanel();
+        jLabel143 = new javax.swing.JLabel();
+        jPanel144 = new javax.swing.JPanel();
+        jLabel144 = new javax.swing.JLabel();
+        jPanel145 = new javax.swing.JPanel();
+        jLabel145 = new javax.swing.JLabel();
+        jPanel146 = new javax.swing.JPanel();
+        jLabel146 = new javax.swing.JLabel();
+        jPanel147 = new javax.swing.JPanel();
+        jLabel147 = new javax.swing.JLabel();
+        jPanel148 = new javax.swing.JPanel();
+        jLabel148 = new javax.swing.JLabel();
+        jPanel149 = new javax.swing.JPanel();
+        jLabel149 = new javax.swing.JLabel();
+        jPanel150 = new javax.swing.JPanel();
+        jLabel150 = new javax.swing.JLabel();
+        jPanel151 = new javax.swing.JPanel();
+        jLabel151 = new javax.swing.JLabel();
+        jPanel152 = new javax.swing.JPanel();
+        jLabel152 = new javax.swing.JLabel();
+        jPanel153 = new javax.swing.JPanel();
+        jLabel153 = new javax.swing.JLabel();
+        jPanel154 = new javax.swing.JPanel();
+        jLabel154 = new javax.swing.JLabel();
+        jPanel155 = new javax.swing.JPanel();
+        jLabel155 = new javax.swing.JLabel();
+        jPanel156 = new javax.swing.JPanel();
+        jLabel156 = new javax.swing.JLabel();
+        jPanel157 = new javax.swing.JPanel();
+        jLabel157 = new javax.swing.JLabel();
+        jPanel227 = new javax.swing.JPanel();
+        jLabel223 = new javax.swing.JLabel();
+        jPanel228 = new javax.swing.JPanel();
+        jLabel227 = new javax.swing.JLabel();
+        jPanel229 = new javax.swing.JPanel();
+        jLabel228 = new javax.swing.JLabel();
+        jPanel230 = new javax.swing.JPanel();
+        jLabel233 = new javax.swing.JLabel();
+        jPanel231 = new javax.swing.JPanel();
+        jLabel234 = new javax.swing.JLabel();
+        jPanel232 = new javax.swing.JPanel();
+        jLabel235 = new javax.swing.JLabel();
+        jPanel233 = new javax.swing.JPanel();
+        jLabel236 = new javax.swing.JLabel();
+        jPanel234 = new javax.swing.JPanel();
+        jLabel237 = new javax.swing.JLabel();
+        jPanel235 = new javax.swing.JPanel();
+        jLabel238 = new javax.swing.JLabel();
+        jPanel236 = new javax.swing.JPanel();
+        jLabel239 = new javax.swing.JLabel();
+        jPanel237 = new javax.swing.JPanel();
+        jLabel240 = new javax.swing.JLabel();
+        jPanel238 = new javax.swing.JPanel();
+        jLabel241 = new javax.swing.JLabel();
+        jPanel239 = new javax.swing.JPanel();
+        jLabel242 = new javax.swing.JLabel();
+        jPanel240 = new javax.swing.JPanel();
+        jLabel243 = new javax.swing.JLabel();
+        jPanel241 = new javax.swing.JPanel();
+        jLabel244 = new javax.swing.JLabel();
+        jPanel242 = new javax.swing.JPanel();
+        jLabel245 = new javax.swing.JLabel();
+        jPanel243 = new javax.swing.JPanel();
+        jLabel246 = new javax.swing.JLabel();
+        jPanel244 = new javax.swing.JPanel();
+        jLabel247 = new javax.swing.JLabel();
+        jPanel245 = new javax.swing.JPanel();
+        jLabel248 = new javax.swing.JLabel();
+        jPanel246 = new javax.swing.JPanel();
+        jLabel249 = new javax.swing.JLabel();
+        jPanel247 = new javax.swing.JPanel();
+        jLabel250 = new javax.swing.JLabel();
+        jPanel248 = new javax.swing.JPanel();
+        jLabel251 = new javax.swing.JLabel();
+        jPanel249 = new javax.swing.JPanel();
+        jLabel252 = new javax.swing.JLabel();
+        jPanel250 = new javax.swing.JPanel();
+        jLabel253 = new javax.swing.JLabel();
+        jPanel251 = new javax.swing.JPanel();
+        jLabel254 = new javax.swing.JLabel();
+        jPanel252 = new javax.swing.JPanel();
+        jLabel255 = new javax.swing.JLabel();
+        jPanel253 = new javax.swing.JPanel();
+        jLabel256 = new javax.swing.JLabel();
+        jPanel254 = new javax.swing.JPanel();
+        jLabel257 = new javax.swing.JLabel();
+        jPanel255 = new javax.swing.JPanel();
+        jLabel258 = new javax.swing.JLabel();
+        jPanel256 = new javax.swing.JPanel();
+        jLabel259 = new javax.swing.JLabel();
+        jPanel257 = new javax.swing.JPanel();
+        jLabel260 = new javax.swing.JLabel();
+        jPanel258 = new javax.swing.JPanel();
+        jLabel261 = new javax.swing.JLabel();
+        jPanel259 = new javax.swing.JPanel();
+        jLabel262 = new javax.swing.JLabel();
+        jPanel260 = new javax.swing.JPanel();
+        jLabel263 = new javax.swing.JLabel();
+        jPanel261 = new javax.swing.JPanel();
+        jLabel264 = new javax.swing.JLabel();
+        jPanel262 = new javax.swing.JPanel();
+        jLabel265 = new javax.swing.JLabel();
+        jPanel263 = new javax.swing.JPanel();
+        jLabel266 = new javax.swing.JLabel();
+        jPanel264 = new javax.swing.JPanel();
+        jLabel267 = new javax.swing.JLabel();
+        jPanel265 = new javax.swing.JPanel();
+        jLabel268 = new javax.swing.JLabel();
+        jPanel266 = new javax.swing.JPanel();
+        jLabel269 = new javax.swing.JLabel();
         jPanel68 = new javax.swing.JPanel();
         jPanel222 = new javax.swing.JPanel();
         txtsosach = new javax.swing.JLabel();
@@ -1897,495 +1978,8 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel3.add(jPanel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
 
-        jPanel52.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel53.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel53.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel53.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Book_26px.png"))); // NOI18N
-        jLabel53.setText("Quản lý sách");
-        jPanel52.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 120, -1));
-
-        jPanel53.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel54.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel54.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel54.setText("Homepage");
-        jPanel53.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel52.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel54.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel54.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel55.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel55.setText("Homepage");
-        jPanel54.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel55.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel56.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel56.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel56.setText("Homepage");
-        jPanel55.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel54.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel52.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel56.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel56.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel57.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel57.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel57.setText("Homepage");
-        jPanel56.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel57.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel57.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel58.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel58.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel58.setText("Homepage");
-        jPanel57.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel56.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel58.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel58.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel59.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel59.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel59.setText("Homepage");
-        jPanel58.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel59.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel59.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel60.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel60.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel60.setText("Homepage");
-        jPanel59.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel58.add(jPanel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel56.add(jPanel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel52.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel126.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel126.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel126.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel126.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel126.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel126.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel126.setText("Trang chủ");
-        jPanel126.add(jLabel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
-
-        jPanel127.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel127.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel127.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel127.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel127.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel127.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel127.setText("Homepage");
-        jPanel127.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel126.add(jPanel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel128.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel128.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel128.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel128.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel128.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel128.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel128.setText("Homepage");
-        jPanel128.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel129.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel129.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel129.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel129.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel129.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel129.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel129.setText("Homepage");
-        jPanel129.add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel128.add(jPanel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel126.add(jPanel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel130.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel130.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel130.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel130.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel130.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel130.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel130.setText("Homepage");
-        jPanel130.add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel131.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel131.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel131.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel131.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel131.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel131.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel131.setText("Homepage");
-        jPanel131.add(jLabel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel130.add(jPanel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel132.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel132.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel132.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel132.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel132.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel132.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel132.setText("Homepage");
-        jPanel132.add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel133.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel133.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel133.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel133.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel133.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel133.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel133.setText("Homepage");
-        jPanel133.add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel132.add(jPanel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel130.add(jPanel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel126.add(jPanel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel134.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel134.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel134.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel134.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel134.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel134.setText("Trang chủ");
-        jPanel134.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
-
-        jPanel135.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel135.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel135.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel135.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel135.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel135.setText("Homepage");
-        jPanel135.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel134.add(jPanel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel136.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel136.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel136.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel136.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel136.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel136.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel136.setText("Homepage");
-        jPanel136.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel137.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel137.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel137.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel137.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel137.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel137.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel137.setText("Homepage");
-        jPanel137.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel136.add(jPanel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel134.add(jPanel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel138.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel138.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel138.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel138.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel138.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel138.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel138.setText("Homepage");
-        jPanel138.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel139.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel139.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel139.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel139.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel139.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel139.setText("Homepage");
-        jPanel139.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel138.add(jPanel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel140.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel140.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel140.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel140.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel140.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel140.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel140.setText("Homepage");
-        jPanel140.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel141.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel141.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel141.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel141.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel141.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel141.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel141.setText("Homepage");
-        jPanel141.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel140.add(jPanel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel138.add(jPanel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel134.add(jPanel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel126.add(jPanel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
-
-        jPanel142.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel142.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel142.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel142.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel142.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel142.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel142.setText("Trang chủ");
-        jPanel142.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
-
-        jPanel143.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel143.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel143.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel143.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel143.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel143.setText("Homepage");
-        jPanel143.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel142.add(jPanel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel144.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel144.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel144.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel144.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel144.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel144.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel144.setText("Homepage");
-        jPanel144.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel145.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel145.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel145.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel145.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel145.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel145.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel145.setText("Homepage");
-        jPanel145.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel144.add(jPanel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel142.add(jPanel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel146.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel146.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel146.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel146.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel146.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel146.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel146.setText("Homepage");
-        jPanel146.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel147.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel147.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel147.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel147.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel147.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel147.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel147.setText("Homepage");
-        jPanel147.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel146.add(jPanel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel148.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel148.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel148.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel148.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel148.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel148.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel148.setText("Homepage");
-        jPanel148.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel149.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel149.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel149.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel149.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel149.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel149.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel149.setText("Homepage");
-        jPanel149.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel148.add(jPanel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel146.add(jPanel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel142.add(jPanel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel150.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel150.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel150.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel150.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel150.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel150.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel150.setText("Trang chủ");
-        jPanel150.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
-
-        jPanel151.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel151.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel151.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel151.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel151.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel151.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel151.setText("Homepage");
-        jPanel151.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel150.add(jPanel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel152.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel152.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel152.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel152.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel152.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel152.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel152.setText("Homepage");
-        jPanel152.add(jLabel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel153.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel153.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel153.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel153.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel153.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel153.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel153.setText("Homepage");
-        jPanel153.add(jLabel153, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel152.add(jPanel153, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel150.add(jPanel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel154.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel154.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel154.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel154.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel154.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel154.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel154.setText("Homepage");
-        jPanel154.add(jLabel154, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel155.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel155.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel155.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel155.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel155.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel155.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel155.setText("Homepage");
-        jPanel155.add(jLabel155, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel154.add(jPanel155, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel156.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel156.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel156.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel156.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel156.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel156.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel156.setText("Homepage");
-        jPanel156.add(jLabel156, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel157.setBackground(new java.awt.Color(255, 51, 0));
-        jPanel157.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel157.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel157.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel157.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel157.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
-        jLabel157.setText("Homepage");
-        jPanel157.add(jLabel157, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel156.add(jPanel157, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel154.add(jPanel156, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel150.add(jPanel154, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
-
-        jPanel142.add(jPanel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
-
-        jPanel126.add(jPanel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
-
-        jPanel52.add(jPanel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 210, 40));
-
-        jPanel3.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 210, 40));
-
         jPanel60.setBackground(new java.awt.Color(51, 51, 51));
         jPanel60.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel61.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel61.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jLabel61.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Conference_26px.png"))); // NOI18N
-        jLabel61.setText("Quản lý người mượn");
-        jPanel60.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 210, 40));
 
         jPanel61.setBackground(new java.awt.Color(255, 51, 0));
         jPanel61.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -3239,6 +2833,13 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel60.add(jPanel190, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
 
+        jLabel222.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel222.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jLabel222.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel222.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Conference_26px.png"))); // NOI18N
+        jLabel222.setText("Quản lý người mượn");
+        jPanel60.add(jLabel222, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 210, 40));
+
         jPanel3.add(jPanel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 150, 40));
 
         jLabel13.setBackground(new java.awt.Color(61, 61, 61));
@@ -3249,6 +2850,11 @@ public class Homepage extends javax.swing.JFrame {
         jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, -1, -1));
 
         jPanel69.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel69.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel69MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel69Layout = new javax.swing.GroupLayout(jPanel69);
         jPanel69.setLayout(jPanel69Layout);
@@ -3262,6 +2868,981 @@ public class Homepage extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 210, 40));
+
+        jPanel52.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel53.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel53.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Book_26px.png"))); // NOI18N
+        jLabel53.setText("Quản lý sách");
+        jPanel52.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 120, -1));
+
+        jPanel53.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel54.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel54.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel54.setText("Homepage");
+        jPanel53.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel52.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel54.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel54.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel55.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel55.setText("Homepage");
+        jPanel54.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel55.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel56.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel56.setText("Homepage");
+        jPanel55.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel54.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel52.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel56.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel56.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel57.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel57.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel57.setText("Homepage");
+        jPanel56.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel57.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel57.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel58.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel58.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel58.setText("Homepage");
+        jPanel57.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel56.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel58.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel58.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel59.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel59.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel59.setText("Homepage");
+        jPanel58.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel59.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel59.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel60.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel60.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel60.setText("Homepage");
+        jPanel59.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel58.add(jPanel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel56.add(jPanel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel52.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel126.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel126.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel126.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel126.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel126.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel126.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel126.setText("Trang chủ");
+        jPanel126.add(jLabel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        jPanel127.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel127.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel127.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel127.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel127.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel127.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel127.setText("Homepage");
+        jPanel127.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel126.add(jPanel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel128.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel128.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel128.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel128.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel128.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel128.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel128.setText("Homepage");
+        jPanel128.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel129.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel129.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel129.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel129.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel129.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel129.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel129.setText("Homepage");
+        jPanel129.add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel128.add(jPanel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel126.add(jPanel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel130.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel130.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel130.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel130.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel130.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel130.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel130.setText("Homepage");
+        jPanel130.add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel131.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel131.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel131.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel131.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel131.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel131.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel131.setText("Homepage");
+        jPanel131.add(jLabel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel130.add(jPanel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel132.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel132.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel132.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel132.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel132.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel132.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel132.setText("Homepage");
+        jPanel132.add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel133.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel133.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel133.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel133.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel133.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel133.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel133.setText("Homepage");
+        jPanel133.add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel132.add(jPanel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel130.add(jPanel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel126.add(jPanel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel134.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel134.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel134.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel134.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel134.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel134.setText("Trang chủ");
+        jPanel134.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        jPanel135.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel135.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel135.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel135.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel135.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel135.setText("Homepage");
+        jPanel135.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel134.add(jPanel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel136.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel136.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel136.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel136.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel136.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel136.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel136.setText("Homepage");
+        jPanel136.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel137.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel137.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel137.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel137.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel137.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel137.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel137.setText("Homepage");
+        jPanel137.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel136.add(jPanel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel134.add(jPanel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel138.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel138.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel138.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel138.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel138.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel138.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel138.setText("Homepage");
+        jPanel138.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel139.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel139.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel139.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel139.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel139.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel139.setText("Homepage");
+        jPanel139.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel138.add(jPanel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel140.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel140.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel140.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel140.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel140.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel140.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel140.setText("Homepage");
+        jPanel140.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel141.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel141.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel141.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel141.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel141.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel141.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel141.setText("Homepage");
+        jPanel141.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel140.add(jPanel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel138.add(jPanel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel134.add(jPanel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel126.add(jPanel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
+
+        jPanel142.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel142.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel142.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel142.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel142.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel142.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel142.setText("Trang chủ");
+        jPanel142.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        jPanel143.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel143.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel143.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel143.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel143.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel143.setText("Homepage");
+        jPanel143.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel142.add(jPanel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel144.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel144.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel144.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel144.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel144.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel144.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel144.setText("Homepage");
+        jPanel144.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel145.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel145.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel145.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel145.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel145.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel145.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel145.setText("Homepage");
+        jPanel145.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel144.add(jPanel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel142.add(jPanel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel146.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel146.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel146.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel146.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel146.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel146.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel146.setText("Homepage");
+        jPanel146.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel147.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel147.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel147.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel147.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel147.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel147.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel147.setText("Homepage");
+        jPanel147.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel146.add(jPanel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel148.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel148.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel148.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel148.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel148.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel148.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel148.setText("Homepage");
+        jPanel148.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel149.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel149.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel149.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel149.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel149.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel149.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel149.setText("Homepage");
+        jPanel149.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel148.add(jPanel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel146.add(jPanel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel142.add(jPanel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel150.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel150.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel150.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel150.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel150.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel150.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel150.setText("Trang chủ");
+        jPanel150.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        jPanel151.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel151.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel151.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel151.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel151.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel151.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel151.setText("Homepage");
+        jPanel151.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel150.add(jPanel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel152.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel152.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel152.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel152.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel152.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel152.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel152.setText("Homepage");
+        jPanel152.add(jLabel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel153.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel153.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel153.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel153.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel153.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel153.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel153.setText("Homepage");
+        jPanel153.add(jLabel153, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel152.add(jPanel153, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel150.add(jPanel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel154.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel154.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel154.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel154.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel154.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel154.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel154.setText("Homepage");
+        jPanel154.add(jLabel154, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel155.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel155.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel155.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel155.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel155.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel155.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel155.setText("Homepage");
+        jPanel155.add(jLabel155, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel154.add(jPanel155, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel156.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel156.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel156.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel156.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel156.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel156.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel156.setText("Homepage");
+        jPanel156.add(jLabel156, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel157.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel157.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel157.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel157.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel157.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel157.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel157.setText("Homepage");
+        jPanel157.add(jLabel157, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel156.add(jPanel157, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel154.add(jPanel156, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel150.add(jPanel154, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel142.add(jPanel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
+
+        jPanel126.add(jPanel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
+
+        jPanel52.add(jPanel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 210, 40));
+
+        jPanel227.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel227.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel223.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel223.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel223.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel223.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Book_26px.png"))); // NOI18N
+        jLabel223.setText("Quản lý sách");
+        jPanel227.add(jLabel223, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 120, -1));
+
+        jPanel228.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel228.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel227.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel227.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel227.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel227.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel227.setText("Homepage");
+        jPanel228.add(jLabel227, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel227.add(jPanel228, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel229.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel229.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel228.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel228.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel228.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel228.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel228.setText("Homepage");
+        jPanel229.add(jLabel228, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel230.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel230.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel233.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel233.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel233.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel233.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel233.setText("Homepage");
+        jPanel230.add(jLabel233, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel229.add(jPanel230, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel227.add(jPanel229, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel231.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel231.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel234.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel234.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel234.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel234.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel234.setText("Homepage");
+        jPanel231.add(jLabel234, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel232.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel232.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel235.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel235.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel235.setText("Homepage");
+        jPanel232.add(jLabel235, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel231.add(jPanel232, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel233.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel233.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel236.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel236.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel236.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel236.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel236.setText("Homepage");
+        jPanel233.add(jLabel236, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel234.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel234.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel237.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel237.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel237.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel237.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel237.setText("Homepage");
+        jPanel234.add(jLabel237, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel233.add(jPanel234, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel231.add(jPanel233, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel227.add(jPanel231, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel235.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel238.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel238.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel238.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel238.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel238.setText("Trang chủ");
+        jPanel235.add(jLabel238, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        jPanel236.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel236.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel239.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel239.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel239.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel239.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel239.setText("Homepage");
+        jPanel236.add(jLabel239, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel235.add(jPanel236, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel237.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel237.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel240.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel240.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel240.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel240.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel240.setText("Homepage");
+        jPanel237.add(jLabel240, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel238.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel238.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel241.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel241.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel241.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel241.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel241.setText("Homepage");
+        jPanel238.add(jLabel241, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel237.add(jPanel238, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel235.add(jPanel237, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel239.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel239.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel242.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel242.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel242.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel242.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel242.setText("Homepage");
+        jPanel239.add(jLabel242, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel240.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel240.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel243.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel243.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel243.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel243.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel243.setText("Homepage");
+        jPanel240.add(jLabel243, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel239.add(jPanel240, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel241.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel241.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel244.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel244.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel244.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel244.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel244.setText("Homepage");
+        jPanel241.add(jLabel244, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel242.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel242.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel245.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel245.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel245.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel245.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel245.setText("Homepage");
+        jPanel242.add(jLabel245, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel241.add(jPanel242, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel239.add(jPanel241, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel235.add(jPanel239, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel243.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel243.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel246.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel246.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel246.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel246.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel246.setText("Trang chủ");
+        jPanel243.add(jLabel246, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        jPanel244.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel244.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel247.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel247.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel247.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel247.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel247.setText("Homepage");
+        jPanel244.add(jLabel247, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel243.add(jPanel244, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel245.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel245.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel248.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel248.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel248.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel248.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel248.setText("Homepage");
+        jPanel245.add(jLabel248, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel246.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel246.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel249.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel249.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel249.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel249.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel249.setText("Homepage");
+        jPanel246.add(jLabel249, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel245.add(jPanel246, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel243.add(jPanel245, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel247.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel247.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel250.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel250.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel250.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel250.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel250.setText("Homepage");
+        jPanel247.add(jLabel250, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel248.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel248.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel251.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel251.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel251.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel251.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel251.setText("Homepage");
+        jPanel248.add(jLabel251, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel247.add(jPanel248, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel249.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel249.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel252.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel252.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel252.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel252.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel252.setText("Homepage");
+        jPanel249.add(jLabel252, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel250.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel250.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel253.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel253.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel253.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel253.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel253.setText("Homepage");
+        jPanel250.add(jLabel253, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel249.add(jPanel250, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel247.add(jPanel249, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel243.add(jPanel247, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel235.add(jPanel243, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
+
+        jPanel251.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel251.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel254.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel254.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel254.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel254.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel254.setText("Trang chủ");
+        jPanel251.add(jLabel254, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        jPanel252.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel252.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel255.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel255.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel255.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel255.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel255.setText("Homepage");
+        jPanel252.add(jLabel255, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel251.add(jPanel252, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel253.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel253.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel256.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel256.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel256.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel256.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel256.setText("Homepage");
+        jPanel253.add(jLabel256, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel254.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel254.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel257.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel257.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel257.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel257.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel257.setText("Homepage");
+        jPanel254.add(jLabel257, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel253.add(jPanel254, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel251.add(jPanel253, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel255.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel255.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel258.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel258.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel258.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel258.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel258.setText("Homepage");
+        jPanel255.add(jLabel258, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel256.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel256.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel259.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel259.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel259.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel259.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel259.setText("Homepage");
+        jPanel256.add(jLabel259, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel255.add(jPanel256, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel257.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel257.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel260.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel260.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel260.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel260.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel260.setText("Homepage");
+        jPanel257.add(jLabel260, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel258.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel258.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel261.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel261.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel261.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel261.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel261.setText("Homepage");
+        jPanel258.add(jLabel261, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel257.add(jPanel258, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel255.add(jPanel257, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel251.add(jPanel255, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel259.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel259.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel262.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel262.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel262.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel262.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel262.setText("Trang chủ");
+        jPanel259.add(jLabel262, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        jPanel260.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel260.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel263.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel263.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel263.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel263.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel263.setText("Homepage");
+        jPanel260.add(jLabel263, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel259.add(jPanel260, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel261.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel261.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel264.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel264.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel264.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel264.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel264.setText("Homepage");
+        jPanel261.add(jLabel264, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel262.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel262.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel265.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel265.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel265.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel265.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel265.setText("Homepage");
+        jPanel262.add(jLabel265, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel261.add(jPanel262, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel259.add(jPanel261, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel263.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel263.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel266.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel266.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel266.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel266.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel266.setText("Homepage");
+        jPanel263.add(jLabel266, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel264.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel264.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel267.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel267.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel267.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel267.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel267.setText("Homepage");
+        jPanel264.add(jLabel267, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel263.add(jPanel264, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel265.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel265.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel268.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel268.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel268.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel268.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel268.setText("Homepage");
+        jPanel265.add(jLabel268, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel266.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel266.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel269.setBackground(new java.awt.Color(61, 61, 61));
+        jLabel269.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel269.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel269.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/home_24px.png"))); // NOI18N
+        jLabel269.setText("Homepage");
+        jPanel266.add(jLabel269, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel265.add(jPanel266, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel263.add(jPanel265, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel259.add(jPanel263, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
+
+        jPanel251.add(jPanel259, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
+
+        jPanel235.add(jPanel251, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
+
+        jPanel227.add(jPanel235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 210, 40));
+
+        jPanel52.add(jPanel227, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 210, 40));
+
+        javax.swing.GroupLayout jPanel226Layout = new javax.swing.GroupLayout(jPanel226);
+        jPanel226.setLayout(jPanel226Layout);
+        jPanel226Layout.setHorizontalGroup(
+            jPanel226Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel226Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel226Layout.setVerticalGroup(
+            jPanel226Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel226Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel3.add(jPanel226, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 210, 40));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 580));
 
@@ -3296,7 +3877,7 @@ public class Homepage extends javax.swing.JFrame {
 
         txtconlai.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         txtconlai.setForeground(new java.awt.Color(0, 0, 0));
-        txtconlai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Sell_50px.png"))); // NOI18N
+        txtconlai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_List_of_Thumbnails_50px.png"))); // NOI18N
         jPanel224.add(txtconlai, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 110, -1));
 
         jPanel68.add(jPanel224, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 50, 150, 70));
@@ -3307,7 +3888,7 @@ public class Homepage extends javax.swing.JFrame {
 
         txtdangmuon.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         txtdangmuon.setForeground(new java.awt.Color(0, 0, 0));
-        txtdangmuon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_List_of_Thumbnails_50px.png"))); // NOI18N
+        txtdangmuon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Sell_50px.png"))); // NOI18N
         jPanel225.add(txtdangmuon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, -1));
 
         jPanel68.add(jPanel225, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 120, 70));
@@ -3317,10 +3898,10 @@ public class Homepage extends javax.swing.JFrame {
         jLabel224.setText("Sách còn lại");
         jPanel68.add(jLabel224, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 140, -1));
 
-        jLabel225.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel225.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel225.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel225.setText("Số sách mượn");
-        jPanel68.add(jLabel225, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 140, -1));
+        jLabel225.setText("Sách đang cho mượn");
+        jPanel68.add(jLabel225, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 190, -1));
 
         jLabel226.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel226.setForeground(new java.awt.Color(0, 0, 0));
@@ -3329,7 +3910,7 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel229.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel229.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel229.setText("Số người mượn");
+        jLabel229.setText("Người Mượn");
         jPanel68.add(jLabel229, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 140, -1));
 
         tblsach.setBackground(new java.awt.Color(240, 240, 240));
@@ -3378,7 +3959,7 @@ public class Homepage extends javax.swing.JFrame {
 
         jLabel231.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel231.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel231.setText("Số sách");
+        jLabel231.setText("Số Sách");
         jPanel68.add(jLabel231, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 90, -1));
 
         jLabel232.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -3388,13 +3969,19 @@ public class Homepage extends javax.swing.JFrame {
 
         chart.setBackground(new java.awt.Color(240, 240, 240));
         chart.setLayout(new java.awt.BorderLayout());
-        jPanel68.add(chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 320, 360));
+        jPanel68.add(chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 320, 390));
 
         getContentPane().add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 790, 580));
 
         setSize(new java.awt.Dimension(1008, 649));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanel69MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel69MouseClicked
+        this.setVisible(false);
+        Login lg = new Login();
+        lg.setVisible(true);
+    }//GEN-LAST:event_jPanel69MouseClicked
 
     /**
      * @param args the command line arguments
@@ -3570,17 +4157,58 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel220;
     private javax.swing.JLabel jLabel221;
+    private javax.swing.JLabel jLabel222;
+    private javax.swing.JLabel jLabel223;
     private javax.swing.JLabel jLabel224;
     private javax.swing.JLabel jLabel225;
     private javax.swing.JLabel jLabel226;
+    private javax.swing.JLabel jLabel227;
+    private javax.swing.JLabel jLabel228;
     private javax.swing.JLabel jLabel229;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel230;
     private javax.swing.JLabel jLabel231;
     private javax.swing.JLabel jLabel232;
+    private javax.swing.JLabel jLabel233;
+    private javax.swing.JLabel jLabel234;
+    private javax.swing.JLabel jLabel235;
+    private javax.swing.JLabel jLabel236;
+    private javax.swing.JLabel jLabel237;
+    private javax.swing.JLabel jLabel238;
+    private javax.swing.JLabel jLabel239;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel240;
+    private javax.swing.JLabel jLabel241;
+    private javax.swing.JLabel jLabel242;
+    private javax.swing.JLabel jLabel243;
+    private javax.swing.JLabel jLabel244;
+    private javax.swing.JLabel jLabel245;
+    private javax.swing.JLabel jLabel246;
+    private javax.swing.JLabel jLabel247;
+    private javax.swing.JLabel jLabel248;
+    private javax.swing.JLabel jLabel249;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel250;
+    private javax.swing.JLabel jLabel251;
+    private javax.swing.JLabel jLabel252;
+    private javax.swing.JLabel jLabel253;
+    private javax.swing.JLabel jLabel254;
+    private javax.swing.JLabel jLabel255;
+    private javax.swing.JLabel jLabel256;
+    private javax.swing.JLabel jLabel257;
+    private javax.swing.JLabel jLabel258;
+    private javax.swing.JLabel jLabel259;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel260;
+    private javax.swing.JLabel jLabel261;
+    private javax.swing.JLabel jLabel262;
+    private javax.swing.JLabel jLabel263;
+    private javax.swing.JLabel jLabel264;
+    private javax.swing.JLabel jLabel265;
+    private javax.swing.JLabel jLabel266;
+    private javax.swing.JLabel jLabel267;
+    private javax.swing.JLabel jLabel268;
+    private javax.swing.JLabel jLabel269;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -3618,7 +4246,6 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
@@ -3801,10 +4428,51 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel223;
     private javax.swing.JPanel jPanel224;
     private javax.swing.JPanel jPanel225;
+    private javax.swing.JPanel jPanel226;
+    private javax.swing.JPanel jPanel227;
+    private javax.swing.JPanel jPanel228;
+    private javax.swing.JPanel jPanel229;
     private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel230;
+    private javax.swing.JPanel jPanel231;
+    private javax.swing.JPanel jPanel232;
+    private javax.swing.JPanel jPanel233;
+    private javax.swing.JPanel jPanel234;
+    private javax.swing.JPanel jPanel235;
+    private javax.swing.JPanel jPanel236;
+    private javax.swing.JPanel jPanel237;
+    private javax.swing.JPanel jPanel238;
+    private javax.swing.JPanel jPanel239;
     private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel240;
+    private javax.swing.JPanel jPanel241;
+    private javax.swing.JPanel jPanel242;
+    private javax.swing.JPanel jPanel243;
+    private javax.swing.JPanel jPanel244;
+    private javax.swing.JPanel jPanel245;
+    private javax.swing.JPanel jPanel246;
+    private javax.swing.JPanel jPanel247;
+    private javax.swing.JPanel jPanel248;
+    private javax.swing.JPanel jPanel249;
     private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel250;
+    private javax.swing.JPanel jPanel251;
+    private javax.swing.JPanel jPanel252;
+    private javax.swing.JPanel jPanel253;
+    private javax.swing.JPanel jPanel254;
+    private javax.swing.JPanel jPanel255;
+    private javax.swing.JPanel jPanel256;
+    private javax.swing.JPanel jPanel257;
+    private javax.swing.JPanel jPanel258;
+    private javax.swing.JPanel jPanel259;
     private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel260;
+    private javax.swing.JPanel jPanel261;
+    private javax.swing.JPanel jPanel262;
+    private javax.swing.JPanel jPanel263;
+    private javax.swing.JPanel jPanel264;
+    private javax.swing.JPanel jPanel265;
+    private javax.swing.JPanel jPanel266;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
