@@ -681,13 +681,13 @@ public class Homepage extends javax.swing.JFrame {
         jLabel225 = new javax.swing.JLabel();
         jLabel226 = new javax.swing.JLabel();
         jLabel229 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblsach = new rojeru_san.complementos.RSTableMetro();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tblnguoimuon = new rojeru_san.complementos.RSTableMetro();
         jLabel231 = new javax.swing.JLabel();
         jLabel232 = new javax.swing.JLabel();
         chart = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tblnguoimuon = new javax.swing.JTable();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tblsach = new javax.swing.JTable();
 
         jLabel230.setText("jLabel230");
 
@@ -3913,50 +3913,6 @@ public class Homepage extends javax.swing.JFrame {
         jLabel229.setText("Người Mượn");
         jPanel68.add(jLabel229, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 140, -1));
 
-        tblsach.setBackground(new java.awt.Color(240, 240, 240));
-        tblsach.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Ma sach", "Ten sach", "The loai", "So luong"
-            }
-        ));
-        tblsach.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
-        tblsach.setColorBordeFilas(new java.awt.Color(102, 102, 255));
-        tblsach.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
-        tblsach.setColorSelBackgound(new java.awt.Color(255, 51, 51));
-        tblsach.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 25)); // NOI18N
-        tblsach.setFuenteFilas(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        tblsach.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI", 1, 20)); // NOI18N
-        tblsach.setFuenteHead(new java.awt.Font("Yu Gothic UI Semibold", 1, 20)); // NOI18N
-        tblsach.setRowHeight(30);
-        jScrollPane1.setViewportView(tblsach);
-
-        jPanel68.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 440, 180));
-
-        tblnguoimuon.setBackground(new java.awt.Color(240, 240, 240));
-        tblnguoimuon.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Ma nguoi muon", "Ten nguoi muon", "Email"
-            }
-        ));
-        tblnguoimuon.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
-        tblnguoimuon.setColorBordeFilas(new java.awt.Color(102, 102, 255));
-        tblnguoimuon.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
-        tblnguoimuon.setColorSelBackgound(new java.awt.Color(255, 51, 51));
-        tblnguoimuon.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 25)); // NOI18N
-        tblnguoimuon.setFuenteFilas(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
-        tblnguoimuon.setFuenteFilasSelect(new java.awt.Font("Yu Gothic UI", 1, 20)); // NOI18N
-        tblnguoimuon.setFuenteHead(new java.awt.Font("Yu Gothic UI Semibold", 1, 20)); // NOI18N
-        tblnguoimuon.setRowHeight(30);
-        jScrollPane2.setViewportView(tblnguoimuon);
-
-        jPanel68.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 440, 180));
-
         jLabel231.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel231.setForeground(new java.awt.Color(0, 0, 0));
         jLabel231.setText("Số Sách");
@@ -3969,11 +3925,40 @@ public class Homepage extends javax.swing.JFrame {
 
         chart.setBackground(new java.awt.Color(240, 240, 240));
         chart.setLayout(new java.awt.BorderLayout());
-        jPanel68.add(chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 320, 390));
+        jPanel68.add(chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 330, 420));
+
+        tblnguoimuon.setBackground(new java.awt.Color(240, 240, 240));
+        tblnguoimuon.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Mã Người Mượn", "Tên Người Mượn", "Email"
+            }
+        ));
+        jScrollPane3.setViewportView(tblnguoimuon);
+
+        jPanel68.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 440, 170));
+
+        tblsach.setBackground(new java.awt.Color(240, 240, 240));
+        tblsach.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Mã Sách", "Tên Sách", "Thể Loại", "Số Lượng"
+            }
+        ));
+        jScrollPane4.setViewportView(tblsach);
+        if (tblsach.getColumnModel().getColumnCount() > 0) {
+            tblsach.getColumnModel().getColumn(3).setHeaderValue("Số Lượng");
+        }
+
+        jPanel68.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 440, 170));
 
         getContentPane().add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 790, 580));
 
-        setSize(new java.awt.Dimension(1008, 649));
+        setSize(new java.awt.Dimension(1008, 651));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -4553,10 +4538,10 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel97;
     private javax.swing.JPanel jPanel98;
     private javax.swing.JPanel jPanel99;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private rojeru_san.complementos.RSTableMetro tblnguoimuon;
-    private rojeru_san.complementos.RSTableMetro tblsach;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTable tblnguoimuon;
+    private javax.swing.JTable tblsach;
     private javax.swing.JLabel txtconlai;
     private javax.swing.JLabel txtdangmuon;
     private javax.swing.JLabel txtnguoimuon;
