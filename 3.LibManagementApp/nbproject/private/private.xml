@@ -3,10 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/common/view/Homepage.java</file>
             <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/model/Book.java</file>
             <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/book/controller/BookDetailController.java</file>
             <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/common/view/CopyBookControl.java</file>
+=======
+            <file>file:/E:/LibraryManagementProject/3.LibManagementApp/src/common/view/MainFormOfLibrarian.java</file>
+>>>>>>> 3eea4b5ff1860600aa60e7c90257eabf100e3fc1
         </group>
     </open-files>
 </project-private>

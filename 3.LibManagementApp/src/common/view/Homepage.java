@@ -684,6 +684,10 @@ public class Homepage extends javax.swing.JFrame {
         jLabel231 = new javax.swing.JLabel();
         jLabel232 = new javax.swing.JLabel();
         chart = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tblnguoimuon = new javax.swing.JTable();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tblsach = new javax.swing.JTable();
 
         jLabel230.setText("jLabel230");
 
@@ -3921,11 +3925,40 @@ public class Homepage extends javax.swing.JFrame {
 
         chart.setBackground(new java.awt.Color(240, 240, 240));
         chart.setLayout(new java.awt.BorderLayout());
-        jPanel68.add(chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 320, 390));
+        jPanel68.add(chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 330, 420));
+
+        tblnguoimuon.setBackground(new java.awt.Color(240, 240, 240));
+        tblnguoimuon.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Mã Người Mượn", "Tên Người Mượn", "Email"
+            }
+        ));
+        jScrollPane3.setViewportView(tblnguoimuon);
+
+        jPanel68.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 440, 170));
+
+        tblsach.setBackground(new java.awt.Color(240, 240, 240));
+        tblsach.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Mã Sách", "Tên Sách", "Thể Loại", "Số Lượng"
+            }
+        ));
+        jScrollPane4.setViewportView(tblsach);
+        if (tblsach.getColumnModel().getColumnCount() > 0) {
+            tblsach.getColumnModel().getColumn(3).setHeaderValue("Số Lượng");
+        }
+
+        jPanel68.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 440, 170));
 
         getContentPane().add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 790, 580));
 
-        setSize(new java.awt.Dimension(1008, 649));
+        setSize(new java.awt.Dimension(1008, 651));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -4505,6 +4538,13 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel97;
     private javax.swing.JPanel jPanel98;
     private javax.swing.JPanel jPanel99;
+<<<<<<< HEAD
+=======
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTable tblnguoimuon;
+    private javax.swing.JTable tblsach;
+>>>>>>> 3eea4b5ff1860600aa60e7c90257eabf100e3fc1
     private javax.swing.JLabel txtconlai;
     private javax.swing.JLabel txtdangmuon;
     private javax.swing.JLabel txtnguoimuon;
