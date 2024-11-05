@@ -6,6 +6,7 @@
 package model;
 
 //import book.controller.BookDetailController;
+import book.controller.BookDetailController;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
