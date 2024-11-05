@@ -4538,13 +4538,10 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel97;
     private javax.swing.JPanel jPanel98;
     private javax.swing.JPanel jPanel99;
-<<<<<<< HEAD
-=======
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable tblnguoimuon;
     private javax.swing.JTable tblsach;
->>>>>>> 3eea4b5ff1860600aa60e7c90257eabf100e3fc1
     private javax.swing.JLabel txtconlai;
     private javax.swing.JLabel txtdangmuon;
     private javax.swing.JLabel txtnguoimuon;
