@@ -366,7 +366,7 @@ try {
     String sqlKiemTra = """
         SELECT tt.trangThai AS trangThaiThongTin, ct.trangThai AS trangThaiChiTiet
         FROM thongtinmuontrasach tt
-        JOIN chitietmuonsach ct ON tt.maThongTinMuonTraSach = ct.maThongTinMuonSach
+        JOIN chitietmuonsach ct ON tt.maMuon = ct.maMuon
         WHERE tt.maNM = ? AND ct.maBanSaoSach = ?
     """;
     PreparedStatement pstKiemTra = conn.prepareStatement(sqlKiemTra);
@@ -455,7 +455,7 @@ try {
         String sqlThongTinMuonTra = """
             SELECT tt.maNM, tt.ngayMuon, tt.hanTra
             FROM thongtinmuontrasach tt
-            JOIN chitietmuonsach ct ON tt.maThongTinMuonTraSach = ct.maThongTinMuonSach
+            JOIN chitietmuonsach ct ON tt.maMuon = ct.maMuon
             WHERE tt.maNM = ? AND ct.maBanSaoSach = ?
         """;
         PreparedStatement pstThongTin = conn.prepareStatement(sqlThongTinMuonTra);
