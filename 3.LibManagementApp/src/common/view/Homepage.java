@@ -504,7 +504,7 @@ public class Homepage extends javax.swing.JFrame {
         jLabel220 = new javax.swing.JLabel();
         jPanel221 = new javax.swing.JPanel();
         jLabel221 = new javax.swing.JLabel();
-        jLabel222 = new javax.swing.JLabel();
+        JLablelBorrowerManagement = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jPanel69 = new javax.swing.JPanel();
         jPanel226 = new javax.swing.JPanel();
@@ -668,7 +668,7 @@ public class Homepage extends javax.swing.JFrame {
         jLabel268 = new javax.swing.JLabel();
         jPanel266 = new javax.swing.JPanel();
         jLabel269 = new javax.swing.JLabel();
-        jPanel68 = new javax.swing.JPanel();
+        JPanelHomepage = new javax.swing.JPanel();
         jPanel222 = new javax.swing.JPanel();
         txtsosach = new javax.swing.JLabel();
         jPanel223 = new javax.swing.JPanel();
@@ -694,7 +694,7 @@ public class Homepage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 106, 106));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_menu_48px_1.png"))); // NOI18N
@@ -2833,12 +2833,12 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel60.add(jPanel190, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
 
-        jLabel222.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel222.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jLabel222.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel222.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Conference_26px.png"))); // NOI18N
-        jLabel222.setText("Quản lý người mượn");
-        jPanel60.add(jLabel222, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 210, 40));
+        JLablelBorrowerManagement.setBackground(new java.awt.Color(61, 61, 61));
+        JLablelBorrowerManagement.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        JLablelBorrowerManagement.setForeground(new java.awt.Color(153, 153, 153));
+        JLablelBorrowerManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Conference_26px.png"))); // NOI18N
+        JLablelBorrowerManagement.setText("Quản lý người mượn");
+        jPanel60.add(JLablelBorrowerManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 210, 40));
 
         jPanel3.add(jPanel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 150, 40));
 
@@ -3846,8 +3846,8 @@ public class Homepage extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 580));
 
-        jPanel68.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel68.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        JPanelHomepage.setBackground(new java.awt.Color(255, 255, 255));
+        JPanelHomepage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel222.setBackground(new java.awt.Color(240, 240, 240));
         jPanel222.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 0, 0, 0, new java.awt.Color(255, 51, 51)));
@@ -3858,7 +3858,7 @@ public class Homepage extends javax.swing.JFrame {
         txtsosach.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Book_Shelf_50px.png"))); // NOI18N
         jPanel222.add(txtsosach, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 110, -1));
 
-        jPanel68.add(jPanel222, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 140, 70));
+        JPanelHomepage.add(jPanel222, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 140, 70));
 
         jPanel223.setBackground(new java.awt.Color(240, 240, 240));
         jPanel223.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 0, 0, 0, new java.awt.Color(102, 102, 255)));
@@ -3869,7 +3869,7 @@ public class Homepage extends javax.swing.JFrame {
         txtnguoimuon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_People_50px.png"))); // NOI18N
         jPanel223.add(txtnguoimuon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, -1));
 
-        jPanel68.add(jPanel223, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 120, 70));
+        JPanelHomepage.add(jPanel223, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 120, 70));
 
         jPanel224.setBackground(new java.awt.Color(240, 240, 240));
         jPanel224.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 0, 0, 0, new java.awt.Color(255, 51, 51)));
@@ -3880,7 +3880,7 @@ public class Homepage extends javax.swing.JFrame {
         txtconlai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_List_of_Thumbnails_50px.png"))); // NOI18N
         jPanel224.add(txtconlai, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 110, -1));
 
-        jPanel68.add(jPanel224, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 50, 150, 70));
+        JPanelHomepage.add(jPanel224, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 50, 150, 70));
 
         jPanel225.setBackground(new java.awt.Color(240, 240, 240));
         jPanel225.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 0, 0, 0, new java.awt.Color(102, 102, 255)));
@@ -3891,41 +3891,41 @@ public class Homepage extends javax.swing.JFrame {
         txtdangmuon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Sell_50px.png"))); // NOI18N
         jPanel225.add(txtdangmuon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, -1));
 
-        jPanel68.add(jPanel225, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 120, 70));
+        JPanelHomepage.add(jPanel225, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 120, 70));
 
         jLabel224.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel224.setForeground(new java.awt.Color(0, 0, 0));
         jLabel224.setText("Sách còn lại");
-        jPanel68.add(jLabel224, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 140, -1));
+        JPanelHomepage.add(jLabel224, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 140, -1));
 
         jLabel225.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel225.setForeground(new java.awt.Color(0, 0, 0));
         jLabel225.setText("Sách đang cho mượn");
-        jPanel68.add(jLabel225, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 190, -1));
+        JPanelHomepage.add(jLabel225, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 190, -1));
 
         jLabel226.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel226.setForeground(new java.awt.Color(0, 0, 0));
         jLabel226.setText("Chi tiết sách");
-        jPanel68.add(jLabel226, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 180, -1));
+        JPanelHomepage.add(jLabel226, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 180, -1));
 
         jLabel229.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel229.setForeground(new java.awt.Color(0, 0, 0));
         jLabel229.setText("Người Mượn");
-        jPanel68.add(jLabel229, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 140, -1));
+        JPanelHomepage.add(jLabel229, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 140, -1));
 
         jLabel231.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel231.setForeground(new java.awt.Color(0, 0, 0));
         jLabel231.setText("Số Sách");
-        jPanel68.add(jLabel231, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 90, -1));
+        JPanelHomepage.add(jLabel231, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 90, -1));
 
         jLabel232.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel232.setForeground(new java.awt.Color(0, 0, 0));
         jLabel232.setText("Chi tiết người mượn");
-        jPanel68.add(jLabel232, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 180, -1));
+        JPanelHomepage.add(jLabel232, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 180, -1));
 
         chart.setBackground(new java.awt.Color(240, 240, 240));
         chart.setLayout(new java.awt.BorderLayout());
-        jPanel68.add(chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 330, 420));
+        JPanelHomepage.add(chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 330, 420));
 
         tblnguoimuon.setBackground(new java.awt.Color(240, 240, 240));
         tblnguoimuon.setModel(new javax.swing.table.DefaultTableModel(
@@ -3938,7 +3938,7 @@ public class Homepage extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tblnguoimuon);
 
-        jPanel68.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 440, 170));
+        JPanelHomepage.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 440, 170));
 
         tblsach.setBackground(new java.awt.Color(240, 240, 240));
         tblsach.setModel(new javax.swing.table.DefaultTableModel(
@@ -3954,9 +3954,9 @@ public class Homepage extends javax.swing.JFrame {
             tblsach.getColumnModel().getColumn(3).setHeaderValue("Số Lượng");
         }
 
-        jPanel68.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 440, 170));
+        JPanelHomepage.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 440, 170));
 
-        getContentPane().add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 790, 580));
+        getContentPane().add(JPanelHomepage, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 790, 580));
 
         setSize(new java.awt.Dimension(1008, 651));
         setLocationRelativeTo(null);
@@ -4004,6 +4004,8 @@ public class Homepage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel JLablelBorrowerManagement;
+    private javax.swing.JPanel JPanelHomepage;
     private javax.swing.JPanel chart;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -4142,7 +4144,6 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel220;
     private javax.swing.JLabel jLabel221;
-    private javax.swing.JLabel jLabel222;
     private javax.swing.JLabel jLabel223;
     private javax.swing.JLabel jLabel224;
     private javax.swing.JLabel jLabel225;
@@ -4503,7 +4504,6 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel65;
     private javax.swing.JPanel jPanel66;
     private javax.swing.JPanel jPanel67;
-    private javax.swing.JPanel jPanel68;
     private javax.swing.JPanel jPanel69;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel70;
