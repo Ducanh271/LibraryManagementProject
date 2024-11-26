@@ -505,11 +505,8 @@ public class Homepage extends javax.swing.JFrame {
         jLabel220 = new javax.swing.JLabel();
         jPanel221 = new javax.swing.JPanel();
         jLabel221 = new javax.swing.JLabel();
-<<<<<<< HEAD
         quanlynguoimuon = new javax.swing.JLabel();
-=======
         JLablelBorrowerManagement = new javax.swing.JLabel();
->>>>>>> 87fd8092f68aaf16a24107139d4fcddca7c9c6eb
         jLabel13 = new javax.swing.JLabel();
         jPanel69 = new javax.swing.JPanel();
         jPanel226 = new javax.swing.JPanel();
@@ -2843,21 +2840,18 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel60.add(jPanel190, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
 
-<<<<<<< HEAD
         quanlynguoimuon.setBackground(new java.awt.Color(61, 61, 61));
         quanlynguoimuon.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         quanlynguoimuon.setForeground(new java.awt.Color(153, 153, 153));
         quanlynguoimuon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Conference_26px.png"))); // NOI18N
         quanlynguoimuon.setText("Quản lý người mượn");
         jPanel60.add(quanlynguoimuon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 210, 40));
-=======
         JLablelBorrowerManagement.setBackground(new java.awt.Color(61, 61, 61));
         JLablelBorrowerManagement.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         JLablelBorrowerManagement.setForeground(new java.awt.Color(153, 153, 153));
         JLablelBorrowerManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Conference_26px.png"))); // NOI18N
         JLablelBorrowerManagement.setText("Quản lý người mượn");
         jPanel60.add(JLablelBorrowerManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 210, 40));
->>>>>>> 87fd8092f68aaf16a24107139d4fcddca7c9c6eb
 
         jPanel3.add(jPanel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 150, 40));
 
