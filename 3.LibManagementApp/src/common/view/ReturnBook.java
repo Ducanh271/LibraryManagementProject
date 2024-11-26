@@ -46,6 +46,7 @@ public class ReturnBook extends javax.swing.JFrame {
     private void initComponents() {
 
         rSButtonPane1 = new rojeru_san.complementos.RSButtonPane();
+        rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -68,9 +69,10 @@ public class ReturnBook extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         txtmabs = new app.bolivia.swing.JCTextField();
         txtmasv = new app.bolivia.swing.JCTextField();
-        bttimkiem = new rojerusan.RSMaterialButtonCircle();
-        bttrasach = new rojerusan.RSMaterialButtonCircle();
         jLabel11 = new javax.swing.JLabel();
+        buttontimkiem = new javax.swing.JToggleButton();
+        buttontrasach = new javax.swing.JToggleButton();
+        jButton1 = new javax.swing.JButton();
 
         javax.swing.GroupLayout rSButtonPane1Layout = new javax.swing.GroupLayout(rSButtonPane1);
         rSButtonPane1.setLayout(rSButtonPane1Layout);
@@ -82,6 +84,8 @@ public class ReturnBook extends javax.swing.JFrame {
             rSButtonPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 40, Short.MAX_VALUE)
         );
+
+        rSMaterialButtonCircle1.setText("rSMaterialButtonCircle1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -203,7 +207,7 @@ public class ReturnBook extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(hantra, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
@@ -236,31 +240,47 @@ public class ReturnBook extends javax.swing.JFrame {
 
         txtmasv.setBackground(new java.awt.Color(255, 255, 255));
 
-        bttimkiem.setBorder(null);
-        bttimkiem.setText("Tìm kiếm");
-        bttimkiem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttimkiemActionPerformed(evt);
-            }
-        });
-
-        bttrasach.setBackground(new java.awt.Color(255, 0, 0));
-        bttrasach.setBorder(null);
-        bttrasach.setText("Trả sách");
-        bttrasach.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttrasachActionPerformed(evt);
-            }
-        });
-
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/library-3.png.png"))); // NOI18N
+
+        buttontimkiem.setBackground(new java.awt.Color(0, 102, 102));
+        buttontimkiem.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        buttontimkiem.setText("Tìm kiếm");
+        buttontimkiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttontimkiemActionPerformed(evt);
+            }
+        });
+
+        buttontrasach.setBackground(new java.awt.Color(255, 51, 51));
+        buttontrasach.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        buttontrasach.setText("Trả Sách");
+        buttontrasach.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttontrasachActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8_Rewind_48px 1.png"))); // NOI18N
+        jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,22 +292,24 @@ public class ReturnBook extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel9)
                                     .addComponent(jLabel10))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtmasv, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtmabs, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(bttrasach, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bttimkiem, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(41, 41, 41))))
+                                    .addComponent(txtmabs, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(41, 41, 41))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(buttontrasach, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttontimkiem, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(93, 93, 93))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,22 +327,94 @@ public class ReturnBook extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(txtmasv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addComponent(bttimkiem, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(bttrasach, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(buttontimkiem)
+                .addGap(51, 51, 51)
+                .addComponent(buttontrasach)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1000, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void bttimkiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttimkiemActionPerformed
-     String mabs = txtmabs.getText().trim(); // Mã bản sao
+    
+    }//GEN-LAST:event_bttimkiemActionPerformed
+
+    private void bttrasachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttrasachActionPerformed
+        
+    }//GEN-LAST:event_bttrasachActionPerformed
+
+    private void buttontrasachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttontrasachActionPerformed
+        String mabs = txtmabs.getText().trim(); // Mã bản sao
+String masv = txtmasv.getText().trim(); // Mã sinh viên
+
+if (mabs.isEmpty() || masv.isEmpty()) {
+    JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ mã bản sao và mã sinh viên!");
+    return;
+}
+
+try {
+    // Kiểm tra mã bản sao và trạng thái trong bảng chitietmuonsach
+    String sqlKiemTra = """
+        SELECT tt.trangThai AS trangThaiThongTin, ct.trangThai AS trangThaiChiTiet
+        FROM thongtinmuontrasach tt
+        JOIN chitietmuonsach ct ON tt.maThongTinMuonTraSach = ct.maThongTinMuonSach
+        WHERE tt.maNM = ? AND ct.maBanSaoSach = ?
+    """;
+    PreparedStatement pstKiemTra = conn.prepareStatement(sqlKiemTra);
+    pstKiemTra.setString(1, masv);
+    pstKiemTra.setString(2, mabs);
+
+    ResultSet rsKiemTra = pstKiemTra.executeQuery();
+    if (rsKiemTra.next()) {
+        int trangThaiThongTin = rsKiemTra.getInt("trangThaiThongTin");
+        int trangThaiChiTiet = rsKiemTra.getInt("trangThaiChiTiet");
+
+        if (trangThaiThongTin == 1 && trangThaiChiTiet == 1) {
+            // Cập nhật trạng thái thành 2 trong cả hai bảng
+            String sqlCapNhatThongTin = "UPDATE thongtinmuontrasach SET trangThai = 2 WHERE maNM = ?";
+            PreparedStatement pstCapNhatThongTin = conn.prepareStatement(sqlCapNhatThongTin);
+            pstCapNhatThongTin.setString(1, masv);
+            pstCapNhatThongTin.executeUpdate();
+
+            String sqlCapNhatChiTiet = "UPDATE chitietmuonsach SET trangThai = 2 WHERE maBanSaoSach = ?";
+            PreparedStatement pstCapNhatChiTiet = conn.prepareStatement(sqlCapNhatChiTiet);
+            pstCapNhatChiTiet.setString(1, mabs);
+            pstCapNhatChiTiet.executeUpdate();
+
+            // Đặt lại các label về rỗng
+            masach.setText("");
+            mabsao.setText("");
+            tensach.setText("");
+            svmuon.setText("");
+            ngaymuon.setText("");
+            hantra.setText("");
+
+            JOptionPane.showMessageDialog(this, "Trả sách thành công!");
+        } else if (trangThaiThongTin == 2 || trangThaiChiTiet == 2) {
+            JOptionPane.showMessageDialog(this, "Quyển sách chưa được mượn!");
+        } else {
+            JOptionPane.showMessageDialog(this, "Trạng thái không hợp lệ!");
+        }
+    } else {
+        JOptionPane.showMessageDialog(this, "Không tìm thấy thông tin mượn sách với mã bản sao và mã sinh viên này!");
+    }
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(this, "Lỗi xử lý: " + e.getMessage());
+}
+
+    }//GEN-LAST:event_buttontrasachActionPerformed
+
+    private void buttontimkiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttontimkiemActionPerformed
+       String mabs = txtmabs.getText().trim(); // Mã bản sao
     String masv = txtmasv.getText().trim(); // Mã sinh viên
 
     if (mabs.isEmpty() || masv.isEmpty()) {
@@ -379,53 +473,13 @@ public class ReturnBook extends javax.swing.JFrame {
     } catch (Exception e) {
         JOptionPane.showMessageDialog(this, "Lỗi tìm kiếm: " + e.getMessage());
     }
-    }//GEN-LAST:event_bttimkiemActionPerformed
+    }//GEN-LAST:event_buttontimkiemActionPerformed
 
-    private void bttrasachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttrasachActionPerformed
-         String mabs = txtmabs.getText().trim(); // Mã bản sao
-    String masv = txtmasv.getText().trim(); // Mã sinh viên
-
-    if (mabs.isEmpty() || masv.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ mã bản sao và mã sinh viên!");
-        return;
-    }
-
-    try {
-        // Bước 1: Kiểm tra thông tin sinh viên trong bảng thongtinmuonsach
-        String sqlCheckMuonSach = "SELECT * FROM thongtinmuontrasach WHERE maNM = ? AND EXISTS (SELECT 1 FROM bansaosach WHERE maBanSao = ?)";
-        PreparedStatement pstCheckMuonSach = conn.prepareStatement(sqlCheckMuonSach);
-        pstCheckMuonSach.setString(1, masv);
-        pstCheckMuonSach.setString(2, mabs);
-
-        ResultSet rsCheckMuonSach = pstCheckMuonSach.executeQuery();
-        if (rsCheckMuonSach.next()) {
-            // Bước 2: Xóa thông tin mượn sách
-            String sqlXoaMuonSach = "DELETE FROM thongtinmuontrasach WHERE maNM = ? AND EXISTS (SELECT 1 FROM bansaosach WHERE maBanSao = ?)";
-            PreparedStatement pstXoaMuonSach = conn.prepareStatement(sqlXoaMuonSach);
-            pstXoaMuonSach.setString(1, masv);
-            pstXoaMuonSach.setString(2, mabs);
-
-            int rowsAffected = pstXoaMuonSach.executeUpdate();
-            if (rowsAffected > 0) {
-                JOptionPane.showMessageDialog(this, "Trả sách thành công!");
-
-                // Cập nhật giao diện
-                masach.setText("");
-                mabsao.setText("");
-                tensach.setText("");
-                svmuon.setText("");
-                ngaymuon.setText("");
-                hantra.setText("");
-            } else {
-                JOptionPane.showMessageDialog(this, "Không thể trả sách. Vui lòng kiểm tra lại!");
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Thông tin mượn sách không tồn tại. Vui lòng kiểm tra lại!");
-        }
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Lỗi xử lý trả sách: " + e.getMessage());
-    }
-    }//GEN-LAST:event_bttrasachActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Homepage hp = new Homepage();
+        this.setVisible(false);
+        hp.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -463,9 +517,10 @@ public class ReturnBook extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private rojerusan.RSMaterialButtonCircle bttimkiem;
-    private rojerusan.RSMaterialButtonCircle bttrasach;
+    private javax.swing.JToggleButton buttontimkiem;
+    private javax.swing.JToggleButton buttontrasach;
     private javax.swing.JLabel hantra;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -485,6 +540,7 @@ public class ReturnBook extends javax.swing.JFrame {
     private javax.swing.JLabel masach;
     private javax.swing.JLabel ngaymuon;
     private rojeru_san.complementos.RSButtonPane rSButtonPane1;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
     private javax.swing.JLabel svmuon;
     private javax.swing.JLabel tensach;
     private app.bolivia.swing.JCTextField txtmabs;
