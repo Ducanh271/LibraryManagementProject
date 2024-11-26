@@ -73,6 +73,10 @@ public class ReturnBook extends javax.swing.JFrame {
         buttontimkiem = new javax.swing.JToggleButton();
         buttontrasach = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
+        txttienphat = new app.bolivia.swing.JCTextField();
+        jLabel12 = new javax.swing.JLabel();
+        txtlydo = new app.bolivia.swing.JCTextField();
+        jLabel13 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout rSButtonPane1Layout = new javax.swing.GroupLayout(rSButtonPane1);
         rSButtonPane1.setLayout(rSButtonPane1Layout);
@@ -244,6 +248,7 @@ public class ReturnBook extends javax.swing.JFrame {
 
         buttontimkiem.setBackground(new java.awt.Color(0, 102, 102));
         buttontimkiem.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        buttontimkiem.setForeground(new java.awt.Color(255, 255, 255));
         buttontimkiem.setText("Tìm kiếm");
         buttontimkiem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,6 +258,7 @@ public class ReturnBook extends javax.swing.JFrame {
 
         buttontrasach.setBackground(new java.awt.Color(255, 51, 51));
         buttontrasach.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        buttontrasach.setForeground(new java.awt.Color(255, 255, 255));
         buttontrasach.setText("Trả Sách");
         buttontrasach.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -270,6 +276,16 @@ public class ReturnBook extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        txttienphat.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel12.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel12.setText("Tiền Phạt:");
+
+        txtlydo.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel13.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel13.setText("Lý do phạt");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -299,17 +315,22 @@ public class ReturnBook extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel9)
-                                    .addComponent(jLabel10))
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel12))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtmasv, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtmabs, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtmasv, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                                    .addComponent(txtmabs, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                                    .addComponent(txttienphat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(txtlydo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(41, 41, 41))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(buttontrasach, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(buttontimkiem, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(93, 93, 93))))))
+                                .addComponent(buttontimkiem, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(93, 93, 93))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(buttontrasach, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(91, 91, 91))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,9 +350,17 @@ public class ReturnBook extends javax.swing.JFrame {
                     .addComponent(txtmasv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(buttontimkiem)
-                .addGap(51, 51, 51)
+                .addGap(23, 23, 23)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txttienphat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtlydo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttontrasach)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(63, 63, 63))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -353,63 +382,91 @@ public class ReturnBook extends javax.swing.JFrame {
     }//GEN-LAST:event_bttrasachActionPerformed
 
     private void buttontrasachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttontrasachActionPerformed
-        String mabs = txtmabs.getText().trim(); // Mã bản sao
-String masv = txtmasv.getText().trim(); // Mã sinh viên
+  String mabs = txtmabs.getText().trim(); // Mã bản sao
+    String masv = txtmasv.getText().trim(); // Mã sinh viên
+    String tienPhat = txttienphat.getText().trim(); // Tiền phạt
+    String lyDoPhat = txtlydo.getText().trim(); // Lý do phạt
 
-if (mabs.isEmpty() || masv.isEmpty()) {
-    JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ mã bản sao và mã sinh viên!");
-    return;
-}
-
-try {
-    // Kiểm tra mã bản sao và trạng thái trong bảng chitietmuonsach
-    String sqlKiemTra = """
-        SELECT tt.trangThai AS trangThaiThongTin, ct.trangThai AS trangThaiChiTiet
-        FROM thongtinmuontrasach tt
-        JOIN chitietmuonsach ct ON tt.maMuon = ct.maMuon
-        WHERE tt.maNM = ? AND ct.maBanSaoSach = ?
-    """;
-    PreparedStatement pstKiemTra = conn.prepareStatement(sqlKiemTra);
-    pstKiemTra.setString(1, masv);
-    pstKiemTra.setString(2, mabs);
-
-    ResultSet rsKiemTra = pstKiemTra.executeQuery();
-    if (rsKiemTra.next()) {
-        int trangThaiThongTin = rsKiemTra.getInt("trangThaiThongTin");
-        int trangThaiChiTiet = rsKiemTra.getInt("trangThaiChiTiet");
-
-        if (trangThaiThongTin == 1 && trangThaiChiTiet == 1) {
-            // Cập nhật trạng thái thành 2 trong cả hai bảng
-            String sqlCapNhatThongTin = "UPDATE thongtinmuontrasach SET trangThai = 2 WHERE maNM = ?";
-            PreparedStatement pstCapNhatThongTin = conn.prepareStatement(sqlCapNhatThongTin);
-            pstCapNhatThongTin.setString(1, masv);
-            pstCapNhatThongTin.executeUpdate();
-
-            String sqlCapNhatChiTiet = "UPDATE chitietmuonsach SET trangThai = 2 WHERE maBanSaoSach = ?";
-            PreparedStatement pstCapNhatChiTiet = conn.prepareStatement(sqlCapNhatChiTiet);
-            pstCapNhatChiTiet.setString(1, mabs);
-            pstCapNhatChiTiet.executeUpdate();
-
-            // Đặt lại các label về rỗng
-            masach.setText("");
-            mabsao.setText("");
-            tensach.setText("");
-            svmuon.setText("");
-            ngaymuon.setText("");
-            hantra.setText("");
-
-            JOptionPane.showMessageDialog(this, "Trả sách thành công!");
-        } else if (trangThaiThongTin == 2 || trangThaiChiTiet == 2) {
-            JOptionPane.showMessageDialog(this, "Quyển sách chưa được mượn!");
-        } else {
-            JOptionPane.showMessageDialog(this, "Trạng thái không hợp lệ!");
-        }
-    } else {
-        JOptionPane.showMessageDialog(this, "Không tìm thấy thông tin mượn sách với mã bản sao và mã sinh viên này!");
+    if (mabs.isEmpty() || masv.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ mã bản sao và mã sinh viên!");
+        return;
     }
-} catch (Exception e) {
-    JOptionPane.showMessageDialog(this, "Lỗi xử lý: " + e.getMessage());
-}
+
+    if (!tienPhat.isEmpty() && lyDoPhat.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Vui lòng nhập lý do phạt!");
+        return;
+    }
+
+    if (tienPhat.isEmpty() && !lyDoPhat.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Vui lòng nhập tiền phạt!");
+        return;
+    }
+
+    try {
+        // Kiểm tra mã bản sao và trạng thái trong bảng chitietmuonsach
+        String sqlKiemTra = """
+            SELECT tt.trangThai AS trangThaiThongTin, ct.trangThai AS trangThaiChiTiet
+            FROM thongtinmuontrasach tt
+            JOIN chitietmuonsach ct ON tt.maMuon = ct.maMuon
+            WHERE tt.maNM = ? AND ct.maBanSaoSach = ?
+        """;
+        PreparedStatement pstKiemTra = conn.prepareStatement(sqlKiemTra);
+        pstKiemTra.setString(1, masv);
+        pstKiemTra.setString(2, mabs);
+
+        ResultSet rsKiemTra = pstKiemTra.executeQuery();
+        if (rsKiemTra.next()) {
+            int trangThaiThongTin = rsKiemTra.getInt("trangThaiThongTin");
+            int trangThaiChiTiet = rsKiemTra.getInt("trangThaiChiTiet");
+
+            if (trangThaiThongTin == 1 && trangThaiChiTiet == 1) {
+                // Cập nhật trạng thái thành 2 trong bảng thongtinmuontrasach
+                String sqlCapNhatThongTin = "UPDATE thongtinmuontrasach SET trangThai = 2 WHERE maNM = ?";
+                PreparedStatement pstCapNhatThongTin = conn.prepareStatement(sqlCapNhatThongTin);
+                pstCapNhatThongTin.setString(1, masv);
+                pstCapNhatThongTin.executeUpdate();
+
+                // Cập nhật trạng thái và tùy chọn cập nhật tienPhat và lyDoPhat
+                String sqlCapNhatChiTiet;
+                PreparedStatement pstCapNhatChiTiet;
+                if (!tienPhat.isEmpty() && !lyDoPhat.isEmpty()) {
+                    sqlCapNhatChiTiet = """
+                        UPDATE chitietmuonsach 
+                        SET trangThai = 2, tienPhat = ?, lyDoPhat = ?
+                        WHERE maBanSaoSach = ?
+                    """;
+                    pstCapNhatChiTiet = conn.prepareStatement(sqlCapNhatChiTiet);
+                    pstCapNhatChiTiet.setString(1, tienPhat);
+                    pstCapNhatChiTiet.setString(2, lyDoPhat);
+                } else {
+                    sqlCapNhatChiTiet = "UPDATE chitietmuonsach SET trangThai = 2 WHERE maBanSaoSach = ?";
+                    pstCapNhatChiTiet = conn.prepareStatement(sqlCapNhatChiTiet);
+                }
+                pstCapNhatChiTiet.setString(pstCapNhatChiTiet.getParameterMetaData().getParameterCount(), mabs);
+                pstCapNhatChiTiet.executeUpdate();
+
+                // Đặt lại các trường nhập liệu về rỗng
+                masach.setText("");
+                mabsao.setText("");
+                tensach.setText("");
+                svmuon.setText("");
+                ngaymuon.setText("");
+                hantra.setText("");
+                txttienphat.setText("");
+                txtlydo.setText("");
+
+                JOptionPane.showMessageDialog(this, "Trả sách thành công!");
+            } else if (trangThaiThongTin == 2 || trangThaiChiTiet == 2) {
+                JOptionPane.showMessageDialog(this, "Quyển sách chưa được mượn!");
+            } else {
+                JOptionPane.showMessageDialog(this, "Trạng thái không hợp lệ!");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Không tìm thấy thông tin mượn sách với mã bản sao và mã sinh viên này!");
+        }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Lỗi xử lý: " + e.getMessage());
+    }
 
     }//GEN-LAST:event_buttontrasachActionPerformed
 
@@ -524,6 +581,8 @@ try {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -543,7 +602,9 @@ try {
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
     private javax.swing.JLabel svmuon;
     private javax.swing.JLabel tensach;
+    private app.bolivia.swing.JCTextField txtlydo;
     private app.bolivia.swing.JCTextField txtmabs;
     private app.bolivia.swing.JCTextField txtmasv;
+    private app.bolivia.swing.JCTextField txttienphat;
     // End of variables declaration//GEN-END:variables
 }
