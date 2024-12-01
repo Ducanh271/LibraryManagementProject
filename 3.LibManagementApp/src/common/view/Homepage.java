@@ -90,7 +90,7 @@ public class Homepage extends javax.swing.JFrame {
             soNguoiMuon = rsSoNguoiMuon.getInt(1);
             txtnguoimuon.setText(String.valueOf(soNguoiMuon));
         }
-        String querySoDangMuon = "SELECT COUNT(maThongTinMuonSach) FROM chitietmuonsach";
+        String querySoDangMuon = "SELECT COUNT(maMuon) FROM chitietmuonsach";
         java.sql.PreparedStatement psSoDangMuon = con.prepareStatement(querySoDangMuon);
         java.sql.ResultSet rsSoDangMuon = psSoDangMuon.executeQuery();
         int soDangMuon = 0;
