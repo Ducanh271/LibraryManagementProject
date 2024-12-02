@@ -143,6 +143,24 @@ public class ReturnBook extends javax.swing.JFrame {
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
+        masach.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        masach.setForeground(new java.awt.Color(255, 255, 255));
+
+        mabsao.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        mabsao.setForeground(new java.awt.Color(255, 255, 255));
+
+        tensach.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tensach.setForeground(new java.awt.Color(255, 255, 255));
+
+        ngaymuon.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ngaymuon.setForeground(new java.awt.Color(255, 255, 255));
+
+        svmuon.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        svmuon.setForeground(new java.awt.Color(255, 255, 255));
+
+        hantra.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        hantra.setForeground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -241,6 +259,11 @@ public class ReturnBook extends javax.swing.JFrame {
         jLabel10.setText("Mã sinh viên: ");
 
         txtmabs.setBackground(new java.awt.Color(255, 255, 255));
+        txtmabs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtmabsActionPerformed(evt);
+            }
+        });
 
         txtmasv.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -405,10 +428,9 @@ public class ReturnBook extends javax.swing.JFrame {
     try {
         // Kiểm tra mã bản sao và trạng thái trong bảng chitietmuonsach
         String sqlKiemTra = """
-            SELECT tt.trangThai AS trangThaiThongTin, ct.trangThai AS trangThaiChiTiet
-            FROM thongtinmuontrasach tt
-            JOIN chitietmuonsach ct ON tt.maMuon = ct.maMuon
-            WHERE tt.maNM = ? AND ct.maBanSaoSach = ?
+            SELECT trangThai
+            FROM thongtinmuontrasach
+            WHERE maNM = ? AND maBanSaoSach = ?
         """;
         PreparedStatement pstKiemTra = conn.prepareStatement(sqlKiemTra);
         pstKiemTra.setString(1, masv);
@@ -416,32 +438,38 @@ public class ReturnBook extends javax.swing.JFrame {
 
         ResultSet rsKiemTra = pstKiemTra.executeQuery();
         if (rsKiemTra.next()) {
-            int trangThaiThongTin = rsKiemTra.getInt("trangThaiThongTin");
-            int trangThaiChiTiet = rsKiemTra.getInt("trangThaiChiTiet");
+            int trangThai = rsKiemTra.getInt("trangThai");
 
-            if (trangThaiThongTin == 1 && trangThaiChiTiet == 1) {
+            if (trangThai==0) {
                 // Cập nhật trạng thái thành 2 trong bảng thongtinmuontrasach
-                String sqlCapNhatThongTin = "UPDATE thongtinmuontrasach SET trangThai = 2 WHERE maNM = ?";
+                String sqlCapNhatThongTin = "UPDATE thongtinmuontrasach SET trangThai = 1 WHERE maNM = ?";
                 PreparedStatement pstCapNhatThongTin = conn.prepareStatement(sqlCapNhatThongTin);
                 pstCapNhatThongTin.setString(1, masv);
                 pstCapNhatThongTin.executeUpdate();
 
                 // Cập nhật trạng thái và tùy chọn cập nhật tienPhat và lyDoPhat
                 String sqlCapNhatChiTiet;
-                PreparedStatement pstCapNhatChiTiet;
+                PreparedStatement pstCapNhatChiTiet = null;
                 if (!tienPhat.isEmpty() && !lyDoPhat.isEmpty()) {
                     sqlCapNhatChiTiet = """
-                        UPDATE chitietmuonsach 
-                        SET trangThai = 2, tienPhat = ?, lyDoPhat = ?
+                        UPDATE thongtinmuontrasach 
+                        SET trangThai = 1, tienPhat = ?, lyDoPhat = ?
                         WHERE maBanSaoSach = ?
                     """;
                     pstCapNhatChiTiet = conn.prepareStatement(sqlCapNhatChiTiet);
                     pstCapNhatChiTiet.setString(1, tienPhat);
                     pstCapNhatChiTiet.setString(2, lyDoPhat);
-                } else {
-                    sqlCapNhatChiTiet = "UPDATE chitietmuonsach SET trangThai = 2 WHERE maBanSaoSach = ?";
-                    pstCapNhatChiTiet = conn.prepareStatement(sqlCapNhatChiTiet);
                 }
+                else {
+    // Trường hợp không có tiền phạt hoặc lý do phạt
+    sqlCapNhatChiTiet = """
+        UPDATE thongtinmuontrasach 
+        SET trangThai = 1
+        WHERE maBanSaoSach = ?
+    """;
+    pstCapNhatChiTiet = conn.prepareStatement(sqlCapNhatChiTiet);
+    pstCapNhatChiTiet.setString(1, mabs);
+}
                 pstCapNhatChiTiet.setString(pstCapNhatChiTiet.getParameterMetaData().getParameterCount(), mabs);
                 pstCapNhatChiTiet.executeUpdate();
 
@@ -456,7 +484,7 @@ public class ReturnBook extends javax.swing.JFrame {
                 txtlydo.setText("");
 
                 JOptionPane.showMessageDialog(this, "Trả sách thành công!");
-            } else if (trangThaiThongTin == 2 || trangThaiChiTiet == 2) {
+            } else if (trangThai == 1) {
                 JOptionPane.showMessageDialog(this, "Quyển sách chưa được mượn!");
             } else {
                 JOptionPane.showMessageDialog(this, "Trạng thái không hợp lệ!");
@@ -471,7 +499,7 @@ public class ReturnBook extends javax.swing.JFrame {
     }//GEN-LAST:event_buttontrasachActionPerformed
 
     private void buttontimkiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttontimkiemActionPerformed
-       String mabs = txtmabs.getText().trim(); // Mã bản sao
+        String mabs = txtmabs.getText().trim(); // Mã bản sao
     String masv = txtmasv.getText().trim(); // Mã sinh viên
 
     if (mabs.isEmpty() || masv.isEmpty()) {
@@ -510,10 +538,9 @@ public class ReturnBook extends javax.swing.JFrame {
 
         // Bước 3: Kiểm tra thông tin người mượn và mã thông tin mượn trả
         String sqlThongTinMuonTra = """
-            SELECT tt.maNM, tt.ngayMuon, tt.hanTra
-            FROM thongtinmuontrasach tt
-            JOIN chitietmuonsach ct ON tt.maMuon = ct.maMuon
-            WHERE tt.maNM = ? AND ct.maBanSaoSach = ?
+            SELECT maNM, ngayMuon, hanTra
+            FROM thongtinmuontrasach 
+            WHERE maNM = ? AND maBanSaoSach = ? AND trangThai = 0
         """;
         PreparedStatement pstThongTin = conn.prepareStatement(sqlThongTinMuonTra);
         pstThongTin.setString(1, masv);
@@ -537,6 +564,10 @@ public class ReturnBook extends javax.swing.JFrame {
         this.setVisible(false);
         hp.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtmabsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmabsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtmabsActionPerformed
 
     /**
      * @param args the command line arguments
