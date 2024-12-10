@@ -12,6 +12,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.UUID;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -57,14 +59,16 @@ public class IssueBook extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        label = new javax.swing.JLabel();
         lbl_studentID = new javax.swing.JLabel();
         lbl_studentName = new javax.swing.JLabel();
         lbl_course = new javax.swing.JLabel();
-        lbl_branch = new javax.swing.JLabel();
+        lbl_email = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         lbl_studentError = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        lbl_branch = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -73,6 +77,7 @@ public class IssueBook extends javax.swing.JFrame {
         txt_StudentID = new javax.swing.JTextField();
         txt_CopyBookID = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        btn_IssueBook1 = new necesario.RSMaterialButtonCircle();
         date_dueDate = new rojeru_san.componentes.RSDateChooser();
         date_issueDate = new rojeru_san.componentes.RSDateChooser();
 
@@ -179,11 +184,16 @@ public class IssueBook extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Số lượng:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 90, -1));
 
         lbl_bookError.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         lbl_bookError.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(lbl_bookError, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 600, 180, 50));
+        lbl_bookError.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                lbl_bookErrorFocusLost(evt);
+            }
+        });
+        jPanel1.add(lbl_bookError, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 600, 280, 50));
 
         panel_main.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 740));
 
@@ -216,10 +226,10 @@ public class IssueBook extends javax.swing.JFrame {
         jLabel12.setText("Niên khóa: ");
         jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
 
-        jLabel14.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Ngành học: ");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
+        label.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        label.setForeground(new java.awt.Color(255, 255, 255));
+        label.setText("Email:");
+        jPanel3.add(label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 110, -1));
 
         lbl_studentID.setBackground(new java.awt.Color(255, 255, 255));
         lbl_studentID.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -234,12 +244,12 @@ public class IssueBook extends javax.swing.JFrame {
         lbl_course.setBackground(new java.awt.Color(255, 255, 255));
         lbl_course.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         lbl_course.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel3.add(lbl_course, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 190, 30));
+        jPanel3.add(lbl_course, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 190, 30));
 
-        lbl_branch.setBackground(new java.awt.Color(255, 255, 255));
-        lbl_branch.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        lbl_branch.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel3.add(lbl_branch, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 190, 30));
+        lbl_email.setBackground(new java.awt.Color(255, 255, 255));
+        lbl_email.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        lbl_email.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel3.add(lbl_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, 190, 30));
 
         jLabel13.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -255,7 +265,22 @@ public class IssueBook extends javax.swing.JFrame {
 
         lbl_studentError.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         lbl_studentError.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel3.add(lbl_studentError, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, 190, 40));
+        lbl_studentError.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                lbl_studentErrorFocusLost(evt);
+            }
+        });
+        jPanel3.add(lbl_studentError, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 600, 270, 40));
+
+        jLabel16.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Ngành học: ");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 110, -1));
+
+        lbl_branch.setBackground(new java.awt.Color(255, 255, 255));
+        lbl_branch.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        lbl_branch.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel3.add(lbl_branch, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 190, 30));
 
         panel_main.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 400, 740));
 
@@ -337,10 +362,19 @@ public class IssueBook extends javax.swing.JFrame {
         jLabel9.setText("  Thông tin sinh viên");
         panel_main.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 100, 310, 120));
 
+        btn_IssueBook1.setBackground(new java.awt.Color(0, 106, 106));
+        btn_IssueBook1.setText("Cho mượn");
+        btn_IssueBook1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_IssueBook1ActionPerformed(evt);
+            }
+        });
+        panel_main.add(btn_IssueBook1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 570, 280, 60));
+
         date_dueDate.setColorBackground(new java.awt.Color(0, 106, 106));
         date_dueDate.setColorButtonHover(new java.awt.Color(0, 106, 106));
         date_dueDate.setColorForeground(new java.awt.Color(0, 106, 106));
-        panel_main.add(date_dueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 450, 270, -1));
+        panel_main.add(date_dueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 460, 270, -1));
 
         date_issueDate.setColorBackground(new java.awt.Color(0, 106, 106));
         date_issueDate.setColorButtonHover(new java.awt.Color(0, 106, 106));
@@ -360,14 +394,6 @@ public class IssueBook extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_CopyBookIDActionPerformed
 
-    private void btn_IssueBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IssueBookActionPerformed
-        if (issueBook() == true) {
-            JOptionPane.showMessageDialog(this, "Thêm mượn thành công");
-        } else {
-            JOptionPane.showMessageDialog(this, "Thêm thất bại");
-        }
-    }//GEN-LAST:event_btn_IssueBookActionPerformed
-
     private void txt_StudentIDFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_StudentIDFocusLost
 
         if (!txt_StudentID.getText().equals("")) {
@@ -378,46 +404,86 @@ public class IssueBook extends javax.swing.JFrame {
 
     private void txt_CopyBookIDFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_CopyBookIDFocusLost
         if (!txt_CopyBookID.getText().equals("")) {
+            
             getBookDetails();
         }
     }//GEN-LAST:event_txt_CopyBookIDFocusLost
-    // hàm này sẽ được cho vào model
+
+    private void btn_IssueBook1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IssueBook1ActionPerformed
+         if(lendingBook() == true){
+             JOptionPane.showMessageDialog(this, "cho mượn thành công");
+         }
+    }//GEN-LAST:event_btn_IssueBook1ActionPerformed
+
+    private void lbl_bookErrorFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lbl_bookErrorFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl_bookErrorFocusLost
+
+    private void lbl_studentErrorFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lbl_studentErrorFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbl_studentErrorFocusLost
+    // hàm kiểm tra mã bản sao có tồn tại hay không
+    public boolean isCopyExist(String maBanSao) throws Exception {
+        String sql = "SELECT 1 FROM bansaosach WHERE maBanSao = ?";
+
+        try (Connection conn = DatabaseConnection.getConnection(); PreparedStatement pst = conn.prepareStatement(sql)) {
+
+            pst.setString(1, maBanSao); // Đặt giá trị cho tham số `?`
+            try (ResultSet rs = pst.executeQuery()) {
+                // Trả về true nếu tồn tại, false nếu không tồn tại
+                return rs.next();
+            }
+        }
+    }
+// hàm này sẽ được cho vào model
+
     public void getBookDetails() {
         String copOfBookID = txt_CopyBookID.getText();
-        String bookID = copOfBookID.length() >= 6 ? copOfBookID.substring(0, 6) : copOfBookID;
-        try (Connection con = DatabaseConnection.getConnection()) {
-            String query1 = "select * from sach where maSach = ?";
-            try (PreparedStatement pst = con.prepareStatement(query1)) {
-                pst.setString(1, bookID);
-                try (ResultSet rs = pst.executeQuery()) {
-                    if (rs.next()) {
-                        lbl_copyID.setText(copOfBookID);
-                        lbl_bookID.setText(rs.getString("maSach"));
-                        lbl_bookName.setText(rs.getString("tenSach"));
-                        lbl_NumbersOfBook.setText(rs.getString("soLuong"));
-                        lbl_bookError.setText("");
+        try {
+            boolean exits = isCopyExist(copOfBookID);
 
-                    } else {
-                        lbl_bookError.setText("Mã bản sao không hợp lệ");
-                    }
-                }
-            }
+            if (exits) {
+                String bookID = copOfBookID.length() >= 6 ? copOfBookID.substring(0, 6) : copOfBookID;
 
-            String query2 = "SELECT tacgia.tenTacGia FROM tacgia "
-                    + "JOIN chitiettacgia ON tacgia.maTacGia = chitiettacgia.maTacGia "
-                    + "WHERE chitiettacgia.maSach = ?";
-            try (PreparedStatement pst2 = con.prepareStatement(query2)) {
-                pst2.setString(1, bookID);
-                try (ResultSet rs2 = pst2.executeQuery()) {
-                    if (rs2.next()) {
-                        lbl_author.setText(rs2.getString("tenTacGia"));
+                try (Connection con = DatabaseConnection.getConnection()) {
+                    String query1 = "select * from sach where maSach = ?";
+                    try (PreparedStatement pst = con.prepareStatement(query1)) {
+                        pst.setString(1, bookID);
+                        try (ResultSet rs = pst.executeQuery()) {
+                            if (rs.next()) {
+                                lbl_copyID.setText(copOfBookID);
+                                lbl_bookID.setText(rs.getString("maSach"));
+                                lbl_bookName.setText(rs.getString("tenSach"));
+                                lbl_NumbersOfBook.setText(rs.getString("soLuong"));
+                                lbl_bookError.setText("");
+
+                            } else {
+                                lbl_bookError.setText("Mã bản sao không hợp lệ");
+                            }
+                        }
                     }
 
+                    String query2 = "SELECT tacgia.tenTacGia FROM tacgia "
+                            + "JOIN chitiettacgia ON tacgia.maTacGia = chitiettacgia.maTacGia "
+                            + "WHERE chitiettacgia.maSach = ?";
+                    try (PreparedStatement pst2 = con.prepareStatement(query2)) {
+                        pst2.setString(1, bookID);
+                        try (ResultSet rs2 = pst2.executeQuery()) {
+                            if (rs2.next()) {
+                                lbl_author.setText(rs2.getString("tenTacGia"));
+                            }
+
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                    // Thêm thông báo lỗi cho người dùng ở đây
                 }
+            } else {
+                lbl_bookError.setText("Mã bản sao không hợp lệ");
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            // Thêm thông báo lỗi cho người dùng ở đây
+        } catch (Exception ex) {
+            Logger.getLogger(IssueBook.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -435,6 +501,7 @@ public class IssueBook extends javax.swing.JFrame {
                         lbl_studentName.setText(rs.getString("tenSV"));
                         lbl_course.setText(rs.getString("nienKhoa"));
                         lbl_branch.setText(rs.getString("nganhHoc"));
+                        lbl_email.setText(rs.getString("email"));
                         lbl_studentError.setText("");
                     } else {
                         lbl_studentError.setText("Không tồn tại sinh viên này");
@@ -450,50 +517,56 @@ public class IssueBook extends javax.swing.JFrame {
     }
     // hàm thêm thông tin mượn sách vào database
 
-    public boolean issueBook() {
-        Boolean isIssued = null;
-        String copyID = txt_CopyBookID.getText();
-        String studentID = txt_StudentID.getText();
-        String bookName = lbl_bookName.getText();
-        String studentName = lbl_studentName.getText();
+   public boolean lendingBook() {
+    Boolean isIssued = false;  // Đặt mặc định là false
+    String copyID = txt_CopyBookID.getText();
+    String studentID = txt_StudentID.getText();
+    String bookName = lbl_bookName.getText();
+    String studentName = lbl_studentName.getText();
+    String studentEmail = lbl_email.getText();
+    Date uIssueDate = date_issueDate.getDatoFecha();
+    Date uDueDate = date_dueDate.getDatoFecha();
 
-        Date uIssueDate = date_issueDate.getDatoFecha();
-        Date uDueDate = date_dueDate.getDatoFecha();
+    long l1 = uIssueDate.getTime(); // Sửa lại dòng này để lấy ngày mượn
+    long l2 = uDueDate.getTime();
 
-        long l1 = uDueDate.getTime();
-        long l2 = uIssueDate.getTime();
-        
-        java.sql.Date sIssueDate = new java.sql.Date(l1);
-        java.sql.Date sDueDate = new java.sql.Date(l2);
+    java.sql.Date sIssueDate = new java.sql.Date(l1);
+    java.sql.Date sDueDate = new java.sql.Date(l2);
 
-        try (Connection con = DatabaseConnection.getConnection()) {
-            String sql = "Insert into thongtinmuontrasach (maMuon, ngayMuon, hanTra, trangThai, maNM) values (?, ?, ?, ?, ?)";
-            String uuid = UUID.randomUUID().toString().replaceAll("-", "");
-            try (PreparedStatement pst = con.prepareStatement(sql)) {
-                // Sinh UUID ngẫu nhiên
-                // Lấy 4 ký tự từ UUID để tạo mã duy nhất
-                String issueID = "TQB" + uuid.substring(0, 4); // TCB + 4 ký tự đầu
-                pst.setString(1, issueID);
-                pst.setDate(2, sIssueDate);
-                pst.setDate(3, sDueDate);
-                pst.setInt(4, 1);
-                pst.setString(5, studentID);
+    try (Connection con = DatabaseConnection.getConnection()) {
+        // Câu lệnh SQL để thêm thông tin mượn sách
+        String sql = "INSERT INTO thongtinmuontrasach (maMuon, ngayMuon, hanTra, trangThai, maNM, maBanSao) VALUES (?, ?, ?, ?, ?, ?)";
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+        try (PreparedStatement pst = con.prepareStatement(sql)) {
+            // Sinh UUID ngẫu nhiên và lấy 4 ký tự đầu
+            String issueID = "TQB" + uuid.substring(0, 4); // TQB + 4 ký tự đầu
+            pst.setString(1, issueID);
+            pst.setDate(2, sIssueDate);
+            pst.setDate(3, sDueDate);
+            pst.setInt(4, 1); // Trang thái: 1 có thể là "Đang mượn"
+            pst.setString(5, studentID);
+            pst.setString(6, copyID);
 
-                int rowCount = pst.executeUpdate();
-                if (rowCount > 0) {
-                    isIssued = true;
-                } else {
-                    isIssued = false;
-                }
+            int rowCount = pst.executeUpdate(); // Thực thi câu lệnh insert
 
-            } catch (Exception e) {
+            if (rowCount > 0) { // Nếu có dòng bị ảnh hưởng
+                isIssued = true;
+                
+            } else {
+                isIssued = false;
             }
-
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(); // In lỗi nếu có
+            isIssued = false;
         }
-        return isIssued;
+    } catch (Exception e) {
+        e.printStackTrace(); // In lỗi kết nối nếu có
+        isIssued = false;
     }
+
+    return isIssued; // Trả về true nếu mượn thành công, false nếu có lỗi
+}
+
 
     /**
      * @param args the command line arguments
@@ -514,14 +587,15 @@ public class IssueBook extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Back;
+    private necesario.RSMaterialButtonCircle btn_IssueBook1;
     private rojeru_san.componentes.RSDateChooser date_dueDate;
     private rojeru_san.componentes.RSDateChooser date_issueDate;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -538,6 +612,7 @@ public class IssueBook extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel label;
     private javax.swing.JLabel lbl_NumbersOfBook;
     private javax.swing.JLabel lbl_author;
     private javax.swing.JLabel lbl_bookError;
@@ -546,6 +621,7 @@ public class IssueBook extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_branch;
     private javax.swing.JLabel lbl_copyID;
     private javax.swing.JLabel lbl_course;
+    private javax.swing.JLabel lbl_email;
     private javax.swing.JLabel lbl_studentError;
     private javax.swing.JLabel lbl_studentID;
     private javax.swing.JLabel lbl_studentName;

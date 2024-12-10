@@ -9,7 +9,6 @@ import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import javaapplication5.CopyBookControl;
 import javax.swing.table.DefaultTableModel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -697,6 +696,11 @@ public class Homepage extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 106, 106));
+        jPanel1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jPanel1FocusLost(evt);
+            }
+        });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_menu_48px_1.png"))); // NOI18N
@@ -3986,6 +3990,11 @@ public class Homepage extends javax.swing.JFrame {
         lg.setVisible(true);
     }//GEN-LAST:event_jPanel69MouseClicked
 
+<<<<<<< HEAD
+    private void jPanel1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPanel1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel1FocusLost
+=======
     private void quanlysachMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quanlysachMouseClicked
        this.setVisible(false);
       MainFormOfLibrarian main = new MainFormOfLibrarian();
@@ -3997,6 +4006,7 @@ public class Homepage extends javax.swing.JFrame {
         this.setVisible(false);
         bansao.setVisible(true);
     }//GEN-LAST:event_quanlybansaoMouseClicked
+>>>>>>> 21b3df9800b094253dd9ff54f7db37361c453ebb
 
     /**
      * @param args the command line arguments
