@@ -695,6 +695,11 @@ public class Homepage extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 106, 106));
+        jPanel1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jPanel1FocusLost(evt);
+            }
+        });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_menu_48px_1.png"))); // NOI18N
@@ -3967,6 +3972,10 @@ public class Homepage extends javax.swing.JFrame {
         Login lg = new Login();
         lg.setVisible(true);
     }//GEN-LAST:event_jPanel69MouseClicked
+
+    private void jPanel1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPanel1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel1FocusLost
 
     /**
      * @param args the command line arguments
