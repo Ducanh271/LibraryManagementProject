@@ -5,10 +5,12 @@
         <group>
             <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/common/view/Homepage.java</file>
             <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/common/view/Login.java</file>
+            <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/common/view/ManageBooks.java</file>
+            <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/common/view/ReturnBook.java</file>
             <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/common/view/IssuedBookDetail.java</file>
+            <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/book/controller/BookDetailController.java</file>
             <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/common/view/CopyBookControl.java</file>
             <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/common/view/IssueBook.java</file>
-            <file>file:/C:/Users/Duc%20Anh/Documents/NetBeansProjects/LibraryManagementProject/3.LibManagementApp/src/common/view/MainFormOfLibrarian.java</file>
         </group>
     </open-files>
 </project-private>

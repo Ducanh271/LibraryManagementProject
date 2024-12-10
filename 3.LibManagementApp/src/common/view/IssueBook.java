@@ -77,9 +77,9 @@ public class IssueBook extends javax.swing.JFrame {
         txt_StudentID = new javax.swing.JTextField();
         txt_CopyBookID = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        btn_IssueBook1 = new necesario.RSMaterialButtonCircle();
         date_dueDate = new rojeru_san.componentes.RSDateChooser();
         date_issueDate = new rojeru_san.componentes.RSDateChooser();
-        btn_IssueBook1 = new necesario.RSMaterialButtonCircle();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -362,16 +362,6 @@ public class IssueBook extends javax.swing.JFrame {
         jLabel9.setText("  Thông tin sinh viên");
         panel_main.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 100, 310, 120));
 
-        date_dueDate.setColorBackground(new java.awt.Color(0, 106, 106));
-        date_dueDate.setColorButtonHover(new java.awt.Color(0, 106, 106));
-        date_dueDate.setColorForeground(new java.awt.Color(0, 106, 106));
-        panel_main.add(date_dueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 450, 270, -1));
-
-        date_issueDate.setColorBackground(new java.awt.Color(0, 106, 106));
-        date_issueDate.setColorButtonHover(new java.awt.Color(0, 106, 106));
-        date_issueDate.setColorForeground(new java.awt.Color(0, 106, 106));
-        panel_main.add(date_issueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 400, 270, -1));
-
         btn_IssueBook1.setBackground(new java.awt.Color(0, 106, 106));
         btn_IssueBook1.setText("Cho mượn");
         btn_IssueBook1.addActionListener(new java.awt.event.ActionListener() {
@@ -380,6 +370,16 @@ public class IssueBook extends javax.swing.JFrame {
             }
         });
         panel_main.add(btn_IssueBook1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 570, 280, 60));
+
+        date_dueDate.setColorBackground(new java.awt.Color(0, 106, 106));
+        date_dueDate.setColorButtonHover(new java.awt.Color(0, 106, 106));
+        date_dueDate.setColorForeground(new java.awt.Color(0, 106, 106));
+        panel_main.add(date_dueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 460, 270, -1));
+
+        date_issueDate.setColorBackground(new java.awt.Color(0, 106, 106));
+        date_issueDate.setColorButtonHover(new java.awt.Color(0, 106, 106));
+        date_issueDate.setColorForeground(new java.awt.Color(0, 106, 106));
+        panel_main.add(date_issueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 400, 270, -1));
 
         getContentPane().add(panel_main, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 730));
 

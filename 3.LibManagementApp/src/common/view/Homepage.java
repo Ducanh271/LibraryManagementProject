@@ -89,7 +89,7 @@ public class Homepage extends javax.swing.JFrame {
             soNguoiMuon = rsSoNguoiMuon.getInt(1);
             txtnguoimuon.setText(String.valueOf(soNguoiMuon));
         }
-        String querySoDangMuon = "SELECT COUNT(maThongTinMuonSach) FROM chitietmuonsach";
+        String querySoDangMuon = "SELECT COUNT(maMuon) FROM chitietmuonsach";
         java.sql.PreparedStatement psSoDangMuon = con.prepareStatement(querySoDangMuon);
         java.sql.ResultSet rsSoDangMuon = psSoDangMuon.executeQuery();
         int soDangMuon = 0;
@@ -296,7 +296,7 @@ public class Homepage extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
-        jLabel69 = new javax.swing.JLabel();
+        quanlybansao = new javax.swing.JLabel();
         jPanel44 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
         jPanel45 = new javax.swing.JPanel();
@@ -504,12 +504,13 @@ public class Homepage extends javax.swing.JFrame {
         jLabel220 = new javax.swing.JLabel();
         jPanel221 = new javax.swing.JPanel();
         jLabel221 = new javax.swing.JLabel();
+        quanlynguoimuon = new javax.swing.JLabel();
         JLablelBorrowerManagement = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jPanel69 = new javax.swing.JPanel();
         jPanel226 = new javax.swing.JPanel();
         jPanel52 = new javax.swing.JPanel();
-        jLabel53 = new javax.swing.JLabel();
+        quanlysach = new javax.swing.JLabel();
         jPanel53 = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
         jPanel54 = new javax.swing.JPanel();
@@ -711,7 +712,7 @@ public class Homepage extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 5, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1590,12 +1591,17 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel12.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 40));
 
-        jLabel69.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel69.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel69.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Books_26px.png"))); // NOI18N
-        jLabel69.setText("Quản lý bản sao");
-        jPanel12.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+        quanlybansao.setBackground(new java.awt.Color(61, 61, 61));
+        quanlybansao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        quanlybansao.setForeground(new java.awt.Color(153, 153, 153));
+        quanlybansao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Books_26px.png"))); // NOI18N
+        quanlybansao.setText("Quản lý bản sao");
+        quanlybansao.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quanlybansaoMouseClicked(evt);
+            }
+        });
+        jPanel12.add(quanlybansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
 
         jPanel3.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 210, 40));
 
@@ -2838,6 +2844,12 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel60.add(jPanel190, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 210, 40));
 
+        quanlynguoimuon.setBackground(new java.awt.Color(61, 61, 61));
+        quanlynguoimuon.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        quanlynguoimuon.setForeground(new java.awt.Color(153, 153, 153));
+        quanlynguoimuon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Conference_26px.png"))); // NOI18N
+        quanlynguoimuon.setText("Quản lý người mượn");
+        jPanel60.add(quanlynguoimuon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 210, 40));
         JLablelBorrowerManagement.setBackground(new java.awt.Color(61, 61, 61));
         JLablelBorrowerManagement.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         JLablelBorrowerManagement.setForeground(new java.awt.Color(153, 153, 153));
@@ -2877,12 +2889,17 @@ public class Homepage extends javax.swing.JFrame {
         jPanel52.setBackground(new java.awt.Color(51, 51, 51));
         jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel53.setBackground(new java.awt.Color(61, 61, 61));
-        jLabel53.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel53.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Book_26px.png"))); // NOI18N
-        jLabel53.setText("Quản lý sách");
-        jPanel52.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 120, -1));
+        quanlysach.setBackground(new java.awt.Color(61, 61, 61));
+        quanlysach.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        quanlysach.setForeground(new java.awt.Color(153, 153, 153));
+        quanlysach.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Book_26px.png"))); // NOI18N
+        quanlysach.setText("Quản lý sách");
+        quanlysach.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quanlysachMouseClicked(evt);
+            }
+        });
+        jPanel52.add(quanlysach, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 120, -1));
 
         jPanel53.setBackground(new java.awt.Color(255, 51, 0));
         jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -3963,7 +3980,7 @@ public class Homepage extends javax.swing.JFrame {
 
         getContentPane().add(JPanelHomepage, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 790, 580));
 
-        setSize(new java.awt.Dimension(1008, 651));
+        setSize(new java.awt.Dimension(1012, 651));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -3973,9 +3990,23 @@ public class Homepage extends javax.swing.JFrame {
         lg.setVisible(true);
     }//GEN-LAST:event_jPanel69MouseClicked
 
+<<<<<<< HEAD
     private void jPanel1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPanel1FocusLost
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1FocusLost
+=======
+    private void quanlysachMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quanlysachMouseClicked
+       this.setVisible(false);
+      MainFormOfLibrarian main = new MainFormOfLibrarian();
+      main.setVisible(true);
+    }//GEN-LAST:event_quanlysachMouseClicked
+
+    private void quanlybansaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quanlybansaoMouseClicked
+        CopyBookControl bansao = new CopyBookControl();
+        this.setVisible(false);
+        bansao.setVisible(true);
+    }//GEN-LAST:event_quanlybansaoMouseClicked
+>>>>>>> 21b3df9800b094253dd9ff54f7db37361c453ebb
 
     /**
      * @param args the command line arguments
@@ -4232,7 +4263,6 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
@@ -4248,7 +4278,6 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
@@ -4549,6 +4578,9 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel99;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JLabel quanlybansao;
+    private javax.swing.JLabel quanlynguoimuon;
+    private javax.swing.JLabel quanlysach;
     private javax.swing.JTable tblnguoimuon;
     private javax.swing.JTable tblsach;
     private javax.swing.JLabel txtconlai;
