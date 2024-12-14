@@ -546,8 +546,9 @@ public class ReturnBook extends javax.swing.JFrame {
     }//GEN-LAST:event_buttontimkiemActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-   
+        Homepage h = new Homepage();
         this.setVisible(false);
+        h.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtmabsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmabsActionPerformed
