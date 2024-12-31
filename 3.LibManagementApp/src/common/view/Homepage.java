@@ -865,7 +865,7 @@ public class Homepage extends javax.swing.JFrame {
                 jLabel45MouseClicked(evt);
             }
         });
-        jPanel43.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+        jPanel43.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, -1, -1));
 
         jPanel45.setBackground(new java.awt.Color(51, 51, 51));
         jPanel45.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
