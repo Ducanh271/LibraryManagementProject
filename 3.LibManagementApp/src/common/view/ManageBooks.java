@@ -58,7 +58,7 @@ public class ManageBooks extends javax.swing.JFrame {
     public final void setBookDetailsToTable(){
         
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quan_ly_thu_vien", "root", "");
             Statement  st = con.createStatement();
             ResultSet rs =  st.executeQuery("select * from sach");
@@ -169,6 +169,53 @@ public class ManageBooks extends javax.swing.JFrame {
         return isDeleted;
     }
     
+    //Tìm kiếm sách theo Thể loại và Tên
+    public void findbook() {
+//    boolean isFinded = false;  // Biến dùng để kiểm tra xem có tìm thấy sách không
+
+    // Lấy giá trị từ các trường nhập liệu
+    tenSach = txt_bookName.getText();
+    theLoai = txt_type.getText();
+
+    // Kết nối cơ sở dữ liệu và thực hiện truy vấn
+    try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quan_ly_thu_vien", "root", "");
+         PreparedStatement pst = con.prepareStatement("SELECT * FROM sach WHERE tenSach = ? OR theLoai = ?")) {
+
+        // Đặt giá trị cho tham số trong câu lệnh SQL
+        pst.setString(1, tenSach);
+        pst.setString(2, theLoai);
+
+        // Thực thi câu lệnh SQL
+        try (ResultSet rs = pst.executeQuery()) {
+            // Kiểm tra xem có kết quả trả về không
+            if (rs.next()) {
+//                isFinded = true; // Đã tìm thấy ít nhất 1 cuốn sách
+                JOptionPane.showMessageDialog(this, "Tìm thấy Sách");
+                // Duyệt qua các kết quả trả về và thêm vào bảng
+                model = (DefaultTableModel) tbl_BookDetail.getModel();
+                do {
+                    String BookId = rs.getString("maSach");
+                    String BookName = rs.getString("tenSach");
+                    String Type = rs.getString("theLoai");
+                    int Publish = rs.getInt("maNhaPhatHanh");
+                    int Quantity = rs.getInt("soLuong");
+
+                    Object[] obj = {BookId, BookName, Type, Publish, Quantity};
+                    model.addRow(obj); // Thêm dòng vào bảng
+                } while (rs.next()); // Tiếp tục duyệt qua các bản ghi tiếp theo
+            } else{
+                JOptionPane.showMessageDialog(this, "Không tìm thấy thông tin");
+            }
+            
+        }
+    } catch (Exception e) {
+        System.out.println("Failed Connection: " + e.getMessage());
+        e.printStackTrace();
+    }
+//    return
+}
+
+
     //xoa bang tao trc do
     public void clearTable(){
         DefaultTableModel model = (DefaultTableModel) tbl_BookDetail.getModel();
@@ -212,11 +259,12 @@ public class ManageBooks extends javax.swing.JFrame {
         txt_type = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         txt_publish = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         txt_quantity = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -225,6 +273,7 @@ public class ManageBooks extends javax.swing.JFrame {
         tbl_BookDetail = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
@@ -381,18 +430,6 @@ public class ManageBooks extends javax.swing.JFrame {
         });
         jPanel3.add(txt_publish, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 380, 30));
 
-        jButton1.setBackground(new java.awt.Color(255, 51, 51));
-        jButton1.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Xoá");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 720, 110, 40));
-
         jButton2.setBackground(new java.awt.Color(255, 51, 51));
         jButton2.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -415,7 +452,7 @@ public class ManageBooks extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 720, 110, 40));
+        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 720, 110, 40));
 
         jLabel8.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -432,7 +469,31 @@ public class ManageBooks extends javax.swing.JFrame {
         });
         jPanel3.add(txt_quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 640, 380, 30));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 830));
+        jButton6.setBackground(new java.awt.Color(255, 51, 51));
+        jButton6.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Xoá");
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 720, 110, 40));
+
+        jButton4.setBackground(new java.awt.Color(255, 51, 51));
+        jButton4.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Tìm kiếm");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 720, 110, 40));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 830));
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -440,17 +501,18 @@ public class ManageBooks extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(102, 102, 255));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 35)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(255, 51, 51));
         jLabel1.setText("X");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
             }
         });
-        jPanel10.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 40, 30));
+        jPanel10.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 30));
 
-        jPanel5.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 0, 130, 50));
+        jPanel5.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 0, 120, 50));
         jPanel5.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, -1, -1));
 
         tbl_BookDetail.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
@@ -466,8 +528,7 @@ public class ManageBooks extends javax.swing.JFrame {
         tbl_BookDetail.setRowHeight(35);
         tbl_BookDetail.setSelectionBackground(new java.awt.Color(204, 255, 255));
         tbl_BookDetail.setSelectionForeground(new java.awt.Color(102, 102, 255));
-        tbl_BookDetail.setShowGrid(true);
-        tbl_BookDetail.setShowHorizontalLines(true);
+        tbl_BookDetail.setShowGrid(false);
         tbl_BookDetail.setShowVerticalLines(true);
         tbl_BookDetail.setSurrendersFocusOnKeystroke(true);
         tbl_BookDetail.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -477,7 +538,7 @@ public class ManageBooks extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tbl_BookDetail);
 
-        jPanel5.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 870, 350));
+        jPanel5.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 870, 490));
 
         jPanel7.setBackground(new java.awt.Color(255, 51, 51));
 
@@ -485,11 +546,11 @@ public class ManageBooks extends javax.swing.JFrame {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 5, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jPanel5.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 550, 5));
@@ -501,7 +562,19 @@ public class ManageBooks extends javax.swing.JFrame {
         jLabel6.setText("  Quản lí Sách");
         jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 380, 60));
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 1140, 830));
+        jButton1.setBackground(new java.awt.Color(255, 51, 51));
+        jButton1.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Reset Bảng");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 720, -1, 40));
+
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 0, 1060, 830));
 
         setSize(new java.awt.Dimension(1724, 824));
         setLocationRelativeTo(null);
@@ -524,35 +597,29 @@ public class ManageBooks extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_publishActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         if (deletebook() == true) {
-            
-            JOptionPane.showMessageDialog(this, "Xoa sach thanh cong");
-            clearTable();
-            setBookDetailsToTable();
-        } else{
-            JOptionPane.showMessageDialog(this, "Xoa sach that bai");
-        }
+        clearTable();
+        setBookDetailsToTable();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if (addBook() == true) {
             
-            JOptionPane.showMessageDialog(this, "Them sach thanh cong");
+            JOptionPane.showMessageDialog(this, "Thêm sách thành công");
             clearTable();
             setBookDetailsToTable();
         } else {
-            JOptionPane.showMessageDialog(this, "Them sach that bai");
+            JOptionPane.showMessageDialog(this, "Thêm sách thất bại\nVui lòng thực hiện lại");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         if (updateBook() == true) {
             
-            JOptionPane.showMessageDialog(this, "Sua sach thanh cong");
+            JOptionPane.showMessageDialog(this, "Sửa sách thành công");
             clearTable();
             setBookDetailsToTable();
         } else {
-            JOptionPane.showMessageDialog(this, "Sua sach that bai");
+            JOptionPane.showMessageDialog(this, "Sửa sách thất bại\nVui lòng thực hiện lại");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -581,6 +648,23 @@ public class ManageBooks extends javax.swing.JFrame {
         txt_quantity.setText(model.getValueAt(rowNo, 4).toString());
         
     }//GEN-LAST:event_tbl_BookDetailMouseClicked
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        if (deletebook() == true) {
+            
+            JOptionPane.showMessageDialog(this, "Xoá sách thành công");
+            clearTable();
+            setBookDetailsToTable();
+        } else{
+            JOptionPane.showMessageDialog(this, "Xoá sách thất bại\nVui lòng thực hiện lại");
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        
+            clearTable();
+            findbook();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -621,6 +705,8 @@ public class ManageBooks extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
