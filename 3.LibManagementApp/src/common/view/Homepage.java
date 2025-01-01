@@ -15,7 +15,6 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PiePlot;
 import org.jfree.data.general.DefaultPieDataset;
 
-import javaapplication5.CopyBookControl;
 
 /**
  *
