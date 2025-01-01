@@ -3,16 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/CodeApp/LibraryManagementProject/3.LibManagementApp/src/common/view/Homepage.java</file>
-            <file>file:/D:/CodeApp/LibraryManagementProject/3.LibManagementApp/src/common/view/CopyBookControl.java</file>
-            <file>file:/D:/CodeApp/LibraryManagementProject/3.LibManagementApp/src/common/view/IssueBook.java</file>
-            <file>file:/D:/CodeApp/LibraryManagementProject/3.LibManagementApp/src/common/view/IssuedBookDetail.java</file>
-            <file>file:/D:/CodeApp/LibraryManagementProject/3.LibManagementApp/src/Homepage/controller/HomepageController.java</file>
-            <file>file:/D:/CodeApp/LibraryManagementProject/3.LibManagementApp/src/common/view/Test0.java</file>
-            <file>file:/D:/CodeApp/LibraryManagementProject/3.LibManagementApp/src/common/view/ManageBooks.java</file>
-            <file>file:/D:/CodeApp/LibraryManagementProject/3.LibManagementApp/src/common/view/Login.java</file>
-            <file>file:/D:/CodeApp/LibraryManagementProject/3.LibManagementApp/src/book/controller/BookDetailController.java</file>
-            <file>file:/D:/CodeApp/LibraryManagementProject/3.LibManagementApp/src/common/view/ReturnBook.java</file>
+            <file>file:/C:/DesApp/LibraryManagementProject/3.LibManagementApp/src/common/view/Test0.java</file>
+            <file>file:/C:/DesApp/LibraryManagementProject/3.LibManagementApp/src/common/view/ManageBooks.java</file>
+            <file>file:/C:/DesApp/LibraryManagementProject/3.LibManagementApp/src/ConnectDatabase/DatabaseConnection.java</file>
+            <file>file:/C:/DesApp/LibraryManagementProject/3.LibManagementApp/src/common/view/IssuedBookDetail.java</file>
         </group>
     </open-files>
 </project-private>
