@@ -33,17 +33,17 @@ public class CopyBookControl extends javax.swing.JFrame {
         txtTimkiembansao = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         back_home_btn = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        txtMasach = new javax.swing.JTextField();
+        txt_mbs_end = new javax.swing.JTextField();
         txtMabansao = new javax.swing.JTextField();
         txtLoaibansao = new javax.swing.JTextField();
         txtGiabansao = new javax.swing.JTextField();
@@ -51,6 +51,15 @@ public class CopyBookControl extends javax.swing.JFrame {
         btnThemmoibansao = new javax.swing.JButton();
         btn_capnhat = new javax.swing.JButton();
         btn_xoabansao = new javax.swing.JButton();
+        txtMasach = new javax.swing.JTextField();
+        txt_mbs_begin = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        addnew_hangloat = new javax.swing.JButton();
+        update_hangloat = new javax.swing.JButton();
+        delete_hangloat = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         table_bansao = new rojeru_san.complementos.RSTableMetro();
 
@@ -103,39 +112,49 @@ public class CopyBookControl extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Nhập sách");
+        jLabel3.setText("Nhập mã");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Literature_100px_1.png"))); // NOI18N
+        jLabel4.setText("  ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(432, 432, 432)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
+                        .addGap(32, 32, 32)
                         .addComponent(jLabel2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3)
                         .addGap(34, 34, 34)
-                        .addComponent(txtTimkiembansao, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(txtTimkiembansao, javax.swing.GroupLayout.PREFERRED_SIZE, 588, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                         .addComponent(btn_timkiembansao1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_fillall)))
-                .addContainerGap(156, Short.MAX_VALUE))
+                        .addGap(27, 27, 27)
+                        .addComponent(btn_fillall))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
+                .addGap(32, 32, 32)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_fillall, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btn_timkiembansao1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtTimkiembansao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtTimkiembansao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_fillall, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel3))
                 .addGap(69, 69, 69))
         );
@@ -173,12 +192,6 @@ public class CopyBookControl extends javax.swing.JFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(420, 810));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Literature_100px_1.png"))); // NOI18N
-        jLabel4.setText("     Thông tin bản sao");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 310, 180));
-
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -192,37 +205,37 @@ public class CopyBookControl extends javax.swing.JFrame {
             .addGap(0, 5, Short.MAX_VALUE)
         );
 
-        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, 5));
+        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Mã sách : ");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+        jLabel10.setText("Nhập hàng loạt");
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 120, -1));
 
         jLabel11.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Mã bản sao : ");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
+        jLabel11.setText("MBS End : ");
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Loại bản sao :");
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Giá bản sao :");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, -1, -1));
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Trạng thái :");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 90, -1));
-        jPanel3.add(txtMasach, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 179, 40));
-        jPanel3.add(txtMabansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 179, 40));
-        jPanel3.add(txtLoaibansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 179, 40));
-        jPanel3.add(txtGiabansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 179, 40));
-        jPanel3.add(txtTrangthai, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 179, 40));
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 120, -1));
+        jPanel3.add(txt_mbs_end, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 179, 40));
+        jPanel3.add(txtMabansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 179, 40));
+        jPanel3.add(txtLoaibansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 179, 40));
+        jPanel3.add(txtGiabansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 179, 40));
+        jPanel3.add(txtTrangthai, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 580, 179, 40));
 
         btnThemmoibansao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnThemmoibansao.setText("Thêm mới");
@@ -231,7 +244,7 @@ public class CopyBookControl extends javax.swing.JFrame {
                 btnThemmoibansaoActionPerformed(evt);
             }
         });
-        jPanel3.add(btnThemmoibansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, -1, -1));
+        jPanel3.add(btnThemmoibansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 670, -1, -1));
 
         btn_capnhat.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btn_capnhat.setText("Cập nhật");
@@ -240,7 +253,7 @@ public class CopyBookControl extends javax.swing.JFrame {
                 btn_capnhatActionPerformed(evt);
             }
         });
-        jPanel3.add(btn_capnhat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 640, -1, -1));
+        jPanel3.add(btn_capnhat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 670, -1, -1));
 
         btn_xoabansao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btn_xoabansao.setText("Xóa bản sao");
@@ -249,7 +262,56 @@ public class CopyBookControl extends javax.swing.JFrame {
                 btn_xoabansaoActionPerformed(evt);
             }
         });
-        jPanel3.add(btn_xoabansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 640, -1, -1));
+        jPanel3.add(btn_xoabansao, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 670, -1, -1));
+        jPanel3.add(txtMasach, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 179, 40));
+        jPanel3.add(txt_mbs_begin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 179, 40));
+
+        jLabel15.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Mã sách : ");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Nhập chi tiết");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 120, -1));
+
+        jLabel17.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Mã bản sao : ");
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
+
+        jLabel18.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("MBS Begin : ");
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+
+        addnew_hangloat.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        addnew_hangloat.setText("Add New HL");
+        addnew_hangloat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addnew_hangloatActionPerformed(evt);
+            }
+        });
+        jPanel3.add(addnew_hangloat, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+
+        update_hangloat.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        update_hangloat.setText("Update HL");
+        update_hangloat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                update_hangloatActionPerformed(evt);
+            }
+        });
+        jPanel3.add(update_hangloat, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
+
+        delete_hangloat.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        delete_hangloat.setText("Delete HL");
+        delete_hangloat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delete_hangloatActionPerformed(evt);
+            }
+        });
+        jPanel3.add(delete_hangloat, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, -1));
 
         table_bansao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -285,29 +347,30 @@ public class CopyBookControl extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 924, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(back_home_btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 924, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(58, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(back_home_btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(back_home_btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -332,7 +395,7 @@ public class CopyBookControl extends javax.swing.JFrame {
     }//GEN-LAST:event_table_bansaoFocusLost
 
     private void btn_xoabansaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xoabansaoActionPerformed
-        String maSach = txtMasach.getText().trim();
+        String maSach = txt_mbs_end.getText().trim();
         String maBanSao = txtMabansao.getText().trim();
         // Kiểm tra nếu các trường dữ liệu không trống
         if (maSach.isEmpty() || maBanSao.isEmpty()) {
@@ -393,56 +456,57 @@ public class CopyBookControl extends javax.swing.JFrame {
                 ex.printStackTrace();
             }
         }
-        }
-        // Hàm reset bảng với dữ liệu mới theo mã sách
-        private void resetTableJ(String maSach) {
-            Connection conn = null;
-            PreparedStatement pstmt = null;
-            ResultSet rs = null;
-            try {
-                String URL = "jdbc:mysql://localhost:3306/quan_ly_thu_vien";
-                String USER = "root";
-                String PASSWORD = "";
-                // Tạo kết nối tới cơ sở dữ liệu
-                conn = DriverManager.getConnection(URL, USER, PASSWORD);
-                // Lệnh SQL để lấy dữ liệu theo mã sách
-                String sql = "SELECT * FROM bansaosach WHERE maSach = ?";
-                pstmt = conn.prepareStatement(sql);
-                pstmt.setString(1, maSach);
-                rs = pstmt.executeQuery();
-                // Lấy mô hình bảng của JTable
-                DefaultTableModel model = (DefaultTableModel) table_bansao.getModel();
-                // Xóa dữ liệu cũ trong bảng trước khi đổ dữ liệu mới
-                model.setRowCount(0);
-                // Duyệt qua ResultSet và thêm từng dòng dữ liệu vào JTable
-                while (rs.next()) {
-                    String maSachFromDB = rs.getString("maSach");
-                    String maBanSao = rs.getString("maBanSao");
-                    int loaiBanSao = rs.getInt("loaiBanSao");
-                    int gia = rs.getInt("gia");
-                    int trangThai = rs.getInt("trangThai");
-                    // Thêm dòng dữ liệu vào model của JTable
-                    model.addRow(new Object[]{maSachFromDB, maBanSao, loaiBanSao, gia, trangThai});
-                }
-            } catch (SQLException e) {
-                // Xử lý ngoại lệ
-                JOptionPane.showMessageDialog(this, "Lỗi khi kết nối cơ sở dữ liệu: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            } finally {
-                // Đóng kết nối và các tài nguyên
-                try {
-                    if (rs != null) {
-                        rs.close();
-                    }
-                    if (pstmt != null) {
-                        pstmt.close();
-                    }
-                    if (conn != null) {
-                        conn.close();
-                    }
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                }
+    }
+    // Hàm reset bảng với dữ liệu mới theo mã sách
+
+    private void resetTableJ(String maSach) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try {
+            String URL = "jdbc:mysql://localhost:3306/quan_ly_thu_vien";
+            String USER = "root";
+            String PASSWORD = "";
+            // Tạo kết nối tới cơ sở dữ liệu
+            conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            // Lệnh SQL để lấy dữ liệu theo mã sách
+            String sql = "SELECT * FROM bansaosach WHERE maSach = ?";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, maSach);
+            rs = pstmt.executeQuery();
+            // Lấy mô hình bảng của JTable
+            DefaultTableModel model = (DefaultTableModel) table_bansao.getModel();
+            // Xóa dữ liệu cũ trong bảng trước khi đổ dữ liệu mới
+            model.setRowCount(0);
+            // Duyệt qua ResultSet và thêm từng dòng dữ liệu vào JTable
+            while (rs.next()) {
+                String maSachFromDB = rs.getString("maSach");
+                String maBanSao = rs.getString("maBanSao");
+                int loaiBanSao = rs.getInt("loaiBanSao");
+                int gia = rs.getInt("gia");
+                int trangThai = rs.getInt("trangThai");
+                // Thêm dòng dữ liệu vào model của JTable
+                model.addRow(new Object[]{maSachFromDB, maBanSao, loaiBanSao, gia, trangThai});
             }
+        } catch (SQLException e) {
+            // Xử lý ngoại lệ
+            JOptionPane.showMessageDialog(this, "Lỗi khi kết nối cơ sở dữ liệu: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        } finally {
+            // Đóng kết nối và các tài nguyên
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (pstmt != null) {
+                    pstmt.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
     }//GEN-LAST:event_btn_xoabansaoActionPerformed
 
     private void btn_capnhatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_capnhatActionPerformed
@@ -543,68 +607,69 @@ public class CopyBookControl extends javax.swing.JFrame {
                 ex.printStackTrace();
             }
         }
-        }
-        // Hàm reset bảng với dữ liệu mới theo mã sách
-        private void resetTable(String maSach) {
-            Connection conn = null;
-            PreparedStatement pstmt = null;
-            ResultSet rs = null;
+    }
+    // Hàm reset bảng với dữ liệu mới theo mã sách
 
-            try {
-                String URL = "jdbc:mysql://localhost:3306/quan_ly_thu_vien";
-                String USER = "root";
-                String PASSWORD = "";
+    private void resetTable(String maSach) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
 
-                // Tạo kết nối tới cơ sở dữ liệu
-                conn = DriverManager.getConnection(URL, USER, PASSWORD);
+        try {
+            String URL = "jdbc:mysql://localhost:3306/quan_ly_thu_vien";
+            String USER = "root";
+            String PASSWORD = "";
 
-                // Lệnh SQL để lấy dữ liệu theo mã sách
-                String sql = "SELECT * FROM bansaosach WHERE maSach = ?";
-                pstmt = conn.prepareStatement(sql);
-                pstmt.setString(1, maSach);
-                rs = pstmt.executeQuery();
+            // Tạo kết nối tới cơ sở dữ liệu
+            conn = DriverManager.getConnection(URL, USER, PASSWORD);
 
-                // Lấy mô hình bảng của JTable
-                DefaultTableModel model = (DefaultTableModel) table_bansao.getModel();
+            // Lệnh SQL để lấy dữ liệu theo mã sách
+            String sql = "SELECT * FROM bansaosach WHERE maSach = ?";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, maSach);
+            rs = pstmt.executeQuery();
 
-                // Xóa dữ liệu cũ trong bảng trước khi đổ dữ liệu mới
-                model.setRowCount(0);
+            // Lấy mô hình bảng của JTable
+            DefaultTableModel model = (DefaultTableModel) table_bansao.getModel();
 
-                // Duyệt qua ResultSet và thêm từng dòng dữ liệu vào JTable
-                while (rs.next()) {
-                    String maSachFromDB = rs.getString("maSach");
-                    String maBanSao = rs.getString("maBanSao");
-                    int loaiBanSao = rs.getInt("loaiBanSao");
-                    int gia = rs.getInt("gia");
-                    int trangThai = rs.getInt("trangThai");
+            // Xóa dữ liệu cũ trong bảng trước khi đổ dữ liệu mới
+            model.setRowCount(0);
 
-                    // Thêm dòng dữ liệu vào model của JTable
-                    model.addRow(new Object[]{maSachFromDB, maBanSao, loaiBanSao, gia, trangThai});
-                }
-            } catch (SQLException e) {
-                // Xử lý ngoại lệ
-                JOptionPane.showMessageDialog(this, "Lỗi khi kết nối cơ sở dữ liệu: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            } finally {
-                // Đóng kết nối và các tài nguyên
-                try {
-                    if (rs != null) {
-                        rs.close();
-                    }
-                    if (pstmt != null) {
-                        pstmt.close();
-                    }
-                    if (conn != null) {
-                        conn.close();
-                    }
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                }
+            // Duyệt qua ResultSet và thêm từng dòng dữ liệu vào JTable
+            while (rs.next()) {
+                String maSachFromDB = rs.getString("maSach");
+                String maBanSao = rs.getString("maBanSao");
+                int loaiBanSao = rs.getInt("loaiBanSao");
+                int gia = rs.getInt("gia");
+                int trangThai = rs.getInt("trangThai");
+
+                // Thêm dòng dữ liệu vào model của JTable
+                model.addRow(new Object[]{maSachFromDB, maBanSao, loaiBanSao, gia, trangThai});
             }
+        } catch (SQLException e) {
+            // Xử lý ngoại lệ
+            JOptionPane.showMessageDialog(this, "Lỗi khi kết nối cơ sở dữ liệu: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        } finally {
+            // Đóng kết nối và các tài nguyên
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (pstmt != null) {
+                    pstmt.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
     }//GEN-LAST:event_btn_capnhatActionPerformed
 
     private void btnThemmoibansaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemmoibansaoActionPerformed
 
-        String masach = txtMasach.getText();
+        String masach = txt_mbs_end.getText();
         String mabansao = txtMabansao.getText();
         String loaibansao = txtLoaibansao.getText();
         String giabansao = txtGiabansao.getText();
@@ -632,10 +697,10 @@ public class CopyBookControl extends javax.swing.JFrame {
             } else {
                 // Thực hiện thêm mới nếu không trùng lặp
                 String query = "INSERT INTO bansaosach (maSach, maBanSao, loaiBanSao, gia, trangThai) VALUES ("
-                + "'" + masach + "', '" + mabansao + "', "
-                + Integer.parseInt(loaibansao) + ", "
-                + Integer.parseInt(giabansao) + ", "
-                + Integer.parseInt(trangthai) + ")";
+                        + "'" + masach + "', '" + mabansao + "', "
+                        + Integer.parseInt(loaibansao) + ", "
+                        + Integer.parseInt(giabansao) + ", "
+                        + Integer.parseInt(trangthai) + ")";
 
                 st.executeUpdate(query);
                 System.out.println("Thêm mới bản sao sách thành công!");
@@ -799,6 +864,312 @@ public class CopyBookControl extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_timkiembansao1ActionPerformed
 
+    private void addnew_hangloatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addnew_hangloatActionPerformed
+        // Lấy thông tin từ các ô nhập liệu
+        String maSach = txtMasach.getText().trim();
+        String loaiBanSao = txtLoaibansao.getText().trim();
+        String giaBanSao = txtGiabansao.getText().trim();
+        String trangThai = txtTrangthai.getText().trim();
+        String mbsBeginStr = txt_mbs_begin.getText().trim();
+        String mbsEndStr = txt_mbs_end.getText().trim();
+
+        // Kiểm tra dữ liệu nhập hợp lệ
+        if (maSach.isEmpty() || loaiBanSao.isEmpty() || giaBanSao.isEmpty() || trangThai.isEmpty()
+                || mbsBeginStr.isEmpty() || mbsEndStr.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ thông tin!", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        int mbsBegin, mbsEnd;
+        try {
+            mbsBegin = Integer.parseInt(mbsBeginStr);
+            mbsEnd = Integer.parseInt(mbsEndStr);
+            if (mbsEnd <= mbsBegin) {
+                JOptionPane.showMessageDialog(this, "Số kết thúc phải lớn hơn số bắt đầu!", "Thông báo", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Số bắt đầu và số kết thúc phải là số nguyên!", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        try {
+            // Kết nối cơ sở dữ liệu
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String URL = "jdbc:mysql://localhost:3306/quan_ly_thu_vien";
+            String USER = "root";
+            String PASSWORD = "";
+
+            Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            Statement st = conn.createStatement();
+
+            // Kiểm tra xem mã sách có tồn tại không
+            String checkMaSachQuery = "SELECT COUNT(*) AS count FROM bansaosach WHERE maSach = '" + maSach + "'";
+            ResultSet rsCheck = st.executeQuery(checkMaSachQuery);
+            rsCheck.next();
+            int maSachCount = rsCheck.getInt("count");
+            if (maSachCount == 0) {
+                JOptionPane.showMessageDialog(this, "Mã sách không tồn tại trong cơ sở dữ liệu!", "Thông báo", JOptionPane.WARNING_MESSAGE);
+                conn.close();
+                return;
+            }
+
+            // Lặp qua các mã bản sao cần tạo
+            StringBuilder duplicateMessages = new StringBuilder();
+            for (int i = mbsBegin; i <= mbsEnd; i++) {
+                String maBanSao = maSach + "-" + String.format("%02d", i);
+
+                // Kiểm tra xem mã bản sao đã tồn tại chưa
+                String checkMaBanSaoQuery = "SELECT COUNT(*) AS count FROM bansaosach WHERE maBanSao = '" + maBanSao + "'";
+                ResultSet rs = st.executeQuery(checkMaBanSaoQuery);
+                rs.next();
+                int count = rs.getInt("count");
+
+                if (count > 0) {
+                    duplicateMessages.append(maBanSao).append("\n");
+                } else {
+                    // Thêm mới mã bản sao vào cơ sở dữ liệu
+                    String insertQuery = "INSERT INTO bansaosach (maSach, maBanSao, loaiBanSao, gia, trangThai) VALUES ("
+                            + "'" + maSach + "', '" + maBanSao + "', "
+                            + Integer.parseInt(loaiBanSao) + ", "
+                            + Integer.parseInt(giaBanSao) + ", "
+                            + Integer.parseInt(trangThai) + ")";
+                    st.executeUpdate(insertQuery);
+                }
+            }
+
+            // Hiển thị thông báo kết quả
+            if (duplicateMessages.length() > 0) {
+                JOptionPane.showMessageDialog(this, "Đã thêm mới các bản sao thỏa mãn \n" + "Các mã bản sao sau đã tồn tại và không được thêm mới:\n" + duplicateMessages, "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Thêm mới hàng loạt mã bản sao thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+            conn.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Lỗi: " + e.getMessage(), "Thông báo", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_addnew_hangloatActionPerformed
+
+    private void update_hangloatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_hangloatActionPerformed
+        // Lấy giá trị từ các ô nhập liệu
+    String maSach = txtMasach.getText().trim();
+    String maBanSaoBeginStr = txt_mbs_begin.getText().trim();
+    String maBanSaoEndStr = txt_mbs_end.getText().trim();
+    String loaiBanSaoStr = txtLoaibansao.getText().trim();
+    String giaStr = txtGiabansao.getText().trim();
+    String trangThaiStr = txtTrangthai.getText().trim();
+
+    // Kiểm tra nếu các trường mã sách, mã bản sao bắt đầu và mã bản sao kết thúc không được để trống
+    if (maSach.isEmpty() || maBanSaoBeginStr.isEmpty() || maBanSaoEndStr.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ mã sách và phạm vi mã bản sao.", "Thông báo", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+
+    // Kiểm tra định dạng và chuyển đổi các giá trị
+    int maBanSaoBegin, maBanSaoEnd;
+    try {
+        maBanSaoBegin = Integer.parseInt(maBanSaoBeginStr);
+        maBanSaoEnd = Integer.parseInt(maBanSaoEndStr);
+        if (maBanSaoBegin > maBanSaoEnd) {
+            JOptionPane.showMessageDialog(this, "Phạm vi mã bản sao không hợp lệ (Begin phải nhỏ hơn hoặc bằng End).", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Mã bản sao bắt đầu và kết thúc phải là số nguyên.", "Thông báo", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+
+    Integer loaiBanSao = null, gia = null, trangThai = null;
+
+    if (!loaiBanSaoStr.isEmpty()) {
+        try {
+            loaiBanSao = Integer.parseInt(loaiBanSaoStr);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Loại bản sao phải là một số nguyên.", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+    }
+
+    if (!giaStr.isEmpty()) {
+        try {
+            gia = Integer.parseInt(giaStr);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Giá bản sao phải là một số nguyên.", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+    }
+
+    if (!trangThaiStr.isEmpty()) {
+        try {
+            trangThai = Integer.parseInt(trangThaiStr);
+            if (trangThai != 0 && trangThai != 1) {
+                JOptionPane.showMessageDialog(this, "Trạng thái chỉ có thể là 0 hoặc 1.", "Thông báo", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Trạng thái phải là một số (0 hoặc 1).", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+    }
+
+    // Kết nối cơ sở dữ liệu và thực hiện cập nhật
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    try {
+        String URL = "jdbc:mysql://localhost:3306/quan_ly_thu_vien";
+        String USER = "root";
+        String PASSWORD = "";
+
+        // Tạo kết nối tới cơ sở dữ liệu
+        conn = DriverManager.getConnection(URL, USER, PASSWORD);
+
+        int rowsUpdated = 0;
+
+        for (int i = maBanSaoBegin; i <= maBanSaoEnd; i++) {
+            // Tạo mã bản sao (định dạng "IT1000-02", "IT1000-03", ...)
+            String maBanSao = maSach + "-" + String.format("%02d", i);
+
+            // Chuẩn bị câu lệnh SQL động chỉ cập nhật các trường có giá trị
+            StringBuilder updateSQL = new StringBuilder("UPDATE bansaosach SET ");
+            if (loaiBanSao != null) {
+                updateSQL.append("loaiBanSao = ").append(loaiBanSao).append(", ");
+            }
+            if (gia != null) {
+                updateSQL.append("gia = ").append(gia).append(", ");
+            }
+            if (trangThai != null) {
+                updateSQL.append("trangThai = ").append(trangThai).append(", ");
+            }
+
+            // Xóa dấu phẩy cuối cùng và thêm điều kiện WHERE
+            updateSQL.setLength(updateSQL.length() - 2);
+            updateSQL.append(" WHERE maSach = ? AND maBanSao = ?");
+
+            pstmt = conn.prepareStatement(updateSQL.toString());
+            pstmt.setString(1, maSach);
+            pstmt.setString(2, maBanSao);
+
+            rowsUpdated += pstmt.executeUpdate();
+        }
+
+        if (rowsUpdated > 0) {
+            JOptionPane.showMessageDialog(this, "Cập nhật hàng loạt thành công.", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            // Reset bảng JTable và hiển thị lại dữ liệu đã cập nhật
+            resetTable(maSach);
+        } else {
+            JOptionPane.showMessageDialog(this, "Không có bản ghi nào được cập nhật. Vui lòng kiểm tra lại.", "Thông báo", JOptionPane.WARNING_MESSAGE);
+        }
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(this, "Lỗi khi kết nối cơ sở dữ liệu: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    } finally {
+        // Đóng kết nối và các tài nguyên
+        try {
+            if (pstmt != null) {
+                pstmt.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+    }//GEN-LAST:event_update_hangloatActionPerformed
+
+    private void delete_hangloatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delete_hangloatActionPerformed
+        // Lấy thông tin từ các ô nhập liệu
+        String maSach = txtMasach.getText().trim();
+        String mbsBeginStr = txt_mbs_begin.getText().trim();
+        String mbsEndStr = txt_mbs_end.getText().trim();
+
+        // Kiểm tra dữ liệu nhập hợp lệ
+        if (maSach.isEmpty() || mbsBeginStr.isEmpty() || mbsEndStr.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập mã sách, số bắt đầu và số kết thúc.", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        int mbsBegin, mbsEnd;
+        try {
+            mbsBegin = Integer.parseInt(mbsBeginStr);
+            mbsEnd = Integer.parseInt(mbsEndStr);
+            if (mbsEnd <= mbsBegin) {
+                JOptionPane.showMessageDialog(this, "Số kết thúc phải lớn hơn số bắt đầu!", "Thông báo", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Số bắt đầu và số kết thúc phải là số nguyên!", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        try {
+            // Kết nối cơ sở dữ liệu
+            String URL = "jdbc:mysql://localhost:3306/quan_ly_thu_vien";
+            String USER = "root";
+            String PASSWORD = "";
+
+            Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement pstmtCheck = null;
+            PreparedStatement pstmtDelete = null;
+            ResultSet rs = null;
+
+            // Kiểm tra xem mã sách có tồn tại không
+            String checkMaSachSQL = "SELECT COUNT(*) AS count FROM bansaosach WHERE maSach = ?";
+            pstmtCheck = conn.prepareStatement(checkMaSachSQL);
+            pstmtCheck.setString(1, maSach);
+            rs = pstmtCheck.executeQuery();
+            rs.next();
+            int maSachCount = rs.getInt("count");
+            if (maSachCount == 0) {
+                JOptionPane.showMessageDialog(this, "Mã sách không tồn tại trong cơ sở dữ liệu!", "Thông báo", JOptionPane.WARNING_MESSAGE);
+                conn.close();
+                return;
+            }
+
+            // Lặp qua các mã bản sao cần xóa
+            StringBuilder notFoundMessages = new StringBuilder();
+            int totalDeleted = 0;
+            for (int i = mbsBegin; i <= mbsEnd; i++) {
+                String maBanSao = maSach + "-" + String.format("%02d", i);
+
+                // Kiểm tra xem mã bản sao có tồn tại không
+                String checkMaBanSaoSQL = "SELECT COUNT(*) AS count FROM bansaosach WHERE maSach = ? AND maBanSao = ?";
+                pstmtCheck = conn.prepareStatement(checkMaBanSaoSQL);
+                pstmtCheck.setString(1, maSach);
+                pstmtCheck.setString(2, maBanSao);
+                rs = pstmtCheck.executeQuery();
+                rs.next();
+                int count = rs.getInt("count");
+
+                if (count == 0) {
+                    notFoundMessages.append(maBanSao).append("\n");
+                } else {
+                    // Xóa mã bản sao
+                    String deleteSQL = "DELETE FROM bansaosach WHERE maSach = ? AND maBanSao = ?";
+                    pstmtDelete = conn.prepareStatement(deleteSQL);
+                    pstmtDelete.setString(1, maSach);
+                    pstmtDelete.setString(2, maBanSao);
+                    totalDeleted += pstmtDelete.executeUpdate();
+                }
+            }
+
+            // Hiển thị thông báo kết quả
+            if (totalDeleted > 0) {
+                JOptionPane.showMessageDialog(this, "Đã xóa thành công " + totalDeleted + " bản sao.", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            }
+            if (notFoundMessages.length() > 0) {
+                JOptionPane.showMessageDialog(this, "Các mã bản sao sau không tồn tại và không được xóa:\n" + notFoundMessages, "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+            // Cập nhật lại bảng JTable
+            resetTable(maSach);
+
+            conn.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Lỗi: " + e.getMessage(), "Thông báo", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_delete_hangloatActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -835,17 +1206,23 @@ public class CopyBookControl extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addnew_hangloat;
     private javax.swing.JPanel back_home_btn;
     private javax.swing.JButton btnThemmoibansao;
     private javax.swing.JButton btn_capnhat;
     private javax.swing.JToggleButton btn_fillall;
     private javax.swing.JToggleButton btn_timkiembansao1;
     private javax.swing.JButton btn_xoabansao;
+    private javax.swing.JButton delete_hangloat;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -863,5 +1240,8 @@ public class CopyBookControl extends javax.swing.JFrame {
     private javax.swing.JTextField txtMasach;
     private javax.swing.JTextField txtTimkiembansao;
     private javax.swing.JTextField txtTrangthai;
+    private javax.swing.JTextField txt_mbs_begin;
+    private javax.swing.JTextField txt_mbs_end;
+    private javax.swing.JButton update_hangloat;
     // End of variables declaration//GEN-END:variables
 }
