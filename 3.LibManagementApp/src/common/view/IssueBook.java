@@ -323,7 +323,6 @@ public class IssueBook extends javax.swing.JFrame {
         jLabel18.setText("Ngày mượn:");
         panel_main.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 410, -1, -1));
 
-        txt_StudentID.setBackground(new java.awt.Color(255, 255, 255));
         txt_StudentID.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         txt_StudentID.setForeground(new java.awt.Color(0, 106, 106));
         txt_StudentID.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 106, 106)));
@@ -339,7 +338,6 @@ public class IssueBook extends javax.swing.JFrame {
         });
         panel_main.add(txt_StudentID, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 290, 270, 30));
 
-        txt_CopyBookID.setBackground(new java.awt.Color(255, 255, 255));
         txt_CopyBookID.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         txt_CopyBookID.setForeground(new java.awt.Color(0, 106, 106));
         txt_CopyBookID.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 106, 106)));
