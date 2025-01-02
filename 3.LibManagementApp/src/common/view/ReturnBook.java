@@ -467,7 +467,7 @@ public class ReturnBook extends javax.swing.JFrame {
                     txtlydo.setText("");
 
                     JOptionPane.showMessageDialog(this, "Trả sách thành công!");
-                } else if (trangThai == 1) {
+                } else if (trangThai == 0) {
                     JOptionPane.showMessageDialog(this, "Quyển sách này đã được trả rồi!");
                 } else {
                     JOptionPane.showMessageDialog(this, "Trạng thái không hợp lệ!");
