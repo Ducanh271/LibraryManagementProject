@@ -70,6 +70,11 @@ public class IssuedBookDetail extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Rewind_48px.png"))); // NOI18N
         jLabel6.setText("Back");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout BackLayout = new javax.swing.GroupLayout(Back);
         Back.setLayout(BackLayout);
@@ -310,6 +315,12 @@ public class IssuedBookDetail extends javax.swing.JFrame {
             Logger.getLogger(IssuedBookDetail.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_but_searchByIssuedDayActionPerformed
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        Homepage hp = new Homepage();
+        this.setVisible(false);
+        hp.setVisible(true);
+    }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
      * @param args the command line arguments

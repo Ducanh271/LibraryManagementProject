@@ -96,6 +96,11 @@ public class IssueBook extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Rewind_48px.png"))); // NOI18N
         jLabel6.setText("Back");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout BackLayout = new javax.swing.GroupLayout(Back);
         Back.setLayout(BackLayout);
@@ -422,6 +427,12 @@ public class IssueBook extends javax.swing.JFrame {
     private void lbl_studentErrorFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lbl_studentErrorFocusLost
         // TODO add your handling code here:
     }//GEN-LAST:event_lbl_studentErrorFocusLost
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+       Homepage hp = new Homepage();
+       this.setVisible(false);
+       hp.setVisible(true);
+    }//GEN-LAST:event_jLabel6MouseClicked
     // hàm kiểm tra mã bản sao có tồn tại hay không
     public boolean isCopyExist(String maBanSao) throws Exception {
         String sql = "SELECT 1 FROM bansaosach WHERE maBanSao = ?";

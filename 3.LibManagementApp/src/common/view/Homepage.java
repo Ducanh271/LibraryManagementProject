@@ -36,12 +36,14 @@ public class Homepage extends javax.swing.JFrame {
          Class.forName("com.mysql.cj.jdbc.Driver");
          Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quan_ly_thu_vien","root","");
          java.sql.Statement st = con.createStatement();
-         java.sql.ResultSet rs= st.executeQuery("select * from nguoimuon");
+         java.sql.ResultSet rs= st.executeQuery("select * from sinhvien");
          while(rs.next()){
-         String manm = rs.getString("maNM");
-         String tennm = rs.getString("tenNM");
+         String masv = rs.getString("maSV");
+         String tensv = rs.getString("tenSV");
          String email = rs.getString("email");
-         Object[] ob = {manm,tennm,email};
+         String nienkhoa =rs.getString("nienKhoa");
+         String nganhhoc =rs.getString("nganhHoc");
+         Object[] ob = {masv,tensv,email,nienkhoa,nganhhoc};
          model =(DefaultTableModel) tblnguoimuon.getModel();
          model.addRow(ob);
          }
@@ -81,7 +83,7 @@ public class Homepage extends javax.swing.JFrame {
             soSach = rsSoSach.getInt(1);
             txtsosach.setText(String.valueOf(soSach));
         }
-        String querySoNguoiMuon = "SELECT COUNT(maNM) FROM nguoimuon";
+        String querySoNguoiMuon = "SELECT COUNT(maSV) FROM sinhvien";
         java.sql.PreparedStatement psSoNguoiMuon = con.prepareStatement(querySoNguoiMuon);
         java.sql.ResultSet rsSoNguoiMuon = psSoNguoiMuon.executeQuery();
         int soNguoiMuon = 0;
@@ -89,7 +91,7 @@ public class Homepage extends javax.swing.JFrame {
             soNguoiMuon = rsSoNguoiMuon.getInt(1);
             txtnguoimuon.setText(String.valueOf(soNguoiMuon));
         }
-        String querySoDangMuon = "SELECT COUNT(maMuon) FROM thongtinmuontrasach";
+        String querySoDangMuon = "SELECT COUNT(maMuon) FROM thongtinmuontrasach where trangThai =1";
         java.sql.PreparedStatement psSoDangMuon = con.prepareStatement(querySoDangMuon);
         java.sql.ResultSet rsSoDangMuon = psSoDangMuon.executeQuery();
         int soDangMuon = 0;
@@ -484,6 +486,11 @@ public class Homepage extends javax.swing.JFrame {
         jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         jPanel11.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel11MouseClicked(evt);
+            }
+        });
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel12.setBackground(new java.awt.Color(255, 52, 51));
@@ -1391,7 +1398,6 @@ public class Homepage extends javax.swing.JFrame {
         jPanel91.setForeground(new java.awt.Color(255, 255, 255));
 
         txtsosach.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        txtsosach.setForeground(new java.awt.Color(0, 0, 0));
         txtsosach.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Book_Shelf_50px.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel91Layout = new javax.swing.GroupLayout(jPanel91);
@@ -1414,22 +1420,18 @@ public class Homepage extends javax.swing.JFrame {
         jPanel1.add(jPanel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 120, 80));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Số sách còn lại");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, -1, -1));
 
         jLabel92.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel92.setForeground(new java.awt.Color(0, 0, 0));
         jLabel92.setText("Số lượng sách");
         jPanel1.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
 
         jLabel93.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel93.setForeground(new java.awt.Color(0, 0, 0));
         jLabel93.setText("Thông tin sinh viên mượn sách:");
         jPanel1.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, -1, -1));
 
         jLabel94.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel94.setForeground(new java.awt.Color(0, 0, 0));
         jLabel94.setText("Số sách đang mượn");
         jPanel1.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, -1, -1));
 
@@ -1438,7 +1440,6 @@ public class Homepage extends javax.swing.JFrame {
         jPanel92.setForeground(new java.awt.Color(255, 255, 255));
 
         txtnguoimuon.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        txtnguoimuon.setForeground(new java.awt.Color(0, 0, 0));
         txtnguoimuon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_People_50px.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel92Layout = new javax.swing.GroupLayout(jPanel92);
@@ -1465,7 +1466,6 @@ public class Homepage extends javax.swing.JFrame {
         jPanel93.setForeground(new java.awt.Color(255, 255, 255));
 
         txtdangmuon.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        txtdangmuon.setForeground(new java.awt.Color(0, 0, 0));
         txtdangmuon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_Sell_50px.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel93Layout = new javax.swing.GroupLayout(jPanel93);
@@ -1491,7 +1491,6 @@ public class Homepage extends javax.swing.JFrame {
         jPanel94.setForeground(new java.awt.Color(255, 255, 255));
 
         txtconlai.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        txtconlai.setForeground(new java.awt.Color(0, 0, 0));
         txtconlai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adminIcons/icons8_List_of_Thumbnails_50px.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel94Layout = new javax.swing.GroupLayout(jPanel94);
@@ -1513,7 +1512,6 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel1.add(jPanel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, -1, -1));
 
-        tblsach.setBackground(new java.awt.Color(255, 255, 255));
         tblsach.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1526,13 +1524,12 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, 380, 140));
 
-        tblnguoimuon.setBackground(new java.awt.Color(255, 255, 255));
         tblnguoimuon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Mã sinh viên", "Tên sinh viên", "Email"
+                "Mã sinh viên", "Tên sinh viên", "Email", "Niên khóa", "Ngành học"
             }
         ));
         jScrollPane2.setViewportView(tblnguoimuon);
@@ -1540,7 +1537,6 @@ public class Homepage extends javax.swing.JFrame {
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 380, 140));
 
         jLabel95.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel95.setForeground(new java.awt.Color(0, 0, 0));
         jLabel95.setText("Số sinh viên mượn");
         jPanel1.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, -1, -1));
 
@@ -1589,6 +1585,12 @@ public class Homepage extends javax.swing.JFrame {
         this.setVisible(false);
         r.setVisible(true);
     }//GEN-LAST:event_jLabel77MouseClicked
+
+    private void jPanel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseClicked
+        Login lg = new Login();
+        this.setVisible(false);
+        lg.setVisible(true);
+    }//GEN-LAST:event_jPanel11MouseClicked
 
     /**
      * @param args the command line arguments
