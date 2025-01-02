@@ -395,7 +395,7 @@ public class CopyBookControl extends javax.swing.JFrame {
     }//GEN-LAST:event_table_bansaoFocusLost
 
     private void btn_xoabansaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xoabansaoActionPerformed
-        String maSach = txt_mbs_end.getText().trim();
+        String maSach = txtMasach.getText().trim();
         String maBanSao = txtMabansao.getText().trim();
         // Kiểm tra nếu các trường dữ liệu không trống
         if (maSach.isEmpty() || maBanSao.isEmpty()) {
@@ -669,7 +669,7 @@ public class CopyBookControl extends javax.swing.JFrame {
 
     private void btnThemmoibansaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemmoibansaoActionPerformed
 
-        String masach = txt_mbs_end.getText();
+        String masach = txtMasach.getText();
         String mabansao = txtMabansao.getText();
         String loaibansao = txtLoaibansao.getText();
         String giabansao = txtGiabansao.getText();
