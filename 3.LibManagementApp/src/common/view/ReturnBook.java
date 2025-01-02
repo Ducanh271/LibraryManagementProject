@@ -455,7 +455,14 @@ public class ReturnBook extends javax.swing.JFrame {
                         pstCapNhatThongTin.setString(2, mabs);
                     }
                     pstCapNhatThongTin.executeUpdate();
-
+             String sqlCapNhatBanSao = """
+                UPDATE bansaosach
+                SET trangThai = 0
+                WHERE maBanSao = ?
+            """;
+                    PreparedStatement pstCapNhatBanSao = conn.prepareStatement(sqlCapNhatBanSao);
+                    pstCapNhatBanSao.setString(1, mabs);
+                    pstCapNhatBanSao.executeUpdate();
                     // Đặt lại các trường nhập liệu về rỗng
                     masach.setText("");
                     mabsao.setText("");
