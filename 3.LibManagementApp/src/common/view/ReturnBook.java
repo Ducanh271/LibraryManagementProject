@@ -428,7 +428,7 @@ public class ReturnBook extends javax.swing.JFrame {
             if (rsKiemTra.next()) {
                 int trangThai = rsKiemTra.getInt("trangThai");
 
-                if (trangThai == 0) {
+                if (trangThai == 1) {
                     // Cập nhật trạng thái và thông tin trả sách
                     String sqlCapNhatThongTin;
                     PreparedStatement pstCapNhatThongTin;
@@ -436,7 +436,7 @@ public class ReturnBook extends javax.swing.JFrame {
                     if (!tienPhat.isEmpty() && !lyDoPhat.isEmpty()) {
                         sqlCapNhatThongTin = """
                             UPDATE thongtinmuontrasach
-                            SET trangThai = 1, tienPhat = ?, lyDoPhat = ?, ngayTra = NOW()
+                            SET trangThai = 0, tienPhat = ?, lyDoPhat = ?, ngayTra = NOW()
                             WHERE maNM = ? AND maBanSao = ?
                         """;
                         pstCapNhatThongTin = conn.prepareStatement(sqlCapNhatThongTin);
@@ -447,7 +447,7 @@ public class ReturnBook extends javax.swing.JFrame {
                     } else {
                         sqlCapNhatThongTin = """
                             UPDATE thongtinmuontrasach
-                            SET trangThai = 1, ngayTra = NOW()
+                            SET trangThai = 0, ngayTra = NOW()
                             WHERE maNM = ? AND maBanSao = ?
                         """;
                         pstCapNhatThongTin = conn.prepareStatement(sqlCapNhatThongTin);
@@ -519,7 +519,7 @@ public class ReturnBook extends javax.swing.JFrame {
                 String sqlThongTinMuonTra = """
                     SELECT maNM, ngayMuon, hanTra
                     FROM thongtinmuontrasach
-                    WHERE maNM = ? AND maBanSao = ? AND trangThai = 0
+                    WHERE maNM = ? AND maBanSao = ? AND trangThai = 1
                 """;
                 PreparedStatement pstThongTin = conn.prepareStatement(sqlThongTinMuonTra);
                 pstThongTin.setString(1, masv);
