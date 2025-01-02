@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 import javax.swing.JOptionPane;
 /**
  *
@@ -214,7 +216,7 @@ public class ReturnBook extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(hantra, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
@@ -313,15 +315,9 @@ public class ReturnBook extends javax.swing.JFrame {
                                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(buttontimkiem, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(93, 93, 93))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(buttontrasach, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(91, 91, 91))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel9)
@@ -339,7 +335,13 @@ public class ReturnBook extends javax.swing.JFrame {
                                         .addComponent(jLabel13)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(txtlydo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(45, 45, 45))))))
+                                .addGap(45, 45, 45))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(buttontimkiem, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(83, 83, 83))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(buttontrasach, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(78, 78, 78))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,16 +369,16 @@ public class ReturnBook extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(txtlydo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
                 .addComponent(buttontrasach)
-                .addGap(63, 63, 63))
+                .addContainerGap(103, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -391,158 +393,166 @@ public class ReturnBook extends javax.swing.JFrame {
     }//GEN-LAST:event_bttrasachActionPerformed
 
     private void buttontrasachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttontrasachActionPerformed
-  String mabs = txtmabs.getText().trim(); // Mã bản sao
-    String masv = txtmasv.getText().trim(); // Mã sinh viên
-    String tienPhat = txttienphat.getText().trim(); // Tiền phạt
-    String lyDoPhat = txtlydo.getText().trim(); // Lý do phạt
+   String mabs = txtmabs.getText().trim(); // Mã bản sao
+        String masv = txtmasv.getText().trim(); // Mã sinh viên
+        String tienPhat = txttienphat.getText().trim(); // Tiền phạt
+        String lyDoPhat = txtlydo.getText().trim(); // Lý do phạt
 
-    if (mabs.isEmpty() || masv.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ mã bản sao và mã sinh viên!");
-        return;
-    }
-
-    if (!tienPhat.isEmpty() && lyDoPhat.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Vui lòng nhập lý do phạt!");
-        return;
-    }
-
-    if (tienPhat.isEmpty() && !lyDoPhat.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Vui lòng nhập tiền phạt!");
-        return;
-    }
-
-    try {
-        // Kiểm tra mã bản sao và trạng thái trong bảng chitietmuonsach
-        String sqlKiemTra = """
-            SELECT trangThai
-            FROM thongtinmuontrasach
-            WHERE maNM = ? AND maBanSaoSach = ?
-        """;
-        PreparedStatement pstKiemTra = conn.prepareStatement(sqlKiemTra);
-        pstKiemTra.setString(1, masv);
-        pstKiemTra.setString(2, mabs);
-
-        ResultSet rsKiemTra = pstKiemTra.executeQuery();
-        if (rsKiemTra.next()) {
-            int trangThai = rsKiemTra.getInt("trangThai");
-
-            if (trangThai==0) {
-                // Cập nhật trạng thái thành 2 trong bảng thongtinmuontrasach
-                String sqlCapNhatThongTin = "UPDATE thongtinmuontrasach SET trangThai = 1 WHERE maNM = ?";
-                PreparedStatement pstCapNhatThongTin = conn.prepareStatement(sqlCapNhatThongTin);
-                pstCapNhatThongTin.setString(1, masv);
-                pstCapNhatThongTin.executeUpdate();
-
-                // Cập nhật trạng thái và tùy chọn cập nhật tienPhat và lyDoPhat
-                String sqlCapNhatChiTiet;
-                PreparedStatement pstCapNhatChiTiet = null;
-                if (!tienPhat.isEmpty() && !lyDoPhat.isEmpty()) {
-                    sqlCapNhatChiTiet = """
-                        UPDATE thongtinmuontrasach 
-                        SET trangThai = 1, tienPhat = ?, lyDoPhat = ?
-                        WHERE maBanSaoSach = ?
-                    """;
-                    pstCapNhatChiTiet = conn.prepareStatement(sqlCapNhatChiTiet);
-                    pstCapNhatChiTiet.setString(1, tienPhat);
-                    pstCapNhatChiTiet.setString(2, lyDoPhat);
-                }
-                else {
-    // Trường hợp không có tiền phạt hoặc lý do phạt
-    sqlCapNhatChiTiet = """
-        UPDATE thongtinmuontrasach 
-        SET trangThai = 1
-        WHERE maBanSaoSach = ?
-    """;
-    pstCapNhatChiTiet = conn.prepareStatement(sqlCapNhatChiTiet);
-    pstCapNhatChiTiet.setString(1, mabs);
-}
-                pstCapNhatChiTiet.setString(pstCapNhatChiTiet.getParameterMetaData().getParameterCount(), mabs);
-                pstCapNhatChiTiet.executeUpdate();
-
-                // Đặt lại các trường nhập liệu về rỗng
-                masach.setText("");
-                mabsao.setText("");
-                tensach.setText("");
-                svmuon.setText("");
-                ngaymuon.setText("");
-                hantra.setText("");
-                txttienphat.setText("");
-                txtlydo.setText("");
-
-                JOptionPane.showMessageDialog(this, "Trả sách thành công!");
-            } else if (trangThai == 1) {
-                JOptionPane.showMessageDialog(this, "Quyển sách chưa được mượn!");
-            } else {
-                JOptionPane.showMessageDialog(this, "Trạng thái không hợp lệ!");
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Không tìm thấy thông tin mượn sách với mã bản sao và mã sinh viên này!");
+        if (mabs.isEmpty() || masv.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ mã bản sao và mã sinh viên!");
+            return;
         }
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Lỗi xử lý: " + e.getMessage());
-    }
+
+        if (!tienPhat.isEmpty() && lyDoPhat.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập lý do phạt!");
+            return;
+        }
+
+        if (tienPhat.isEmpty() && !lyDoPhat.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập tiền phạt!");
+            return;
+        }
+
+        try {
+            // Kiểm tra mã bản sao và trạng thái trong bảng thongtinmuontrasach
+            String sqlKiemTra = """
+                SELECT trangThai
+                FROM thongtinmuontrasach
+                WHERE maNM = ? AND maBanSao = ?
+            """;
+            PreparedStatement pstKiemTra = conn.prepareStatement(sqlKiemTra);
+            pstKiemTra.setString(1, masv);
+            pstKiemTra.setString(2, mabs);
+
+            ResultSet rsKiemTra = pstKiemTra.executeQuery();
+            if (rsKiemTra.next()) {
+                int trangThai = rsKiemTra.getInt("trangThai");
+
+                if (trangThai == 0) {
+                    // Cập nhật trạng thái và thông tin trả sách
+                    String sqlCapNhatThongTin;
+                    PreparedStatement pstCapNhatThongTin;
+
+                    if (!tienPhat.isEmpty() && !lyDoPhat.isEmpty()) {
+                        sqlCapNhatThongTin = """
+                            UPDATE thongtinmuontrasach
+                            SET trangThai = 1, tienPhat = ?, lyDoPhat = ?, ngayTra = NOW()
+                            WHERE maNM = ? AND maBanSao = ?
+                        """;
+                        pstCapNhatThongTin = conn.prepareStatement(sqlCapNhatThongTin);
+                        pstCapNhatThongTin.setString(1, tienPhat);
+                        pstCapNhatThongTin.setString(2, lyDoPhat);
+                        pstCapNhatThongTin.setString(3, masv);
+                        pstCapNhatThongTin.setString(4, mabs);
+                    } else {
+                        sqlCapNhatThongTin = """
+                            UPDATE thongtinmuontrasach
+                            SET trangThai = 1, ngayTra = NOW()
+                            WHERE maNM = ? AND maBanSao = ?
+                        """;
+                        pstCapNhatThongTin = conn.prepareStatement(sqlCapNhatThongTin);
+                        pstCapNhatThongTin.setString(1, masv);
+                        pstCapNhatThongTin.setString(2, mabs);
+                    }
+                    pstCapNhatThongTin.executeUpdate();
+
+                    // Đặt lại các trường nhập liệu về rỗng
+                    masach.setText("");
+                    mabsao.setText("");
+                    tensach.setText("");
+                    svmuon.setText("");
+                    ngaymuon.setText("");
+                    hantra.setText("");
+                    txttienphat.setText("");
+                    txtlydo.setText("");
+
+                    JOptionPane.showMessageDialog(this, "Trả sách thành công!");
+                } else if (trangThai == 1) {
+                    JOptionPane.showMessageDialog(this, "Quyển sách này đã được trả rồi!");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Trạng thái không hợp lệ!");
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Không tìm thấy thông tin mượn sách với mã bản sao và mã sinh viên này!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Lỗi xử lý: " + e.getMessage());
+        }
 
     }//GEN-LAST:event_buttontrasachActionPerformed
 
     private void buttontimkiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttontimkiemActionPerformed
-        String mabs = txtmabs.getText().trim(); // Mã bản sao
-    String masv = txtmasv.getText().trim(); // Mã sinh viên
+       String mabs = txtmabs.getText().trim(); // Mã bản sao
+        String masv = txtmasv.getText().trim(); // Mã sinh viên
 
-    if (mabs.isEmpty() || masv.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ mã bản sao và mã sinh viên!");
-        return;
-    }
-
-    try {
-        // Bước 1: Kiểm tra mã bản sao trong bảng bansaosach
-        String sqlBanSao = "SELECT maSach FROM bansaosach WHERE maBanSao = ?";
-        PreparedStatement pstBanSao = conn.prepareStatement(sqlBanSao);
-        pstBanSao.setString(1, mabs);
-
-        ResultSet rsBanSao = pstBanSao.executeQuery();
-        if (rsBanSao.next()) {
-            String maSach = rsBanSao.getString("maSach");
-            masach.setText(maSach); // Hiển thị mã sách lên label
-            mabsao.setText(mabs);   // Hiển thị mã bản sao lên label
-
-            // Bước 2: Lấy thông tin sách từ bảng sach
-            String sqlSach = "SELECT tenSach FROM sach WHERE maSach = ?";
-            PreparedStatement pstSach = conn.prepareStatement(sqlSach);
-            pstSach.setString(1, maSach);
-
-            ResultSet rsSach = pstSach.executeQuery();
-            if (rsSach.next()) {
-                tensach.setText(rsSach.getString("tenSach")); // Hiển thị tên sách lên label
-            } else {
-                JOptionPane.showMessageDialog(this, "Không tìm thấy thông tin sách!");
-                return;
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Không tìm thấy mã bản sao!");
+        if (mabs.isEmpty() || masv.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ mã bản sao và mã sinh viên!");
             return;
         }
 
-        // Bước 3: Kiểm tra thông tin người mượn và mã thông tin mượn trả
-        String sqlThongTinMuonTra = """
-            SELECT maNM, ngayMuon, hanTra
-            FROM thongtinmuontrasach 
-            WHERE maNM = ? AND maBanSaoSach = ? AND trangThai = 0
-        """;
-        PreparedStatement pstThongTin = conn.prepareStatement(sqlThongTinMuonTra);
-        pstThongTin.setString(1, masv);
-        pstThongTin.setString(2, mabs);
+        try {
+            // Bước 1: Kiểm tra mã bản sao trong bảng bansaosach
+            String sqlBanSao = "SELECT maSach FROM bansaosach WHERE maBanSao = ?";
+            PreparedStatement pstBanSao = conn.prepareStatement(sqlBanSao);
+            pstBanSao.setString(1, mabs);
 
-        ResultSet rsThongTin = pstThongTin.executeQuery();
-        if (rsThongTin.next()) {
-            svmuon.setText(rsThongTin.getString("maNM"));       // Hiển thị mã người mượn
-            ngaymuon.setText(rsThongTin.getString("ngayMuon")); // Hiển thị ngày mượn
-            hantra.setText(rsThongTin.getString("hanTra"));     // Hiển thị hạn trả
-        } else {
-            JOptionPane.showMessageDialog(this, "Sinh viên mà bạn nhập không mượn bản sao trên!");
+            ResultSet rsBanSao = pstBanSao.executeQuery();
+            if (rsBanSao.next()) {
+                String maSach = rsBanSao.getString("maSach");
+                masach.setText(maSach); // Hiển thị mã sách lên label
+                mabsao.setText(mabs);   // Hiển thị mã bản sao lên label
+
+                // Bước 2: Lấy thông tin sách từ bảng sach
+                String sqlSach = "SELECT tenSach FROM sach WHERE maSach = ?";
+                PreparedStatement pstSach = conn.prepareStatement(sqlSach);
+                pstSach.setString(1, maSach);
+
+                ResultSet rsSach = pstSach.executeQuery();
+                if (rsSach.next()) {
+                    tensach.setText(rsSach.getString("tenSach")); // Hiển thị tên sách lên label
+                } else {
+                    JOptionPane.showMessageDialog(this, "Không tìm thấy thông tin sách!");
+                    return;
+                }
+
+                // Bước 3: Kiểm tra thông tin người mượn và mã thông tin mượn trả
+                String sqlThongTinMuonTra = """
+                    SELECT maNM, ngayMuon, hanTra
+                    FROM thongtinmuontrasach
+                    WHERE maNM = ? AND maBanSao = ? AND trangThai = 0
+                """;
+                PreparedStatement pstThongTin = conn.prepareStatement(sqlThongTinMuonTra);
+                pstThongTin.setString(1, masv);
+                pstThongTin.setString(2, mabs);
+
+                ResultSet rsThongTin = pstThongTin.executeQuery();
+                if (rsThongTin.next()) {
+                    svmuon.setText(rsThongTin.getString("maNM"));       // Hiển thị mã người mượn
+                    ngaymuon.setText(rsThongTin.getString("ngayMuon")); // Hiển thị ngày mượn
+                    hantra.setText(rsThongTin.getString("hanTra"));     // Hiển thị hạn trả
+
+                    // Kiểm tra quá hạn
+                    java.sql.Date hanTraDate = rsThongTin.getDate("hanTra");
+                    Date today = new Date();
+                    if (today.after(hanTraDate)) {
+                        // Tính số ngày quá hạn
+                        long diffInMillies = Math.abs(today.getTime() - hanTraDate.getTime());
+                        long diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
+                        JOptionPane.showMessageDialog(this, "Sách đã quá hạn trả " + diff + " ngày!", "Quá hạn", JOptionPane.WARNING_MESSAGE);
+                    }
+
+                } else {
+                    JOptionPane.showMessageDialog(this, "Sinh viên mà bạn nhập không mượn bản sao này hoặc sách đã được trả!");
+                }
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Không tìm thấy mã bản sao!");
+                return;
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Lỗi tìm kiếm: " + e.getMessage());
         }
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Lỗi tìm kiếm: " + e.getMessage());
-    }
     }//GEN-LAST:event_buttontimkiemActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
