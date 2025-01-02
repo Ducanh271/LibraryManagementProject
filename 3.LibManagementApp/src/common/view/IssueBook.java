@@ -15,6 +15,7 @@ import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import static model.DataAccessHelper.conn;
 
 /**
  *
@@ -48,13 +49,15 @@ public class IssueBook extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        lbl_NumbersOfBook = new javax.swing.JLabel();
+        lbl_StatusOfCopyBook = new javax.swing.JLabel();
         lbl_bookID = new javax.swing.JLabel();
         lbl_copyID = new javax.swing.JLabel();
         lbl_bookName = new javax.swing.JLabel();
         lbl_author = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         lbl_bookError = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        lbl_NumbersOfBook = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
@@ -161,10 +164,10 @@ public class IssueBook extends javax.swing.JFrame {
         jLabel7.setText("Tác giả:");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
 
-        lbl_NumbersOfBook.setBackground(new java.awt.Color(255, 255, 255));
-        lbl_NumbersOfBook.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        lbl_NumbersOfBook.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(lbl_NumbersOfBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 190, 30));
+        lbl_StatusOfCopyBook.setBackground(new java.awt.Color(255, 255, 255));
+        lbl_StatusOfCopyBook.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        lbl_StatusOfCopyBook.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(lbl_StatusOfCopyBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 570, 190, 30));
 
         lbl_bookID.setBackground(new java.awt.Color(255, 255, 255));
         lbl_bookID.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -188,8 +191,8 @@ public class IssueBook extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Số lượng:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 90, -1));
+        jLabel8.setText("Trạng thái: ");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 570, 110, -1));
 
         lbl_bookError.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         lbl_bookError.setForeground(new java.awt.Color(255, 255, 255));
@@ -199,6 +202,16 @@ public class IssueBook extends javax.swing.JFrame {
             }
         });
         jPanel1.add(lbl_bookError, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 600, 280, 50));
+
+        jLabel14.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Số lượng:");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 90, -1));
+
+        lbl_NumbersOfBook.setBackground(new java.awt.Color(255, 255, 255));
+        lbl_NumbersOfBook.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        lbl_NumbersOfBook.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(lbl_NumbersOfBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 190, 30));
 
         panel_main.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 740));
 
@@ -407,15 +420,18 @@ public class IssueBook extends javax.swing.JFrame {
 
     private void txt_CopyBookIDFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_CopyBookIDFocusLost
         if (!txt_CopyBookID.getText().equals("")) {
-            
+
             getBookDetails();
         }
     }//GEN-LAST:event_txt_CopyBookIDFocusLost
 
     private void btn_IssueBook1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IssueBook1ActionPerformed
-         if(lendingBook() == true){
-             JOptionPane.showMessageDialog(this, "cho mượn thành công");
-         }
+        if (lendingBook() == true) {
+            JOptionPane.showMessageDialog(this, "cho mượn thành công");
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "sách đang không có sẵn, cho mượn thất bại");
+        }
     }//GEN-LAST:event_btn_IssueBook1ActionPerformed
 
     private void lbl_bookErrorFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lbl_bookErrorFocusLost
@@ -427,9 +443,9 @@ public class IssueBook extends javax.swing.JFrame {
     }//GEN-LAST:event_lbl_studentErrorFocusLost
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-       Homepage hp = new Homepage();
-       this.setVisible(false);
-       hp.setVisible(true);
+        Homepage hp = new Homepage();
+        this.setVisible(false);
+        hp.setVisible(true);
     }//GEN-LAST:event_jLabel6MouseClicked
     // hàm kiểm tra mã bản sao có tồn tại hay không
     public boolean isCopyExist(String maBanSao) throws Exception {
@@ -445,7 +461,7 @@ public class IssueBook extends javax.swing.JFrame {
         }
     }
 // hàm này sẽ được cho vào model
-
+    int status = 0;
     public void getBookDetails() {
         String copOfBookID = txt_CopyBookID.getText();
         try {
@@ -455,6 +471,18 @@ public class IssueBook extends javax.swing.JFrame {
                 String bookID = copOfBookID.length() >= 6 ? copOfBookID.substring(0, 6) : copOfBookID;
 
                 try (Connection con = DatabaseConnection.getConnection()) {
+                    String query0 = "select trangThai from bansaosach where maBanSao = ?";
+                    try (PreparedStatement pst0 = con.prepareStatement(query0)) {
+                        pst0.setString(1, copOfBookID);
+                        ResultSet rs = pst0.executeQuery();
+                        if(rs.next()){
+                            status = rs.getInt("trangThai");
+                            System.out.println(status);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println(status);
                     String query1 = "select * from sach where maSach = ?";
                     try (PreparedStatement pst = con.prepareStatement(query1)) {
                         pst.setString(1, bookID);
@@ -465,7 +493,13 @@ public class IssueBook extends javax.swing.JFrame {
                                 lbl_bookName.setText(rs.getString("tenSach"));
                                 lbl_NumbersOfBook.setText(rs.getString("soLuong"));
                                 lbl_bookError.setText("");
-
+                                if(status  == 1){
+                                    lbl_StatusOfCopyBook.setText("Đang mượn");
+                                }
+                                else{
+                                    lbl_StatusOfCopyBook.setText("Có sẵn");                                  
+                                }
+                                
                             } else {
                                 lbl_bookError.setText("Mã bản sao không hợp lệ");
                             }
@@ -526,61 +560,87 @@ public class IssueBook extends javax.swing.JFrame {
     }
     // hàm thêm thông tin mượn sách vào database
 
-   public boolean lendingBook() {
-    Boolean isIssued = false;  // Đặt mặc định là false
-    String copyID = txt_CopyBookID.getText();
-    String studentID = txt_StudentID.getText();
-    String bookName = lbl_bookName.getText();
-    String studentName = lbl_studentName.getText();
-    String studentEmail = lbl_email.getText();
-    Date uIssueDate = date_issueDate.getDatoFecha();
-    Date uDueDate = date_dueDate.getDatoFecha();
+    public boolean lendingBook() {
+        Boolean isIssued = false;  // Đặt mặc định là false
+        String copyID = txt_CopyBookID.getText();
+        String studentID = txt_StudentID.getText();
+        String bookName = lbl_bookName.getText();
+        String studentName = lbl_studentName.getText();
+        String studentEmail = lbl_email.getText();
+        Date uIssueDate = date_issueDate.getDatoFecha();
+        Date uDueDate = date_dueDate.getDatoFecha();
 
-    long l1 = uIssueDate.getTime(); // Sửa lại dòng này để lấy ngày mượn
-    long l2 = uDueDate.getTime();
+        long l1 = uIssueDate.getTime(); // Sửa lại dòng này để lấy ngày mượn
+        long l2 = uDueDate.getTime();
 
-    java.sql.Date sIssueDate = new java.sql.Date(l1);
-    java.sql.Date sDueDate = new java.sql.Date(l2);
+        java.sql.Date sIssueDate = new java.sql.Date(l1);
+        java.sql.Date sDueDate = new java.sql.Date(l2);
+        if(status == 0){
+        try (Connection con = DatabaseConnection.getConnection()) {
+            // Câu lệnh SQL để thêm thông tin mượn sách
+            String sql = "INSERT INTO thongtinmuontrasach (maMuon, ngayMuon, hanTra, trangThai, maNM, maBanSao) VALUES (?, ?, ?, ?, ?, ?)";
+            String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+            try (PreparedStatement pst = con.prepareStatement(sql)) {
+                // Sinh UUID ngẫu nhiên và lấy 4 ký tự đầu
+                String issueID = "TQB" + uuid.substring(0, 4); // TQB + 4 ký tự đầu
+                pst.setString(1, issueID);
+                pst.setDate(2, sIssueDate);
+                pst.setDate(3, sDueDate);
+                pst.setInt(4, 1); // Trang thái: 1 có thể là "Đang mượn"
+                pst.setString(5, studentID);
+                pst.setString(6, copyID);
 
-    try (Connection con = DatabaseConnection.getConnection()) {
-        // Câu lệnh SQL để thêm thông tin mượn sách
-        String sql = "INSERT INTO thongtinmuontrasach (maMuon, ngayMuon, hanTra, trangThai, maNM, maBanSao) VALUES (?, ?, ?, ?, ?, ?)";
-        String uuid = UUID.randomUUID().toString().replaceAll("-", "");
-        try (PreparedStatement pst = con.prepareStatement(sql)) {
-            // Sinh UUID ngẫu nhiên và lấy 4 ký tự đầu
-            String issueID = "TQB" + uuid.substring(0, 4); // TQB + 4 ký tự đầu
-            pst.setString(1, issueID);
-            pst.setDate(2, sIssueDate);
-            pst.setDate(3, sDueDate);
-            pst.setInt(4, 1); // Trang thái: 1 có thể là "Đang mượn"
-            pst.setString(5, studentID);
-            pst.setString(6, copyID);
+                int rowCount = pst.executeUpdate(); // Thực thi câu lệnh insert
 
-            int rowCount = pst.executeUpdate(); // Thực thi câu lệnh insert
+                if (rowCount > 0) { // Nếu có dòng bị ảnh hưởng
+                    isIssued = true;
 
-            if (rowCount > 0) { // Nếu có dòng bị ảnh hưởng
-                isIssued = true;
-                
-            } else {
+                } else {
+                    isIssued = false;
+                }
+            } catch (Exception e) {
+                e.printStackTrace(); // In lỗi nếu có
                 isIssued = false;
             }
+            String sql1= "UPDATE bansaosach SET trangThai = 1 WHERE maBanSao = ?";
+            String sql2= "UPDATE thongtinmuontrasach SET trangThai = 1 WHERE maBanSao = ?";
+            try (PreparedStatement pst = con.prepareStatement(sql1)){
+                pst.setString(1, copyID);
+                int rs = pst.executeUpdate();
+                if(rs>0){
+                    System.out.println("cập nhật thành cônng");
+                }
+                else{
+                    System.out.println("cập nhật thất bại");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+           try (PreparedStatement pst = con.prepareStatement(sql2)){
+                pst.setString(1, copyID);
+                int rs = pst.executeUpdate();
+                if(rs>0){
+                    System.out.println("cập nhật thành cônng");
+                }
+                else{
+                    System.out.println("cập nhật thất bại");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         } catch (Exception e) {
-            e.printStackTrace(); // In lỗi nếu có
+            e.printStackTrace(); // In lỗi kết nối nếu có
             isIssued = false;
         }
-    } catch (Exception e) {
-        e.printStackTrace(); // In lỗi kết nối nếu có
-        isIssued = false;
+        }
+
+        return isIssued; // Trả về true nếu mượn thành công, false nếu có lỗi
     }
-
-    return isIssued; // Trả về true nếu mượn thành công, false nếu có lỗi
-}
-
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void showIssueBookScreen() {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -603,6 +663,7 @@ public class IssueBook extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -623,6 +684,7 @@ public class IssueBook extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel label;
     private javax.swing.JLabel lbl_NumbersOfBook;
+    private javax.swing.JLabel lbl_StatusOfCopyBook;
     private javax.swing.JLabel lbl_author;
     private javax.swing.JLabel lbl_bookError;
     private javax.swing.JLabel lbl_bookID;

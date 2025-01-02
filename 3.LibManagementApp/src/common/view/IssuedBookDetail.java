@@ -52,6 +52,7 @@ public class IssuedBookDetail extends javax.swing.JFrame {
         date_ToDate = new rojeru_san.componentes.RSDateChooser();
         jLabel20 = new javax.swing.JLabel();
         but_searchByIssuedDay = new javax.swing.JButton();
+        but_ResetTable = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_IssuedBookInfo = new rojeru_san.complementos.RSTableMetro();
 
@@ -147,7 +148,19 @@ public class IssuedBookDetail extends javax.swing.JFrame {
                 but_searchByIssuedDayActionPerformed(evt);
             }
         });
-        jPanel2.add(but_searchByIssuedDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 200, 130, 40));
+        jPanel2.add(but_searchByIssuedDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 200, 130, 40));
+
+        but_ResetTable.setBackground(new java.awt.Color(255, 51, 51));
+        but_ResetTable.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        but_ResetTable.setForeground(new java.awt.Color(255, 255, 255));
+        but_ResetTable.setText("Reset");
+        but_ResetTable.setBorder(null);
+        but_ResetTable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                but_ResetTableActionPerformed(evt);
+            }
+        });
+        jPanel2.add(but_ResetTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 200, 130, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 260));
 
@@ -322,10 +335,16 @@ public class IssuedBookDetail extends javax.swing.JFrame {
         hp.setVisible(true);
     }//GEN-LAST:event_jLabel6MouseClicked
 
+    private void but_ResetTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_ResetTableActionPerformed
+        date_FromDate.setDatoFecha(null);
+        date_ToDate.setDatoFecha(null);
+        setIssuedBookInfoToTable();
+    }//GEN-LAST:event_but_ResetTableActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void showManHinh() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -353,15 +372,16 @@ public class IssuedBookDetail extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 IssuedBookDetail detail = new IssuedBookDetail();
-                detail.setVisible(true);
                 detail.setLocationRelativeTo(null);
                 detail.setIssuedBookInfoToTable();
+                detail.setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Back;
+    private javax.swing.JButton but_ResetTable;
     private javax.swing.JButton but_searchByIssuedDay;
     private rojeru_san.componentes.RSDateChooser date_FromDate;
     private rojeru_san.componentes.RSDateChooser date_ToDate;

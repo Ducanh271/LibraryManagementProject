@@ -70,12 +70,12 @@ public class Homepage extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
-     public void loadThongKe() {
+    public void loadThongKe() {
     Connection con = null;
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quan_ly_thu_vien", "root", "");
-        String querySoSach = "SELECT SUM(soLuong) FROM sach";
+        String querySoSach = "SELECT COUNT(maBanSao) FROM bansaosach";
         java.sql.PreparedStatement psSoSach = con.prepareStatement(querySoSach);
         java.sql.ResultSet rsSoSach = psSoSach.executeQuery();
         int soSach = 0;
@@ -83,7 +83,7 @@ public class Homepage extends javax.swing.JFrame {
             soSach = rsSoSach.getInt(1);
             txtsosach.setText(String.valueOf(soSach));
         }
-        String querySoNguoiMuon = "SELECT COUNT(maSV) FROM sinhvien";
+        String querySoNguoiMuon = "SELECT COUNT(DISTINCT maNM) FROM thongtinmuontrasach";
         java.sql.PreparedStatement psSoNguoiMuon = con.prepareStatement(querySoNguoiMuon);
         java.sql.ResultSet rsSoNguoiMuon = psSoNguoiMuon.executeQuery();
         int soNguoiMuon = 0;
@@ -91,7 +91,7 @@ public class Homepage extends javax.swing.JFrame {
             soNguoiMuon = rsSoNguoiMuon.getInt(1);
             txtnguoimuon.setText(String.valueOf(soNguoiMuon));
         }
-        String querySoDangMuon = "SELECT COUNT(maMuon) FROM thongtinmuontrasach where trangThai =1";
+        String querySoDangMuon = "SELECT COUNT(DISTINCT maBanSao) FROM thongtinmuontrasach where trangThai =1";
         java.sql.PreparedStatement psSoDangMuon = con.prepareStatement(querySoDangMuon);
         java.sql.ResultSet rsSoDangMuon = psSoDangMuon.executeQuery();
         int soDangMuon = 0;
@@ -332,12 +332,13 @@ public class Homepage extends javax.swing.JFrame {
         txtdangmuon = new javax.swing.JLabel();
         jPanel94 = new javax.swing.JPanel();
         txtconlai = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblsach = new rojeru_san.complementos.RSTableMetro();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblnguoimuon = new rojeru_san.complementos.RSTableMetro();
         jLabel95 = new javax.swing.JLabel();
         chart = new javax.swing.JPanel();
+        jPanel95 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblsach = new rojeru_san.complementos.RSTableMetro();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -382,7 +383,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 522, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1043, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(45, 45, 45))
         );
@@ -399,7 +400,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 70));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 70));
 
         jPanel4.setBackground(new java.awt.Color(51, 51, 51));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -478,7 +479,7 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel7.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 160, 40));
 
-        jPanel4.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 180, 40));
+        jPanel4.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 190, 40));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(204, 204, 204));
@@ -665,7 +666,7 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel11.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 160, 40));
 
-        jPanel4.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 180, 40));
+        jPanel4.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 190, 40));
 
         jPanel27.setBackground(new java.awt.Color(51, 51, 51));
         jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1391,7 +1392,7 @@ public class Homepage extends javax.swing.JFrame {
 
         jPanel4.add(jPanel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 180, 40));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 180, 590));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 190, 820));
 
         jPanel91.setBackground(new java.awt.Color(204, 204, 204));
         jPanel91.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 0, 0, 0, new java.awt.Color(255, 51, 51)));
@@ -1404,36 +1405,36 @@ public class Homepage extends javax.swing.JFrame {
         jPanel91.setLayout(jPanel91Layout);
         jPanel91Layout.setHorizontalGroup(
             jPanel91Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel91Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel91Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addComponent(txtsosach, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         jPanel91Layout.setVerticalGroup(
             jPanel91Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel91Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+            .addGroup(jPanel91Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addComponent(txtsosach)
-                .addGap(4, 4, 4))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 120, 80));
+        jPanel1.add(jPanel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 160, 90));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Số sách còn lại");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 80, 140, 30));
 
         jLabel92.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel92.setText("Số lượng sách");
-        jPanel1.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
+        jPanel1.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 130, 30));
 
         jLabel93.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel93.setText("Thông tin sinh viên mượn sách:");
-        jPanel1.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, -1, -1));
+        jPanel1.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
 
         jLabel94.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel94.setText("Số sách đang mượn");
-        jPanel1.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, -1, -1));
+        jPanel1.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, 170, 30));
 
         jPanel92.setBackground(new java.awt.Color(204, 204, 204));
         jPanel92.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 0, 0, 0, new java.awt.Color(102, 102, 255)));
@@ -1449,7 +1450,7 @@ public class Homepage extends javax.swing.JFrame {
             .addGroup(jPanel92Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtnguoimuon, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         jPanel92Layout.setVerticalGroup(
             jPanel92Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1459,7 +1460,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addGap(17, 17, 17))
         );
 
-        jPanel1.add(jPanel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, -1, 80));
+        jPanel1.add(jPanel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 170, 90));
 
         jPanel93.setBackground(new java.awt.Color(204, 204, 204));
         jPanel93.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 0, 0, 0, new java.awt.Color(255, 51, 51)));
@@ -1473,18 +1474,19 @@ public class Homepage extends javax.swing.JFrame {
         jPanel93Layout.setHorizontalGroup(
             jPanel93Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel93Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addComponent(txtdangmuon, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 22, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel93Layout.setVerticalGroup(
             jPanel93Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel93Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+            .addGroup(jPanel93Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addComponent(txtdangmuon)
-                .addContainerGap())
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 120, -1, -1));
+        jPanel1.add(jPanel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 170, 90));
 
         jPanel94.setBackground(new java.awt.Color(204, 204, 204));
         jPanel94.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 0, 0, 0, new java.awt.Color(102, 102, 255)));
@@ -1497,32 +1499,20 @@ public class Homepage extends javax.swing.JFrame {
         jPanel94.setLayout(jPanel94Layout);
         jPanel94Layout.setHorizontalGroup(
             jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel94Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel94Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(txtconlai, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel94Layout.setVerticalGroup(
             jPanel94Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel94Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(14, 14, 14)
                 .addComponent(txtconlai)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, -1, -1));
-
-        tblsach.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Mã sách", "Tên sách", "Thể loại", "Số lượng"
-            }
-        ));
-        jScrollPane1.setViewportView(tblsach);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, 380, 140));
+        jPanel1.add(jPanel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 110, 160, 90));
 
         tblnguoimuon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1532,21 +1522,57 @@ public class Homepage extends javax.swing.JFrame {
                 "Mã sinh viên", "Tên sinh viên", "Email", "Niên khóa", "Ngành học"
             }
         ));
+        tblnguoimuon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tblnguoimuon.setRowHeight(40);
         jScrollPane2.setViewportView(tblnguoimuon);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 380, 140));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 700, 210));
 
         jLabel95.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel95.setText("Số sinh viên mượn");
-        jPanel1.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, -1, -1));
+        jPanel1.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, 160, 30));
 
         chart.setBackground(new java.awt.Color(255, 255, 255));
         chart.setLayout(new java.awt.BorderLayout());
-        jPanel1.add(chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, 320, 400));
+        jPanel1.add(chart, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 340, 320, 400));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 660));
+        jPanel95.setBackground(new java.awt.Color(0, 106, 106));
+        jPanel95.setForeground(new java.awt.Color(0, 106, 106));
 
-        setSize(new java.awt.Dimension(932, 670));
+        tblsach.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Mã sách", "Tên sách", "Thể loại", "Số lượng"
+            }
+        ));
+        tblsach.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tblsach.setRowHeight(40);
+        jScrollPane1.setViewportView(tblsach);
+
+        javax.swing.GroupLayout jPanel95Layout = new javax.swing.GroupLayout(jPanel95);
+        jPanel95.setLayout(jPanel95Layout);
+        jPanel95Layout.setHorizontalGroup(
+            jPanel95Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel95Layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(479, Short.MAX_VALUE))
+        );
+        jPanel95Layout.setVerticalGroup(
+            jPanel95Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel95Layout.createSequentialGroup()
+                .addContainerGap(346, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
+        );
+
+        jPanel1.add(jPanel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 1250, 630));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 900));
+
+        setSize(new java.awt.Dimension(1455, 902));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1571,13 +1597,13 @@ public class Homepage extends javax.swing.JFrame {
     private void jLabel45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel45MouseClicked
        IssueBook is = new IssueBook();
        this.setVisible(false);
-       is.setVisible(true);
+       is.showIssueBookScreen();
     }//GEN-LAST:event_jLabel45MouseClicked
 
     private void jLabel61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel61MouseClicked
         IssuedBookDetail is = new IssuedBookDetail();
         this.setVisible(false);
-        is.setVisible(true);
+        is.showManHinh();
     }//GEN-LAST:event_jLabel61MouseClicked
 
     private void jLabel77MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel77MouseClicked
@@ -1819,6 +1845,7 @@ public class Homepage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel92;
     private javax.swing.JPanel jPanel93;
     private javax.swing.JPanel jPanel94;
+    private javax.swing.JPanel jPanel95;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private rojeru_san.complementos.RSTableMetro tblnguoimuon;
