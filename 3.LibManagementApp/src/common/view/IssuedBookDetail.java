@@ -53,6 +53,9 @@ public class IssuedBookDetail extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         but_searchByIssuedDay = new javax.swing.JButton();
         but_ResetTable = new javax.swing.JButton();
+        but_FilterBorrowedBooks = new javax.swing.JButton();
+        txt_StudentID = new javax.swing.JTextField();
+        but_FilterStudentID = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_IssuedBookInfo = new rojeru_san.complementos.RSTableMetro();
 
@@ -148,7 +151,7 @@ public class IssuedBookDetail extends javax.swing.JFrame {
                 but_searchByIssuedDayActionPerformed(evt);
             }
         });
-        jPanel2.add(but_searchByIssuedDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 200, 130, 40));
+        jPanel2.add(but_searchByIssuedDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 200, 130, 40));
 
         but_ResetTable.setBackground(new java.awt.Color(255, 51, 51));
         but_ResetTable.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -160,7 +163,46 @@ public class IssuedBookDetail extends javax.swing.JFrame {
                 but_ResetTableActionPerformed(evt);
             }
         });
-        jPanel2.add(but_ResetTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 200, 130, 40));
+        jPanel2.add(but_ResetTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 200, 130, 40));
+
+        but_FilterBorrowedBooks.setBackground(new java.awt.Color(255, 51, 51));
+        but_FilterBorrowedBooks.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        but_FilterBorrowedBooks.setForeground(new java.awt.Color(255, 255, 255));
+        but_FilterBorrowedBooks.setText("Lọc sách đang mượn");
+        but_FilterBorrowedBooks.setBorder(null);
+        but_FilterBorrowedBooks.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                but_FilterBorrowedBooksActionPerformed(evt);
+            }
+        });
+        jPanel2.add(but_FilterBorrowedBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 200, 150, 40));
+
+        txt_StudentID.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txt_StudentID.setForeground(new java.awt.Color(0, 106, 106));
+        txt_StudentID.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 106, 106)));
+        txt_StudentID.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_StudentIDFocusLost(evt);
+            }
+        });
+        txt_StudentID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_StudentIDActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txt_StudentID, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 130, 270, 40));
+
+        but_FilterStudentID.setBackground(new java.awt.Color(255, 51, 51));
+        but_FilterStudentID.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        but_FilterStudentID.setForeground(new java.awt.Color(255, 255, 255));
+        but_FilterStudentID.setText("Lọc sách theo msv");
+        but_FilterStudentID.setBorder(null);
+        but_FilterStudentID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                but_FilterStudentIDActionPerformed(evt);
+            }
+        });
+        jPanel2.add(but_FilterStudentID, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 130, 150, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 260));
 
@@ -264,59 +306,129 @@ public class IssuedBookDetail extends javax.swing.JFrame {
 
     // lọc thông tin qua ngày tháng
     public void search() throws SQLException {
-    Date uFromDate = date_FromDate.getDatoFecha();
-    Date uToDate = date_ToDate.getDatoFecha();
+        Date uFromDate = date_FromDate.getDatoFecha();
+        Date uToDate = date_ToDate.getDatoFecha();
 
-    if (uFromDate == null || uToDate == null) {
-        JOptionPane.showMessageDialog(this, "Vui lòng chọn ngày bắt đầu và ngày kết thúc!", "Thông báo", JOptionPane.WARNING_MESSAGE);
-        return;
-    }
-
-    long l1 = uFromDate.getTime();
-    long l2 = uToDate.getTime();
-    Date fromDate = new Date(l1);
-    Date toDate = new Date(l2);
-
-    try (Connection con = DatabaseConnection.getConnection()) {
-        String sql = "SELECT t.maMuon, t.maBanSao, s.tenSach, sv.maSV, sv.tenSV, t.ngayMuon, t.hanTra, t.ngayTra " +
-                     "FROM thongtinmuontrasach t " +
-                     "JOIN bansaosach bs ON t.maBanSao = bs.maBanSao " +
-                     "JOIN sach s ON bs.maSach = s.maSach " +
-                     "JOIN sinhvien sv ON t.maNM = sv.maSV " +
-                     "WHERE t.ngayMuon BETWEEN ? AND ?";
-        
-        PreparedStatement pst = con.prepareStatement(sql);
-        pst.setDate(1, new java.sql.Date(fromDate.getTime()));
-        pst.setDate(2, new java.sql.Date(toDate.getTime()));
-
-        ResultSet rs = pst.executeQuery();
-        DefaultTableModel model = (DefaultTableModel) tbl_IssuedBookInfo.getModel();
-        model.setRowCount(0); // Xóa dữ liệu cũ
-
-        boolean found = false;
-        while (rs.next()) {
-            found = true;
-            String maMuon = rs.getString("maMuon");
-            String maBanSaoSach = rs.getString("maBanSao");
-            String tenSach = rs.getString("tenSach");
-            String maNM = rs.getString("maSV");
-            String tenNM = rs.getString("tenSV");
-            String ngayMuon = rs.getString("ngayMuon");
-            String hanTra = rs.getString("hanTra");
-            String ngayTra = rs.getString("ngayTra");
-
-            model.addRow(new Object[]{maMuon, maBanSaoSach, tenSach, maNM, tenNM, ngayMuon, hanTra, ngayTra});
+        if (uFromDate == null || uToDate == null) {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn ngày bắt đầu và ngày kết thúc!", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return;
         }
 
-        if (!found) {
-            JOptionPane.showMessageDialog(this, "Không có bản ghi nào.", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
-        }
+        long l1 = uFromDate.getTime();
+        long l2 = uToDate.getTime();
+        Date fromDate = new Date(l1);
+        Date toDate = new Date(l2);
 
-    } catch (Exception e) {
-        e.printStackTrace();
-        JOptionPane.showMessageDialog(this, "Đã xảy ra lỗi khi truy vấn dữ liệu.", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        try (Connection con = DatabaseConnection.getConnection()) {
+            String sql = "SELECT t.maMuon, t.maBanSao, s.tenSach, sv.maSV, sv.tenSV, t.ngayMuon, t.hanTra, t.ngayTra "
+                    + "FROM thongtinmuontrasach t "
+                    + "JOIN bansaosach bs ON t.maBanSao = bs.maBanSao "
+                    + "JOIN sach s ON bs.maSach = s.maSach "
+                    + "JOIN sinhvien sv ON t.maNM = sv.maSV "
+                    + "WHERE t.ngayMuon BETWEEN ? AND ?";
+
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setDate(1, new java.sql.Date(fromDate.getTime()));
+            pst.setDate(2, new java.sql.Date(toDate.getTime()));
+
+            ResultSet rs = pst.executeQuery();
+            DefaultTableModel model = (DefaultTableModel) tbl_IssuedBookInfo.getModel();
+            model.setRowCount(0); // Xóa dữ liệu cũ
+
+            boolean found = false;
+            while (rs.next()) {
+                found = true;
+                String maMuon = rs.getString("maMuon");
+                String maBanSaoSach = rs.getString("maBanSao");
+                String tenSach = rs.getString("tenSach");
+                String maNM = rs.getString("maSV");
+                String tenNM = rs.getString("tenSV");
+                String ngayMuon = rs.getString("ngayMuon");
+                String hanTra = rs.getString("hanTra");
+                String ngayTra = rs.getString("ngayTra");
+                model.addRow(new Object[]{maMuon, maBanSaoSach, tenSach, maNM, tenNM, ngayMuon, hanTra, ngayTra});
+            }
+
+            if (!found) {
+                JOptionPane.showMessageDialog(this, "Không có bản ghi nào.", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Đã xảy ra lỗi khi truy vấn dữ liệu.", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }
     }
-}
+
+    public void locTheoSachDangMuon() {
+        try (Connection con = DatabaseConnection.getConnection()) {
+            String sql = "SELECT t.maMuon, t.maBanSao, s.tenSach, sv.maSV, sv.tenSV, t.ngayMuon, t.hanTra, t.ngayTra "
+                    + "FROM thongtinmuontrasach t "
+                    + "JOIN bansaosach bs ON t.maBanSao = bs.maBanSao "
+                    + "JOIN sach s ON bs.maSach = s.maSach "
+                    + "JOIN sinhvien sv ON t.maNM = sv.maSV "
+                    + "WHERE t.trangThai = 1";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+            DefaultTableModel model = (DefaultTableModel) tbl_IssuedBookInfo.getModel();
+            model.setRowCount(0); // Xóa dữ liệu cũ
+            boolean found = false;
+            while (rs.next()) {
+                found = true;
+                String maMuon = rs.getString("maMuon");
+                String maBanSaoSach = rs.getString("maBanSao");
+                String tenSach = rs.getString("tenSach");
+                String maNM = rs.getString("maSV");
+                String tenNM = rs.getString("tenSV");
+                String ngayMuon = rs.getString("ngayMuon");
+                String hanTra = rs.getString("hanTra");
+                String ngayTra = rs.getString("ngayTra");
+                model.addRow(new Object[]{maMuon, maBanSaoSach, tenSach, maNM, tenNM, ngayMuon, hanTra, ngayTra});
+            }
+            if (!found) {
+                JOptionPane.showMessageDialog(this, "Không có bản ghi nào.", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Đã xảy ra lỗi khi truy vấn dữ liệu.", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+        public void locTheoMSV() {
+        try (Connection con = DatabaseConnection.getConnection()) {
+            String sql = "SELECT t.maMuon, t.maBanSao, s.tenSach, sv.maSV, sv.tenSV, t.ngayMuon, t.hanTra, t.ngayTra "
+                    + "FROM thongtinmuontrasach t "
+                    + "JOIN bansaosach bs ON t.maBanSao = bs.maBanSao "
+                    + "JOIN sach s ON bs.maSach = s.maSach "
+                    + "JOIN sinhvien sv ON t.maNM = sv.maSV "
+                    + "WHERE UPPER(t.maNM) like ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            String msv = txt_StudentID.getText();
+            pst.setString(1,msv );
+            ResultSet rs = pst.executeQuery();
+            DefaultTableModel model = (DefaultTableModel) tbl_IssuedBookInfo.getModel();
+            model.setRowCount(0); // Xóa dữ liệu cũ
+            boolean found = false;
+            while (rs.next()) {
+                found = true;
+                String maMuon = rs.getString("maMuon");
+                String maBanSaoSach = rs.getString("maBanSao");
+                String tenSach = rs.getString("tenSach");
+                String maNM = rs.getString("maSV");
+                String tenNM = rs.getString("tenSV");
+                String ngayMuon = rs.getString("ngayMuon");
+                String hanTra = rs.getString("hanTra");
+                String ngayTra = rs.getString("ngayTra");
+                model.addRow(new Object[]{maMuon, maBanSaoSach, tenSach, maNM, tenNM, ngayMuon, hanTra, ngayTra});
+            }
+            if (!found) {
+                JOptionPane.showMessageDialog(this, "Không có bản ghi nào.", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Đã xảy ra lỗi khi truy vấn dữ liệu.", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 
     private void tbl_IssuedBookInfoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tbl_IssuedBookInfoFocusLost
     }//GEN-LAST:event_tbl_IssuedBookInfoFocusLost
@@ -340,6 +452,22 @@ public class IssuedBookDetail extends javax.swing.JFrame {
         date_ToDate.setDatoFecha(null);
         setIssuedBookInfoToTable();
     }//GEN-LAST:event_but_ResetTableActionPerformed
+
+    private void but_FilterBorrowedBooksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_FilterBorrowedBooksActionPerformed
+        locTheoSachDangMuon();
+    }//GEN-LAST:event_but_FilterBorrowedBooksActionPerformed
+
+    private void txt_StudentIDFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_StudentIDFocusLost
+
+    }//GEN-LAST:event_txt_StudentIDFocusLost
+
+    private void txt_StudentIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_StudentIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_StudentIDActionPerformed
+
+    private void but_FilterStudentIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_FilterStudentIDActionPerformed
+        locTheoMSV();
+    }//GEN-LAST:event_but_FilterStudentIDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -381,6 +509,8 @@ public class IssuedBookDetail extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Back;
+    private javax.swing.JButton but_FilterBorrowedBooks;
+    private javax.swing.JButton but_FilterStudentID;
     private javax.swing.JButton but_ResetTable;
     private javax.swing.JButton but_searchByIssuedDay;
     private rojeru_san.componentes.RSDateChooser date_FromDate;
@@ -394,5 +524,6 @@ public class IssuedBookDetail extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
     private rojeru_san.complementos.RSTableMetro tbl_IssuedBookInfo;
+    private javax.swing.JTextField txt_StudentID;
     // End of variables declaration//GEN-END:variables
 }
