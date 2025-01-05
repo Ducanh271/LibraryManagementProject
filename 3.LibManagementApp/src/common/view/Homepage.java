@@ -83,7 +83,7 @@ public class Homepage extends javax.swing.JFrame {
             soSach = rsSoSach.getInt(1);
             txtsosach.setText(String.valueOf(soSach));
         }
-        String querySoNguoiMuon = "SELECT COUNT(DISTINCT maNM) FROM thongtinmuontrasach";
+        String querySoNguoiMuon = "SELECT COUNT(DISTINCT maNM) FROM thongtinmuontrasach where trangThai =1 ";
         java.sql.PreparedStatement psSoNguoiMuon = con.prepareStatement(querySoNguoiMuon);
         java.sql.ResultSet rsSoNguoiMuon = psSoNguoiMuon.executeQuery();
         int soNguoiMuon = 0;
