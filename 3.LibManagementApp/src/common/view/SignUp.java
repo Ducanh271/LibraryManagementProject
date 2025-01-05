@@ -265,7 +265,8 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_txtacActionPerformed
 
     private void SignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpActionPerformed
-String username = txtac.getText();
+
+   String username = txtac.getText();
     String password = new String(txtpass.getPassword());
     String confirmPassword = new String(txtconfirm.getPassword());
 
