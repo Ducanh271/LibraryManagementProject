@@ -265,7 +265,7 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_txtacActionPerformed
 
     private void SignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpActionPerformed
-     String username = txtac.getText();
+   String username = txtac.getText();
     String password = new String(txtpass.getPassword());
     String confirmPassword = new String(txtconfirm.getPassword());
 
@@ -275,9 +275,21 @@ public class SignUp extends javax.swing.JFrame {
         return;
     }
 
-    // Thực hiện kết nối cơ sở dữ liệu và lưu thông tin
+    // Thực hiện kết nối cơ sở dữ liệu và kiểm tra thông tin
     try (Connection conn = DatabaseConnection.getConnection()) {
         if (conn != null) {
+            // Kiểm tra xem tài khoản đã tồn tại chưa
+            String checkSql = "SELECT COUNT(*) FROM thuthu WHERE taiKhoan = ?";
+            java.sql.PreparedStatement checkStmt = conn.prepareStatement(checkSql);
+            checkStmt.setString(1, username);
+            java.sql.ResultSet rs = checkStmt.executeQuery();
+
+            if (rs.next() && rs.getInt(1) > 0) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Tài khoản đã tồn tại!");
+                return;
+            }
+
+            // Thêm tài khoản mới nếu chưa tồn tại
             String sql = "INSERT INTO thuthu (taiKhoan, matKhau) VALUES (?, ?)";
             java.sql.PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, username);
@@ -291,6 +303,7 @@ public class SignUp extends javax.swing.JFrame {
     } catch (SQLException e) {
         javax.swing.JOptionPane.showMessageDialog(this, "Lỗi: " + e.getMessage());
     }
+
     }//GEN-LAST:event_SignUpActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
