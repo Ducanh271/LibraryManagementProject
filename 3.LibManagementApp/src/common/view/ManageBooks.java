@@ -13,28 +13,6 @@ import javax.swing.JOptionPane;
 
 
 
-/**
- *
- * @author PC
- */
-/*
-class DatabaseConnection {
-    private static final String URL = "jdbc:mysql://localhost:3306/quan_ly_thu_vien";
-    private static final String USER = "root";
-    private static final String PASSWORD = ""; // Mật khẩu mặc định là rỗng trong XAMPP
-
-    public static Connection getConnection() {
-        try {
-            return DriverManager.getConnection(URL, USER, PASSWORD);
-        } catch (SQLException e) {
-            System.out.println("Kết nối thất bại: " + e.getMessage());
-            return null;
-        }
-    }
-}
-*/
-
-
 public class ManageBooks extends javax.swing.JFrame {
 
     /**
@@ -60,17 +38,17 @@ public class ManageBooks extends javax.swing.JFrame {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quan_ly_thu_vien", "root", "");
             Statement  st = con.createStatement();
-            ResultSet rs =  st.executeQuery("select * from sach");
-            String sql = "SELECT  tacgia.tenTacGia FROM chitiettacgia JOIN sach ON chitiettacgia.maSach = sach.maSach JOIN tacgia ON chitiettacgia.maTacGia = tacgia.maTacGia";
-            PreparedStatement pst = con.prepareStatement(sql);
-//            pst.setString(1, maSach);
-            ResultSet rs1 =  pst.executeQuery();
+             String sql = "SELECT sach.maSach, sach.tenSach, sach.theLoai, sach.soLuong, tacgia.tenTacGia FROM sach "
+                + "JOIN chitiettacgia ON sach.maSach = chitiettacgia.maSach "
+                + "JOIN tacgia ON chitiettacgia.maTacGia = tacgia.maTacGia  ";  
+            ResultSet rs =  st.executeQuery(sql);
             
-            while(rs.next() && rs1.next()){
+            
+            while(rs.next()){
                 String BookId = rs.getString("maSach");
                 String BookName = rs.getString("tenSach");
                 String Type = rs.getString("theLoai");
-                String AuthrName = rs1.getString("tenTacGia");
+                String AuthrName = rs.getString("tenTacGia");
                 int Quantity = rs.getInt("soLuong");
                 
                 
@@ -86,7 +64,26 @@ public class ManageBooks extends javax.swing.JFrame {
             
         }
     }
-//
+    
+    //cap nhat so luong sach
+        public void updateBookQuantities() {
+        String sql = "UPDATE sach " +
+                 "SET soLuong = (" +
+                 "    SELECT COUNT(*) " +
+                 "    FROM bansaosach " +
+                 "    WHERE bansaosach.maSach = sach.maSach" +
+                 ")";
+                     
+        try (Connection con = DatabaseConnection.getConnection();
+             PreparedStatement pst = con.prepareStatement(sql)) { 
+              pst.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //phieu dien them tac gia 
     private JDialog addDialog; 
      public void openAddBookDialog() {
         addDialog = new JDialog(this, "Thêm NPH", true);
@@ -98,8 +95,6 @@ public class ManageBooks extends javax.swing.JFrame {
         addDialog.add(ThemNhaPH);
         ThemNhaPH.setVisible(true);
         addDialog.setVisible(true);
-
-    
     }
      
      private void savePubToDatabase(int PubID, String PubName) {
@@ -163,8 +158,8 @@ public class ManageBooks extends javax.swing.JFrame {
     }
 
 
- 
-public int getOrAddAuthor(String tenTacGia) {
+    //kiem tra tac gia
+    public int getOrAddAuthor(String tenTacGia) {
     int maTacGia = -1; // Mặc định là -1 nếu không tìm thấy
     try {
         Connection con = DatabaseConnection.getConnection();
@@ -186,11 +181,7 @@ public int getOrAddAuthor(String tenTacGia) {
             int rowAffected = insertPst.executeUpdate();
 
             if (rowAffected > 0) {
-                // Lấy mã tác giả vừa thêm
-                ResultSet generatedKeys = insertPst.getGeneratedKeys();
-                if (generatedKeys.next()) {
-                    maTacGia = generatedKeys.getInt(1);
-                }
+                maTacGia = rs.getInt("maTacGia");
             }
             insertPst.close();
         }
@@ -199,26 +190,55 @@ public int getOrAddAuthor(String tenTacGia) {
         con.close();
     } catch (Exception e) {
         e.printStackTrace();
-        JOptionPane.showMessageDialog(null, "Lỗi khi kiểm tra hoặc thêm tác giả!", "Error", JOptionPane.ERROR_MESSAGE);
     }
     return maTacGia;
-}
+    }
+
+    //kiem tra ma sach
+    
+    private boolean isBookIdExists(String maSach) {
+    boolean exists = false;
+    try {
+        // Kết nối cơ sở dữ liệu
+        Connection con = DatabaseConnection.getConnection();
+        String sql = "SELECT COUNT(*) FROM sach WHERE maSach = ?";
+        PreparedStatement pst = con.prepareStatement(sql);
+        pst.setString(1, maSach);
+
+        // Thực thi câu lệnh
+        ResultSet rs = pst.executeQuery();
+        if (rs.next()) {
+            int count = rs.getInt(1);
+            exists = (count > 0); // Nếu count > 0 thì mã sách đã tồn tại
+        }
+
+        // Đóng kết nối
+        rs.close();
+        pst.close();
+        con.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return exists;
+    }
 
     
-    
     //them sach vao bang
-public boolean addBook(){
+    public boolean addBook(){
         boolean isAdded = false;
         maSach = txt_bookid.getText();
         tenSach = txt_bookName.getText();
         theLoai = txt_type.getText();
         maNhaPhatHanh = Integer.parseInt(txt_IDpublish.getText());
         tenTacGia = txt_author.getText();
-//        soLuong = Integer.parseInt(txt_quantity.getText());
         getOrAddAuthor(tenTacGia);
         try {
               // Lấy hoặc thêm mới tác giả
         int maTacGia = getOrAddAuthor(tenTacGia);
+         if (isBookIdExists(maSach)) {
+            JOptionPane.showMessageDialog(null, "Mã sách đã tồn tại! Vui lòng nhập lại.", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            return false;
+        }
 
         if (maTacGia == -1) {
             JOptionPane.showMessageDialog(null, "Không thể thêm sách vì lỗi khi xử lý tác giả!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -320,7 +340,10 @@ public boolean addBook(){
     
     //Tìm kiếm sách theo Thể loại và Tên
     public void findbook() {
-
+        
+        //bien xac nhan
+        boolean hasData = false;
+        
     // Lấy giá trị từ các trường nhập liệu
     tenSach = txt_bookName.getText();
     theLoai = txt_type.getText();
@@ -331,9 +354,10 @@ public boolean addBook(){
     try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quan_ly_thu_vien", "root", "")) {
         
         
-        String sql = "SELECT sach.maSach, sach.tenSach, sach.theLoai, sach.soLuong, tacgia.tenTacGia FROM sach JOIN chitiettacgia ON sach.maSach = chitiettacgia.maSach JOIN tacgia ON chitiettacgia.maTacGia = tacgia.maTacGia  WHERE sach.tenSach = ? OR sach.theLoai = ? OR tacgia.tenTacGia = ?";
-        
-
+        String sql = "SELECT sach.maSach, sach.tenSach, sach.theLoai, sach.soLuong, tacgia.tenTacGia FROM sach "
+                + "JOIN chitiettacgia ON sach.maSach = chitiettacgia.maSach "
+                + "JOIN tacgia ON chitiettacgia.maTacGia = tacgia.maTacGia  "
+                + "WHERE sach.tenSach = ? OR sach.theLoai = ? OR tacgia.tenTacGia = ?";        
         PreparedStatement pst = con.prepareStatement(sql);
        
         
@@ -345,28 +369,29 @@ public boolean addBook(){
        
         try (ResultSet rs = pst.executeQuery()) {
             
-while(rs.next()){
+    while(rs.next())  {
 
-    String BookId = rs.getString("maSach");
-    String BookName = rs.getString("tenSach");
-    String Type = rs.getString("theLoai");
-    String AuthrName = rs.getString("tenTacGia");
-    int Quantity = rs.getInt("soLuong");
-    
-    
-    Object[] obj = {BookId,BookName,Type,AuthrName,Quantity};
-    model = (DefaultTableModel) tbl_BookDetail.getModel();
-    model.addRow(obj);
+        String BookId = rs.getString("maSach");
+        String BookName = rs.getString("tenSach");
+        String Type = rs.getString("theLoai");
+        String AuthrName = rs.getString("tenTacGia");
+        int Quantity = rs.getInt("soLuong");
 
-} 
-    JOptionPane.showMessageDialog(this, "Không tìm thấy thông tin");
+
+        Object[] obj = {BookId,BookName,Type,AuthrName,Quantity};
+        model = (DefaultTableModel) tbl_BookDetail.getModel();
+        model.addRow(obj);
+        hasData = true;
+    } 
+    if (!hasData) {
+        setBookDetailsToTable();
+        JOptionPane.showMessageDialog(null, "Không tìm thấy thông tin!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+    }
         }
                 con.close();
         } catch (Exception e) {
             System.out.println("Failed Connection");
-            
         }
-//    return
 }
 
 
@@ -818,6 +843,7 @@ while(rs.next()){
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         clearTable();
+        updateBookQuantities();
         setBookDetailsToTable();
     }//GEN-LAST:event_jButton1ActionPerformed
 
