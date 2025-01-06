@@ -15,7 +15,6 @@ import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import static model.DataAccessHelper.conn;
 
 /**
  *
@@ -462,10 +461,11 @@ public class IssueBook extends javax.swing.JFrame {
     }
 // hàm này sẽ được cho vào model
     int status = 0;
+    boolean exits = false;
     public void getBookDetails() {
         String copOfBookID = txt_CopyBookID.getText();
         try {
-            boolean exits = isCopyExist(copOfBookID);
+             exits = isCopyExist(copOfBookID);
 
             if (exits) {
                 String bookID = copOfBookID.length() >= 6 ? copOfBookID.substring(0, 6) : copOfBookID;
@@ -482,7 +482,6 @@ public class IssueBook extends javax.swing.JFrame {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    System.out.println(status);
                     String query1 = "select * from sach where maSach = ?";
                     try (PreparedStatement pst = con.prepareStatement(query1)) {
                         pst.setString(1, bookID);
@@ -501,6 +500,10 @@ public class IssueBook extends javax.swing.JFrame {
                                 }
                                 
                             } else {
+                                lbl_copyID.setText("");
+                                lbl_bookID.setText("");
+                                lbl_bookName.setText("");
+                                lbl_NumbersOfBook.setText("");
                                 lbl_bookError.setText("Mã bản sao không hợp lệ");
                             }
                         }
@@ -523,6 +526,12 @@ public class IssueBook extends javax.swing.JFrame {
                     // Thêm thông báo lỗi cho người dùng ở đây
                 }
             } else {
+                lbl_copyID.setText("");
+                lbl_bookID.setText("");
+                lbl_bookName.setText("");
+                lbl_NumbersOfBook.setText("");
+                lbl_author.setText("");
+                lbl_StatusOfCopyBook.setText("");
                 lbl_bookError.setText("Mã bản sao không hợp lệ");
             }
         } catch (Exception ex) {
@@ -547,6 +556,11 @@ public class IssueBook extends javax.swing.JFrame {
                         lbl_email.setText(rs.getString("email"));
                         lbl_studentError.setText("");
                     } else {
+                        lbl_studentID.setText("");
+                        lbl_studentName.setText("");
+                        lbl_course.setText("");
+                        lbl_branch.setText("");
+                        lbl_email.setText("");
                         lbl_studentError.setText("Không tồn tại sinh viên này");
                     }
                 }
@@ -575,7 +589,7 @@ public class IssueBook extends javax.swing.JFrame {
 
         java.sql.Date sIssueDate = new java.sql.Date(l1);
         java.sql.Date sDueDate = new java.sql.Date(l2);
-        if(status == 0){
+        if(status == 0 && exits){
         try (Connection con = DatabaseConnection.getConnection()) {
             // Câu lệnh SQL để thêm thông tin mượn sách
             String sql = "INSERT INTO thongtinmuontrasach (maMuon, ngayMuon, hanTra, trangThai, maNM, maBanSao) VALUES (?, ?, ?, ?, ?, ?)";
